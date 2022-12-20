@@ -17,7 +17,8 @@ You can download official DLL here: https://github.com/raysan5/raylib/releases/t
 
 ---
 
-![TurboRaylib](logo/raylib_logo_animation.gif)
+![TurboRaylib](logo/raylib_logo_animation.gif)  
+(See: https://github.com/turborium/TurboRaylib/blob/main/examples/shapes/shapes_logo_raylib_anim/shapes_logo_raylib_anim.dpr)
 
 raylib is highly inspired by Borland BGI graphics lib and by XNA framework and it's specially well suited for prototyping, tooling, graphical applications, embedded systems and education.
 
@@ -45,6 +46,7 @@ FreePascal  | ❓ no tested | ✔           | ❓ no tested |❓ no tested |
 ### How to use?
 Just add the "raylib" folder to your project, put the necessary dll next to the exe and get a fun!
 
-**Note:**
+**Notes:**
 - Some Raylib functions require the use of pointers, don't forget to enable ```{$POINTERMATH ON}``` option in your source code! 
 - Text strings in Raylib uses UTF8 format, but Delphi uses WideSrtirng, because wrap your string in ```UTF8String()```. Ex: ```UTF8String('My String')```.
+- The examples are mostly converted for testing purposes and are not examples of good Object Pascal code.
