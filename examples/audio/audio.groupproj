@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6A69EEA0-B02E-4C24-B84A-4C5B27F31608}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="audio_module_playing\audio_module_playing.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="audio_music_stream\audio_music_stream.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="audio_raw_stream\audio_raw_stream.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="audio_sound_loading\audio_sound_loading.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="audio_multichannel_sound\audio_multichannel_sound.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="audio_module_playing">
+        <MSBuild Projects="audio_module_playing\audio_module_playing.dproj"/>
+    </Target>
+    <Target Name="audio_module_playing:Clean">
+        <MSBuild Projects="audio_module_playing\audio_module_playing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="audio_module_playing:Make">
+        <MSBuild Projects="audio_module_playing\audio_module_playing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="audio_music_stream">
+        <MSBuild Projects="audio_music_stream\audio_music_stream.dproj"/>
+    </Target>
+    <Target Name="audio_music_stream:Clean">
+        <MSBuild Projects="audio_music_stream\audio_music_stream.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="audio_music_stream:Make">
+        <MSBuild Projects="audio_music_stream\audio_music_stream.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="audio_raw_stream">
+        <MSBuild Projects="audio_raw_stream\audio_raw_stream.dproj"/>
+    </Target>
+    <Target Name="audio_raw_stream:Clean">
+        <MSBuild Projects="audio_raw_stream\audio_raw_stream.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="audio_raw_stream:Make">
+        <MSBuild Projects="audio_raw_stream\audio_raw_stream.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="audio_sound_loading">
+        <MSBuild Projects="audio_sound_loading\audio_sound_loading.dproj"/>
+    </Target>
+    <Target Name="audio_sound_loading:Clean">
+        <MSBuild Projects="audio_sound_loading\audio_sound_loading.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="audio_sound_loading:Make">
+        <MSBuild Projects="audio_sound_loading\audio_sound_loading.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="audio_multichannel_sound">
+        <MSBuild Projects="audio_multichannel_sound\audio_multichannel_sound.dproj"/>
+    </Target>
+    <Target Name="audio_multichannel_sound:Clean">
+        <MSBuild Projects="audio_multichannel_sound\audio_multichannel_sound.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="audio_multichannel_sound:Make">
+        <MSBuild Projects="audio_multichannel_sound\audio_multichannel_sound.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="audio_module_playing;audio_music_stream;audio_raw_stream;audio_sound_loading;audio_multichannel_sound"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="audio_module_playing:Clean;audio_music_stream:Clean;audio_raw_stream:Clean;audio_sound_loading:Clean;audio_multichannel_sound:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="audio_module_playing:Make;audio_music_stream:Make;audio_raw_stream:Make;audio_sound_loading:Make;audio_multichannel_sound:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

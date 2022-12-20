@@ -1,0 +1,216 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5938414B-36B4-4EF6-9DBF-4A693ED05652}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="models_animation\models_animation.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_billboard\models_billboard.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_box_collisions\models_box_collisions.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_cubicmap\models_cubicmap.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_first_person_maze\models_first_person_maze.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_geometric_shapes\models_geometric_shapes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_mesh_generation\models_mesh_generation.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_mesh_picking\models_mesh_picking.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_loading\models_loading.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_loading_gltf\models_loading_gltf.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_loading_vox\models_loading_vox.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_orthographic_projection\models_orthographic_projection.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_rlgl_solar_system\models_rlgl_solar_system.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_yaw_pitch_roll\models_yaw_pitch_roll.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_waving_cubes\models_waving_cubes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_heightmap\models_heightmap.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="models_animation">
+        <MSBuild Projects="models_animation\models_animation.dproj"/>
+    </Target>
+    <Target Name="models_animation:Clean">
+        <MSBuild Projects="models_animation\models_animation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_animation:Make">
+        <MSBuild Projects="models_animation\models_animation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_billboard">
+        <MSBuild Projects="models_billboard\models_billboard.dproj"/>
+    </Target>
+    <Target Name="models_billboard:Clean">
+        <MSBuild Projects="models_billboard\models_billboard.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_billboard:Make">
+        <MSBuild Projects="models_billboard\models_billboard.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_box_collisions">
+        <MSBuild Projects="models_box_collisions\models_box_collisions.dproj"/>
+    </Target>
+    <Target Name="models_box_collisions:Clean">
+        <MSBuild Projects="models_box_collisions\models_box_collisions.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_box_collisions:Make">
+        <MSBuild Projects="models_box_collisions\models_box_collisions.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_cubicmap">
+        <MSBuild Projects="models_cubicmap\models_cubicmap.dproj"/>
+    </Target>
+    <Target Name="models_cubicmap:Clean">
+        <MSBuild Projects="models_cubicmap\models_cubicmap.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_cubicmap:Make">
+        <MSBuild Projects="models_cubicmap\models_cubicmap.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_first_person_maze">
+        <MSBuild Projects="models_first_person_maze\models_first_person_maze.dproj"/>
+    </Target>
+    <Target Name="models_first_person_maze:Clean">
+        <MSBuild Projects="models_first_person_maze\models_first_person_maze.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_first_person_maze:Make">
+        <MSBuild Projects="models_first_person_maze\models_first_person_maze.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_geometric_shapes">
+        <MSBuild Projects="models_geometric_shapes\models_geometric_shapes.dproj"/>
+    </Target>
+    <Target Name="models_geometric_shapes:Clean">
+        <MSBuild Projects="models_geometric_shapes\models_geometric_shapes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_geometric_shapes:Make">
+        <MSBuild Projects="models_geometric_shapes\models_geometric_shapes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_mesh_generation">
+        <MSBuild Projects="models_mesh_generation\models_mesh_generation.dproj"/>
+    </Target>
+    <Target Name="models_mesh_generation:Clean">
+        <MSBuild Projects="models_mesh_generation\models_mesh_generation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_mesh_generation:Make">
+        <MSBuild Projects="models_mesh_generation\models_mesh_generation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_mesh_picking">
+        <MSBuild Projects="models_mesh_picking\models_mesh_picking.dproj"/>
+    </Target>
+    <Target Name="models_mesh_picking:Clean">
+        <MSBuild Projects="models_mesh_picking\models_mesh_picking.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_mesh_picking:Make">
+        <MSBuild Projects="models_mesh_picking\models_mesh_picking.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_loading">
+        <MSBuild Projects="models_loading\models_loading.dproj"/>
+    </Target>
+    <Target Name="models_loading:Clean">
+        <MSBuild Projects="models_loading\models_loading.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_loading:Make">
+        <MSBuild Projects="models_loading\models_loading.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_loading_gltf">
+        <MSBuild Projects="models_loading_gltf\models_loading_gltf.dproj"/>
+    </Target>
+    <Target Name="models_loading_gltf:Clean">
+        <MSBuild Projects="models_loading_gltf\models_loading_gltf.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_loading_gltf:Make">
+        <MSBuild Projects="models_loading_gltf\models_loading_gltf.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_loading_vox">
+        <MSBuild Projects="models_loading_vox\models_loading_vox.dproj"/>
+    </Target>
+    <Target Name="models_loading_vox:Clean">
+        <MSBuild Projects="models_loading_vox\models_loading_vox.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_loading_vox:Make">
+        <MSBuild Projects="models_loading_vox\models_loading_vox.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_orthographic_projection">
+        <MSBuild Projects="models_orthographic_projection\models_orthographic_projection.dproj"/>
+    </Target>
+    <Target Name="models_orthographic_projection:Clean">
+        <MSBuild Projects="models_orthographic_projection\models_orthographic_projection.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_orthographic_projection:Make">
+        <MSBuild Projects="models_orthographic_projection\models_orthographic_projection.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_rlgl_solar_system">
+        <MSBuild Projects="models_rlgl_solar_system\models_rlgl_solar_system.dproj"/>
+    </Target>
+    <Target Name="models_rlgl_solar_system:Clean">
+        <MSBuild Projects="models_rlgl_solar_system\models_rlgl_solar_system.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_rlgl_solar_system:Make">
+        <MSBuild Projects="models_rlgl_solar_system\models_rlgl_solar_system.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_yaw_pitch_roll">
+        <MSBuild Projects="models_yaw_pitch_roll\models_yaw_pitch_roll.dproj"/>
+    </Target>
+    <Target Name="models_yaw_pitch_roll:Clean">
+        <MSBuild Projects="models_yaw_pitch_roll\models_yaw_pitch_roll.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_yaw_pitch_roll:Make">
+        <MSBuild Projects="models_yaw_pitch_roll\models_yaw_pitch_roll.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_waving_cubes">
+        <MSBuild Projects="models_waving_cubes\models_waving_cubes.dproj"/>
+    </Target>
+    <Target Name="models_waving_cubes:Clean">
+        <MSBuild Projects="models_waving_cubes\models_waving_cubes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_waving_cubes:Make">
+        <MSBuild Projects="models_waving_cubes\models_waving_cubes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_heightmap">
+        <MSBuild Projects="models_heightmap\models_heightmap.dproj"/>
+    </Target>
+    <Target Name="models_heightmap:Clean">
+        <MSBuild Projects="models_heightmap\models_heightmap.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_heightmap:Make">
+        <MSBuild Projects="models_heightmap\models_heightmap.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="models_animation;models_billboard;models_box_collisions;models_cubicmap;models_first_person_maze;models_geometric_shapes;models_mesh_generation;models_mesh_picking;models_loading;models_loading_gltf;models_loading_vox;models_orthographic_projection;models_rlgl_solar_system;models_yaw_pitch_roll;models_waving_cubes;models_heightmap"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="models_animation:Clean;models_billboard:Clean;models_box_collisions:Clean;models_cubicmap:Clean;models_first_person_maze:Clean;models_geometric_shapes:Clean;models_mesh_generation:Clean;models_mesh_picking:Clean;models_loading:Clean;models_loading_gltf:Clean;models_loading_vox:Clean;models_orthographic_projection:Clean;models_rlgl_solar_system:Clean;models_yaw_pitch_roll:Clean;models_waving_cubes:Clean;models_heightmap:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="models_animation:Make;models_billboard:Make;models_box_collisions:Make;models_cubicmap:Make;models_first_person_maze:Make;models_geometric_shapes:Make;models_mesh_generation:Make;models_mesh_picking:Make;models_loading:Make;models_loading_gltf:Make;models_loading_vox:Make;models_orthographic_projection:Make;models_rlgl_solar_system:Make;models_yaw_pitch_roll:Make;models_waving_cubes:Make;models_heightmap:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

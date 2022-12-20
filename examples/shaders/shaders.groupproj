@@ -1,0 +1,204 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9B25A578-D2AC-4B79-A373-E770294DCFED}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="shaders_basic_lighting\shaders_basic_lighting.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_model_shader\shaders_model_shader.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_shapes_textures\shaders_shapes_textures.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_custom_uniform\shaders_custom_uniform.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_postprocessing\shaders_postprocessing.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_palette_switch\shaders_palette_switch.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_raymarching\shaders_raymarching.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_eratosthenes\shaders_eratosthenes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_fog\shaders_fog.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_julia_set\shaders_julia_set.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_mesh_instancing\shaders_mesh_instancing.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_simple_mask\shaders_simple_mask.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_texture_drawing\shaders_texture_drawing.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_texture_outline\shaders_texture_outline.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shaders_texture_waves\shaders_texture_waves.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="shaders_basic_lighting">
+        <MSBuild Projects="shaders_basic_lighting\shaders_basic_lighting.dproj"/>
+    </Target>
+    <Target Name="shaders_basic_lighting:Clean">
+        <MSBuild Projects="shaders_basic_lighting\shaders_basic_lighting.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_basic_lighting:Make">
+        <MSBuild Projects="shaders_basic_lighting\shaders_basic_lighting.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_model_shader">
+        <MSBuild Projects="shaders_model_shader\shaders_model_shader.dproj"/>
+    </Target>
+    <Target Name="shaders_model_shader:Clean">
+        <MSBuild Projects="shaders_model_shader\shaders_model_shader.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_model_shader:Make">
+        <MSBuild Projects="shaders_model_shader\shaders_model_shader.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_shapes_textures">
+        <MSBuild Projects="shaders_shapes_textures\shaders_shapes_textures.dproj"/>
+    </Target>
+    <Target Name="shaders_shapes_textures:Clean">
+        <MSBuild Projects="shaders_shapes_textures\shaders_shapes_textures.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_shapes_textures:Make">
+        <MSBuild Projects="shaders_shapes_textures\shaders_shapes_textures.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_custom_uniform">
+        <MSBuild Projects="shaders_custom_uniform\shaders_custom_uniform.dproj"/>
+    </Target>
+    <Target Name="shaders_custom_uniform:Clean">
+        <MSBuild Projects="shaders_custom_uniform\shaders_custom_uniform.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_custom_uniform:Make">
+        <MSBuild Projects="shaders_custom_uniform\shaders_custom_uniform.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_postprocessing">
+        <MSBuild Projects="shaders_postprocessing\shaders_postprocessing.dproj"/>
+    </Target>
+    <Target Name="shaders_postprocessing:Clean">
+        <MSBuild Projects="shaders_postprocessing\shaders_postprocessing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_postprocessing:Make">
+        <MSBuild Projects="shaders_postprocessing\shaders_postprocessing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_palette_switch">
+        <MSBuild Projects="shaders_palette_switch\shaders_palette_switch.dproj"/>
+    </Target>
+    <Target Name="shaders_palette_switch:Clean">
+        <MSBuild Projects="shaders_palette_switch\shaders_palette_switch.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_palette_switch:Make">
+        <MSBuild Projects="shaders_palette_switch\shaders_palette_switch.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_raymarching">
+        <MSBuild Projects="shaders_raymarching\shaders_raymarching.dproj"/>
+    </Target>
+    <Target Name="shaders_raymarching:Clean">
+        <MSBuild Projects="shaders_raymarching\shaders_raymarching.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_raymarching:Make">
+        <MSBuild Projects="shaders_raymarching\shaders_raymarching.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_eratosthenes">
+        <MSBuild Projects="shaders_eratosthenes\shaders_eratosthenes.dproj"/>
+    </Target>
+    <Target Name="shaders_eratosthenes:Clean">
+        <MSBuild Projects="shaders_eratosthenes\shaders_eratosthenes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_eratosthenes:Make">
+        <MSBuild Projects="shaders_eratosthenes\shaders_eratosthenes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_fog">
+        <MSBuild Projects="shaders_fog\shaders_fog.dproj"/>
+    </Target>
+    <Target Name="shaders_fog:Clean">
+        <MSBuild Projects="shaders_fog\shaders_fog.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_fog:Make">
+        <MSBuild Projects="shaders_fog\shaders_fog.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_julia_set">
+        <MSBuild Projects="shaders_julia_set\shaders_julia_set.dproj"/>
+    </Target>
+    <Target Name="shaders_julia_set:Clean">
+        <MSBuild Projects="shaders_julia_set\shaders_julia_set.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_julia_set:Make">
+        <MSBuild Projects="shaders_julia_set\shaders_julia_set.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_mesh_instancing">
+        <MSBuild Projects="shaders_mesh_instancing\shaders_mesh_instancing.dproj"/>
+    </Target>
+    <Target Name="shaders_mesh_instancing:Clean">
+        <MSBuild Projects="shaders_mesh_instancing\shaders_mesh_instancing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_mesh_instancing:Make">
+        <MSBuild Projects="shaders_mesh_instancing\shaders_mesh_instancing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_simple_mask">
+        <MSBuild Projects="shaders_simple_mask\shaders_simple_mask.dproj"/>
+    </Target>
+    <Target Name="shaders_simple_mask:Clean">
+        <MSBuild Projects="shaders_simple_mask\shaders_simple_mask.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_simple_mask:Make">
+        <MSBuild Projects="shaders_simple_mask\shaders_simple_mask.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_texture_drawing">
+        <MSBuild Projects="shaders_texture_drawing\shaders_texture_drawing.dproj"/>
+    </Target>
+    <Target Name="shaders_texture_drawing:Clean">
+        <MSBuild Projects="shaders_texture_drawing\shaders_texture_drawing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_texture_drawing:Make">
+        <MSBuild Projects="shaders_texture_drawing\shaders_texture_drawing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_texture_outline">
+        <MSBuild Projects="shaders_texture_outline\shaders_texture_outline.dproj"/>
+    </Target>
+    <Target Name="shaders_texture_outline:Clean">
+        <MSBuild Projects="shaders_texture_outline\shaders_texture_outline.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_texture_outline:Make">
+        <MSBuild Projects="shaders_texture_outline\shaders_texture_outline.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shaders_texture_waves">
+        <MSBuild Projects="shaders_texture_waves\shaders_texture_waves.dproj"/>
+    </Target>
+    <Target Name="shaders_texture_waves:Clean">
+        <MSBuild Projects="shaders_texture_waves\shaders_texture_waves.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shaders_texture_waves:Make">
+        <MSBuild Projects="shaders_texture_waves\shaders_texture_waves.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="shaders_basic_lighting;shaders_model_shader;shaders_shapes_textures;shaders_custom_uniform;shaders_postprocessing;shaders_palette_switch;shaders_raymarching;shaders_eratosthenes;shaders_fog;shaders_julia_set;shaders_mesh_instancing;shaders_simple_mask;shaders_texture_drawing;shaders_texture_outline;shaders_texture_waves"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="shaders_basic_lighting:Clean;shaders_model_shader:Clean;shaders_shapes_textures:Clean;shaders_custom_uniform:Clean;shaders_postprocessing:Clean;shaders_palette_switch:Clean;shaders_raymarching:Clean;shaders_eratosthenes:Clean;shaders_fog:Clean;shaders_julia_set:Clean;shaders_mesh_instancing:Clean;shaders_simple_mask:Clean;shaders_texture_drawing:Clean;shaders_texture_outline:Clean;shaders_texture_waves:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="shaders_basic_lighting:Make;shaders_model_shader:Make;shaders_shapes_textures:Make;shaders_custom_uniform:Make;shaders_postprocessing:Make;shaders_palette_switch:Make;shaders_raymarching:Make;shaders_eratosthenes:Make;shaders_fog:Make;shaders_julia_set:Make;shaders_mesh_instancing:Make;shaders_simple_mask:Make;shaders_texture_drawing:Make;shaders_texture_outline:Make;shaders_texture_waves:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

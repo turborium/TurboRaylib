@@ -1,0 +1,132 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D3578C65-A1E9-42E7-9770-9CF524C74CD3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="text_raylib_fonts\text_raylib_fonts.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="text_font_spritefont\text_font_spritefont.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="text_font_filters\text_font_filters.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="text_font_loading\text_font_loading.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="text_font_sdf\text_font_sdf.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="text_format_text\text_format_text.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="text_input_box\text_input_box.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="text_writing_anim\text_writing_anim.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="text_rectangle_bounds\text_rectangle_bounds.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="text_raylib_fonts">
+        <MSBuild Projects="text_raylib_fonts\text_raylib_fonts.dproj"/>
+    </Target>
+    <Target Name="text_raylib_fonts:Clean">
+        <MSBuild Projects="text_raylib_fonts\text_raylib_fonts.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="text_raylib_fonts:Make">
+        <MSBuild Projects="text_raylib_fonts\text_raylib_fonts.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="text_font_spritefont">
+        <MSBuild Projects="text_font_spritefont\text_font_spritefont.dproj"/>
+    </Target>
+    <Target Name="text_font_spritefont:Clean">
+        <MSBuild Projects="text_font_spritefont\text_font_spritefont.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="text_font_spritefont:Make">
+        <MSBuild Projects="text_font_spritefont\text_font_spritefont.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="text_font_filters">
+        <MSBuild Projects="text_font_filters\text_font_filters.dproj"/>
+    </Target>
+    <Target Name="text_font_filters:Clean">
+        <MSBuild Projects="text_font_filters\text_font_filters.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="text_font_filters:Make">
+        <MSBuild Projects="text_font_filters\text_font_filters.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="text_font_loading">
+        <MSBuild Projects="text_font_loading\text_font_loading.dproj"/>
+    </Target>
+    <Target Name="text_font_loading:Clean">
+        <MSBuild Projects="text_font_loading\text_font_loading.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="text_font_loading:Make">
+        <MSBuild Projects="text_font_loading\text_font_loading.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="text_font_sdf">
+        <MSBuild Projects="text_font_sdf\text_font_sdf.dproj"/>
+    </Target>
+    <Target Name="text_font_sdf:Clean">
+        <MSBuild Projects="text_font_sdf\text_font_sdf.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="text_font_sdf:Make">
+        <MSBuild Projects="text_font_sdf\text_font_sdf.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="text_format_text">
+        <MSBuild Projects="text_format_text\text_format_text.dproj"/>
+    </Target>
+    <Target Name="text_format_text:Clean">
+        <MSBuild Projects="text_format_text\text_format_text.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="text_format_text:Make">
+        <MSBuild Projects="text_format_text\text_format_text.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="text_input_box">
+        <MSBuild Projects="text_input_box\text_input_box.dproj"/>
+    </Target>
+    <Target Name="text_input_box:Clean">
+        <MSBuild Projects="text_input_box\text_input_box.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="text_input_box:Make">
+        <MSBuild Projects="text_input_box\text_input_box.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="text_writing_anim">
+        <MSBuild Projects="text_writing_anim\text_writing_anim.dproj"/>
+    </Target>
+    <Target Name="text_writing_anim:Clean">
+        <MSBuild Projects="text_writing_anim\text_writing_anim.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="text_writing_anim:Make">
+        <MSBuild Projects="text_writing_anim\text_writing_anim.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="text_rectangle_bounds">
+        <MSBuild Projects="text_rectangle_bounds\text_rectangle_bounds.dproj"/>
+    </Target>
+    <Target Name="text_rectangle_bounds:Clean">
+        <MSBuild Projects="text_rectangle_bounds\text_rectangle_bounds.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="text_rectangle_bounds:Make">
+        <MSBuild Projects="text_rectangle_bounds\text_rectangle_bounds.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="text_raylib_fonts;text_font_spritefont;text_font_filters;text_font_loading;text_font_sdf;text_format_text;text_input_box;text_writing_anim;text_rectangle_bounds"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="text_raylib_fonts:Clean;text_font_spritefont:Clean;text_font_filters:Clean;text_font_loading:Clean;text_font_sdf:Clean;text_format_text:Clean;text_input_box:Clean;text_writing_anim:Clean;text_rectangle_bounds:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="text_raylib_fonts:Make;text_font_spritefont:Make;text_font_filters:Make;text_font_loading:Make;text_font_sdf:Make;text_format_text:Make;text_input_box:Make;text_writing_anim:Make;text_rectangle_bounds:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

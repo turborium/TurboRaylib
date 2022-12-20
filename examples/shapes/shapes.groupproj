@@ -1,0 +1,192 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9A65DAAF-F9B5-43BF-9D0E-18E017586FBF}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="shapes_basic_shapes\shapes_basic_shapes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_bouncing_ball\shapes_bouncing_ball.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_colors_palette\shapes_colors_palette.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_logo_raylib\shapes_logo_raylib.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_logo_raylib_anim\shapes_logo_raylib_anim.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_rectangle_scaling\shapes_rectangle_scaling.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_lines_bezier\shapes_lines_bezier.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_collision_area\shapes_collision_area.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_following_eyes\shapes_following_eyes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_easings_ball_anim\shapes_easings_ball_anim.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_easings_box_anim\shapes_easings_box_anim.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_easings_rectangle_array\shapes_easings_rectangle_array.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_draw_ring\shapes_draw_ring.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="shapes_top_down_lights\shapes_top_down_lights.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="shapes_basic_shapes">
+        <MSBuild Projects="shapes_basic_shapes\shapes_basic_shapes.dproj"/>
+    </Target>
+    <Target Name="shapes_basic_shapes:Clean">
+        <MSBuild Projects="shapes_basic_shapes\shapes_basic_shapes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_basic_shapes:Make">
+        <MSBuild Projects="shapes_basic_shapes\shapes_basic_shapes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_bouncing_ball">
+        <MSBuild Projects="shapes_bouncing_ball\shapes_bouncing_ball.dproj"/>
+    </Target>
+    <Target Name="shapes_bouncing_ball:Clean">
+        <MSBuild Projects="shapes_bouncing_ball\shapes_bouncing_ball.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_bouncing_ball:Make">
+        <MSBuild Projects="shapes_bouncing_ball\shapes_bouncing_ball.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_colors_palette">
+        <MSBuild Projects="shapes_colors_palette\shapes_colors_palette.dproj"/>
+    </Target>
+    <Target Name="shapes_colors_palette:Clean">
+        <MSBuild Projects="shapes_colors_palette\shapes_colors_palette.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_colors_palette:Make">
+        <MSBuild Projects="shapes_colors_palette\shapes_colors_palette.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_logo_raylib">
+        <MSBuild Projects="shapes_logo_raylib\shapes_logo_raylib.dproj"/>
+    </Target>
+    <Target Name="shapes_logo_raylib:Clean">
+        <MSBuild Projects="shapes_logo_raylib\shapes_logo_raylib.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_logo_raylib:Make">
+        <MSBuild Projects="shapes_logo_raylib\shapes_logo_raylib.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_logo_raylib_anim">
+        <MSBuild Projects="shapes_logo_raylib_anim\shapes_logo_raylib_anim.dproj"/>
+    </Target>
+    <Target Name="shapes_logo_raylib_anim:Clean">
+        <MSBuild Projects="shapes_logo_raylib_anim\shapes_logo_raylib_anim.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_logo_raylib_anim:Make">
+        <MSBuild Projects="shapes_logo_raylib_anim\shapes_logo_raylib_anim.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_rectangle_scaling">
+        <MSBuild Projects="shapes_rectangle_scaling\shapes_rectangle_scaling.dproj"/>
+    </Target>
+    <Target Name="shapes_rectangle_scaling:Clean">
+        <MSBuild Projects="shapes_rectangle_scaling\shapes_rectangle_scaling.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_rectangle_scaling:Make">
+        <MSBuild Projects="shapes_rectangle_scaling\shapes_rectangle_scaling.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_lines_bezier">
+        <MSBuild Projects="shapes_lines_bezier\shapes_lines_bezier.dproj"/>
+    </Target>
+    <Target Name="shapes_lines_bezier:Clean">
+        <MSBuild Projects="shapes_lines_bezier\shapes_lines_bezier.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_lines_bezier:Make">
+        <MSBuild Projects="shapes_lines_bezier\shapes_lines_bezier.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_collision_area">
+        <MSBuild Projects="shapes_collision_area\shapes_collision_area.dproj"/>
+    </Target>
+    <Target Name="shapes_collision_area:Clean">
+        <MSBuild Projects="shapes_collision_area\shapes_collision_area.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_collision_area:Make">
+        <MSBuild Projects="shapes_collision_area\shapes_collision_area.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_following_eyes">
+        <MSBuild Projects="shapes_following_eyes\shapes_following_eyes.dproj"/>
+    </Target>
+    <Target Name="shapes_following_eyes:Clean">
+        <MSBuild Projects="shapes_following_eyes\shapes_following_eyes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_following_eyes:Make">
+        <MSBuild Projects="shapes_following_eyes\shapes_following_eyes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_easings_ball_anim">
+        <MSBuild Projects="shapes_easings_ball_anim\shapes_easings_ball_anim.dproj"/>
+    </Target>
+    <Target Name="shapes_easings_ball_anim:Clean">
+        <MSBuild Projects="shapes_easings_ball_anim\shapes_easings_ball_anim.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_easings_ball_anim:Make">
+        <MSBuild Projects="shapes_easings_ball_anim\shapes_easings_ball_anim.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_easings_box_anim">
+        <MSBuild Projects="shapes_easings_box_anim\shapes_easings_box_anim.dproj"/>
+    </Target>
+    <Target Name="shapes_easings_box_anim:Clean">
+        <MSBuild Projects="shapes_easings_box_anim\shapes_easings_box_anim.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_easings_box_anim:Make">
+        <MSBuild Projects="shapes_easings_box_anim\shapes_easings_box_anim.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_easings_rectangle_array">
+        <MSBuild Projects="shapes_easings_rectangle_array\shapes_easings_rectangle_array.dproj"/>
+    </Target>
+    <Target Name="shapes_easings_rectangle_array:Clean">
+        <MSBuild Projects="shapes_easings_rectangle_array\shapes_easings_rectangle_array.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_easings_rectangle_array:Make">
+        <MSBuild Projects="shapes_easings_rectangle_array\shapes_easings_rectangle_array.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_draw_ring">
+        <MSBuild Projects="shapes_draw_ring\shapes_draw_ring.dproj"/>
+    </Target>
+    <Target Name="shapes_draw_ring:Clean">
+        <MSBuild Projects="shapes_draw_ring\shapes_draw_ring.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_draw_ring:Make">
+        <MSBuild Projects="shapes_draw_ring\shapes_draw_ring.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="shapes_top_down_lights">
+        <MSBuild Projects="shapes_top_down_lights\shapes_top_down_lights.dproj"/>
+    </Target>
+    <Target Name="shapes_top_down_lights:Clean">
+        <MSBuild Projects="shapes_top_down_lights\shapes_top_down_lights.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="shapes_top_down_lights:Make">
+        <MSBuild Projects="shapes_top_down_lights\shapes_top_down_lights.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="shapes_basic_shapes;shapes_bouncing_ball;shapes_colors_palette;shapes_logo_raylib;shapes_logo_raylib_anim;shapes_rectangle_scaling;shapes_lines_bezier;shapes_collision_area;shapes_following_eyes;shapes_easings_ball_anim;shapes_easings_box_anim;shapes_easings_rectangle_array;shapes_draw_ring;shapes_top_down_lights"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="shapes_basic_shapes:Clean;shapes_bouncing_ball:Clean;shapes_colors_palette:Clean;shapes_logo_raylib:Clean;shapes_logo_raylib_anim:Clean;shapes_rectangle_scaling:Clean;shapes_lines_bezier:Clean;shapes_collision_area:Clean;shapes_following_eyes:Clean;shapes_easings_ball_anim:Clean;shapes_easings_box_anim:Clean;shapes_easings_rectangle_array:Clean;shapes_draw_ring:Clean;shapes_top_down_lights:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="shapes_basic_shapes:Make;shapes_bouncing_ball:Make;shapes_colors_palette:Make;shapes_logo_raylib:Make;shapes_logo_raylib_anim:Make;shapes_rectangle_scaling:Make;shapes_lines_bezier:Make;shapes_collision_area:Make;shapes_following_eyes:Make;shapes_easings_ball_anim:Make;shapes_easings_box_anim:Make;shapes_easings_rectangle_array:Make;shapes_draw_ring:Make;shapes_top_down_lights:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

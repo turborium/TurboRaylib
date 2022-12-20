@@ -1,0 +1,324 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E9EB35AA-5847-462B-A8EF-360DC17BFEC7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="core_basic_window\core_basic_window.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_input_keys\core_input_keys.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_input_mouse\core_input_mouse.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_input_mouse_wheel\core_input_mouse_wheel.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_2d_camera\core_2d_camera.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_2d_camera_mose_zoom\core_2d_camera_mouse_zoom.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_2d_camera_platformer\core_2d_camera_platformer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_3d_camera_mode\core_3d_camera_mode.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_3d_camera_free\core_3d_camera_free.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_3d_camera_first_person\core_3d_camera_first_person.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_3d_picking\core_3d_picking.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_world_screen\core_world_screen.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_custom_logging\core_custom_logging.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_window_flags\core_window_flags.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_window_letterbox\core_window_letterbox.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_window_should_close\core_window_should_close.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_drop_files\core_drop_files.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_random_values\core_random_values.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_storage_values\core_storage_values.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_loading_thread\core_loading_thread.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_scissor_test\core_scissor_test.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_basic_screen_manager\core_basic_screen_manager.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_custom_frame_control\core_custom_frame_control.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_smooth_pixelperfect\core_smooth_pixelperfect.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="core_split_screen\core_split_screen.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="core_basic_window">
+        <MSBuild Projects="core_basic_window\core_basic_window.dproj"/>
+    </Target>
+    <Target Name="core_basic_window:Clean">
+        <MSBuild Projects="core_basic_window\core_basic_window.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_basic_window:Make">
+        <MSBuild Projects="core_basic_window\core_basic_window.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_input_keys">
+        <MSBuild Projects="core_input_keys\core_input_keys.dproj"/>
+    </Target>
+    <Target Name="core_input_keys:Clean">
+        <MSBuild Projects="core_input_keys\core_input_keys.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_input_keys:Make">
+        <MSBuild Projects="core_input_keys\core_input_keys.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_input_mouse">
+        <MSBuild Projects="core_input_mouse\core_input_mouse.dproj"/>
+    </Target>
+    <Target Name="core_input_mouse:Clean">
+        <MSBuild Projects="core_input_mouse\core_input_mouse.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_input_mouse:Make">
+        <MSBuild Projects="core_input_mouse\core_input_mouse.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_input_mouse_wheel">
+        <MSBuild Projects="core_input_mouse_wheel\core_input_mouse_wheel.dproj"/>
+    </Target>
+    <Target Name="core_input_mouse_wheel:Clean">
+        <MSBuild Projects="core_input_mouse_wheel\core_input_mouse_wheel.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_input_mouse_wheel:Make">
+        <MSBuild Projects="core_input_mouse_wheel\core_input_mouse_wheel.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_2d_camera">
+        <MSBuild Projects="core_2d_camera\core_2d_camera.dproj"/>
+    </Target>
+    <Target Name="core_2d_camera:Clean">
+        <MSBuild Projects="core_2d_camera\core_2d_camera.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_2d_camera:Make">
+        <MSBuild Projects="core_2d_camera\core_2d_camera.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_2d_camera_mouse_zoom">
+        <MSBuild Projects="core_2d_camera_mose_zoom\core_2d_camera_mouse_zoom.dproj"/>
+    </Target>
+    <Target Name="core_2d_camera_mouse_zoom:Clean">
+        <MSBuild Projects="core_2d_camera_mose_zoom\core_2d_camera_mouse_zoom.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_2d_camera_mouse_zoom:Make">
+        <MSBuild Projects="core_2d_camera_mose_zoom\core_2d_camera_mouse_zoom.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_2d_camera_platformer">
+        <MSBuild Projects="core_2d_camera_platformer\core_2d_camera_platformer.dproj"/>
+    </Target>
+    <Target Name="core_2d_camera_platformer:Clean">
+        <MSBuild Projects="core_2d_camera_platformer\core_2d_camera_platformer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_2d_camera_platformer:Make">
+        <MSBuild Projects="core_2d_camera_platformer\core_2d_camera_platformer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_3d_camera_mode">
+        <MSBuild Projects="core_3d_camera_mode\core_3d_camera_mode.dproj"/>
+    </Target>
+    <Target Name="core_3d_camera_mode:Clean">
+        <MSBuild Projects="core_3d_camera_mode\core_3d_camera_mode.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_3d_camera_mode:Make">
+        <MSBuild Projects="core_3d_camera_mode\core_3d_camera_mode.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_3d_camera_free">
+        <MSBuild Projects="core_3d_camera_free\core_3d_camera_free.dproj"/>
+    </Target>
+    <Target Name="core_3d_camera_free:Clean">
+        <MSBuild Projects="core_3d_camera_free\core_3d_camera_free.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_3d_camera_free:Make">
+        <MSBuild Projects="core_3d_camera_free\core_3d_camera_free.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_3d_camera_first_person">
+        <MSBuild Projects="core_3d_camera_first_person\core_3d_camera_first_person.dproj"/>
+    </Target>
+    <Target Name="core_3d_camera_first_person:Clean">
+        <MSBuild Projects="core_3d_camera_first_person\core_3d_camera_first_person.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_3d_camera_first_person:Make">
+        <MSBuild Projects="core_3d_camera_first_person\core_3d_camera_first_person.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_3d_picking">
+        <MSBuild Projects="core_3d_picking\core_3d_picking.dproj"/>
+    </Target>
+    <Target Name="core_3d_picking:Clean">
+        <MSBuild Projects="core_3d_picking\core_3d_picking.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_3d_picking:Make">
+        <MSBuild Projects="core_3d_picking\core_3d_picking.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_world_screen">
+        <MSBuild Projects="core_world_screen\core_world_screen.dproj"/>
+    </Target>
+    <Target Name="core_world_screen:Clean">
+        <MSBuild Projects="core_world_screen\core_world_screen.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_world_screen:Make">
+        <MSBuild Projects="core_world_screen\core_world_screen.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_custom_logging">
+        <MSBuild Projects="core_custom_logging\core_custom_logging.dproj"/>
+    </Target>
+    <Target Name="core_custom_logging:Clean">
+        <MSBuild Projects="core_custom_logging\core_custom_logging.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_custom_logging:Make">
+        <MSBuild Projects="core_custom_logging\core_custom_logging.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_window_flags">
+        <MSBuild Projects="core_window_flags\core_window_flags.dproj"/>
+    </Target>
+    <Target Name="core_window_flags:Clean">
+        <MSBuild Projects="core_window_flags\core_window_flags.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_window_flags:Make">
+        <MSBuild Projects="core_window_flags\core_window_flags.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_window_letterbox">
+        <MSBuild Projects="core_window_letterbox\core_window_letterbox.dproj"/>
+    </Target>
+    <Target Name="core_window_letterbox:Clean">
+        <MSBuild Projects="core_window_letterbox\core_window_letterbox.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_window_letterbox:Make">
+        <MSBuild Projects="core_window_letterbox\core_window_letterbox.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_window_should_close">
+        <MSBuild Projects="core_window_should_close\core_window_should_close.dproj"/>
+    </Target>
+    <Target Name="core_window_should_close:Clean">
+        <MSBuild Projects="core_window_should_close\core_window_should_close.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_window_should_close:Make">
+        <MSBuild Projects="core_window_should_close\core_window_should_close.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_drop_files">
+        <MSBuild Projects="core_drop_files\core_drop_files.dproj"/>
+    </Target>
+    <Target Name="core_drop_files:Clean">
+        <MSBuild Projects="core_drop_files\core_drop_files.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_drop_files:Make">
+        <MSBuild Projects="core_drop_files\core_drop_files.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_random_values">
+        <MSBuild Projects="core_random_values\core_random_values.dproj"/>
+    </Target>
+    <Target Name="core_random_values:Clean">
+        <MSBuild Projects="core_random_values\core_random_values.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_random_values:Make">
+        <MSBuild Projects="core_random_values\core_random_values.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_storage_values">
+        <MSBuild Projects="core_storage_values\core_storage_values.dproj"/>
+    </Target>
+    <Target Name="core_storage_values:Clean">
+        <MSBuild Projects="core_storage_values\core_storage_values.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_storage_values:Make">
+        <MSBuild Projects="core_storage_values\core_storage_values.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_loading_thread">
+        <MSBuild Projects="core_loading_thread\core_loading_thread.dproj"/>
+    </Target>
+    <Target Name="core_loading_thread:Clean">
+        <MSBuild Projects="core_loading_thread\core_loading_thread.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_loading_thread:Make">
+        <MSBuild Projects="core_loading_thread\core_loading_thread.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_scissor_test">
+        <MSBuild Projects="core_scissor_test\core_scissor_test.dproj"/>
+    </Target>
+    <Target Name="core_scissor_test:Clean">
+        <MSBuild Projects="core_scissor_test\core_scissor_test.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_scissor_test:Make">
+        <MSBuild Projects="core_scissor_test\core_scissor_test.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_basic_screen_manager">
+        <MSBuild Projects="core_basic_screen_manager\core_basic_screen_manager.dproj"/>
+    </Target>
+    <Target Name="core_basic_screen_manager:Clean">
+        <MSBuild Projects="core_basic_screen_manager\core_basic_screen_manager.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_basic_screen_manager:Make">
+        <MSBuild Projects="core_basic_screen_manager\core_basic_screen_manager.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_custom_frame_control">
+        <MSBuild Projects="core_custom_frame_control\core_custom_frame_control.dproj"/>
+    </Target>
+    <Target Name="core_custom_frame_control:Clean">
+        <MSBuild Projects="core_custom_frame_control\core_custom_frame_control.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_custom_frame_control:Make">
+        <MSBuild Projects="core_custom_frame_control\core_custom_frame_control.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_smooth_pixelperfect">
+        <MSBuild Projects="core_smooth_pixelperfect\core_smooth_pixelperfect.dproj"/>
+    </Target>
+    <Target Name="core_smooth_pixelperfect:Clean">
+        <MSBuild Projects="core_smooth_pixelperfect\core_smooth_pixelperfect.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_smooth_pixelperfect:Make">
+        <MSBuild Projects="core_smooth_pixelperfect\core_smooth_pixelperfect.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="core_split_screen">
+        <MSBuild Projects="core_split_screen\core_split_screen.dproj"/>
+    </Target>
+    <Target Name="core_split_screen:Clean">
+        <MSBuild Projects="core_split_screen\core_split_screen.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="core_split_screen:Make">
+        <MSBuild Projects="core_split_screen\core_split_screen.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="core_basic_window;core_input_keys;core_input_mouse;core_input_mouse_wheel;core_2d_camera;core_2d_camera_mouse_zoom;core_2d_camera_platformer;core_3d_camera_mode;core_3d_camera_free;core_3d_camera_first_person;core_3d_picking;core_world_screen;core_custom_logging;core_window_flags;core_window_letterbox;core_window_should_close;core_drop_files;core_random_values;core_storage_values;core_loading_thread;core_scissor_test;core_basic_screen_manager;core_custom_frame_control;core_smooth_pixelperfect;core_split_screen"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="core_basic_window:Clean;core_input_keys:Clean;core_input_mouse:Clean;core_input_mouse_wheel:Clean;core_2d_camera:Clean;core_2d_camera_mouse_zoom:Clean;core_2d_camera_platformer:Clean;core_3d_camera_mode:Clean;core_3d_camera_free:Clean;core_3d_camera_first_person:Clean;core_3d_picking:Clean;core_world_screen:Clean;core_custom_logging:Clean;core_window_flags:Clean;core_window_letterbox:Clean;core_window_should_close:Clean;core_drop_files:Clean;core_random_values:Clean;core_storage_values:Clean;core_loading_thread:Clean;core_scissor_test:Clean;core_basic_screen_manager:Clean;core_custom_frame_control:Clean;core_smooth_pixelperfect:Clean;core_split_screen:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="core_basic_window:Make;core_input_keys:Make;core_input_mouse:Make;core_input_mouse_wheel:Make;core_2d_camera:Make;core_2d_camera_mouse_zoom:Make;core_2d_camera_platformer:Make;core_3d_camera_mode:Make;core_3d_camera_free:Make;core_3d_camera_first_person:Make;core_3d_picking:Make;core_world_screen:Make;core_custom_logging:Make;core_window_flags:Make;core_window_letterbox:Make;core_window_should_close:Make;core_drop_files:Make;core_random_values:Make;core_storage_values:Make;core_loading_thread:Make;core_scissor_test:Make;core_basic_screen_manager:Make;core_custom_frame_control:Make;core_smooth_pixelperfect:Make;core_split_screen:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

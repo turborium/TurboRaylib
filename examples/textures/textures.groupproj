@@ -1,0 +1,288 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9D298C3A-58AD-48C6-AD06-78547669F31F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="textures_logo_raylib\textures_logo_raylib.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_srcrec_dstrec\textures_srcrec_dstrec.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_image_drawing\textures_image_drawing.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_image_generation\textures_image_generation.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_image_loading\textures_image_loading.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_image_processing\textures_image_processing.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_image_text\textures_image_text.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_to_image\textures_to_image.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_raw_data\textures_raw_data.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_particles_blending\textures_particles_blending.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_npatch_drawing\textures_npatch_drawing.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_background_scrolling\textures_background_scrolling.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_sprite_anim\textures_sprite_anim.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_sprite_button\textures_sprite_button.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_sprite_explosion\textures_sprite_explosion.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_bunnymark\textures_bunnymark.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_mouse_painting\textures_mouse_painting.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_blend_modes\textures_blend_modes.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_draw_tiled\textures_draw_tiled.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_polygon\textures_polygon.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_fog_of_war\textures_fog_of_war.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="textures_gif_player\textures_gif_player.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="textures_logo_raylib">
+        <MSBuild Projects="textures_logo_raylib\textures_logo_raylib.dproj"/>
+    </Target>
+    <Target Name="textures_logo_raylib:Clean">
+        <MSBuild Projects="textures_logo_raylib\textures_logo_raylib.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_logo_raylib:Make">
+        <MSBuild Projects="textures_logo_raylib\textures_logo_raylib.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_srcrec_dstrec">
+        <MSBuild Projects="textures_srcrec_dstrec\textures_srcrec_dstrec.dproj"/>
+    </Target>
+    <Target Name="textures_srcrec_dstrec:Clean">
+        <MSBuild Projects="textures_srcrec_dstrec\textures_srcrec_dstrec.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_srcrec_dstrec:Make">
+        <MSBuild Projects="textures_srcrec_dstrec\textures_srcrec_dstrec.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_image_drawing">
+        <MSBuild Projects="textures_image_drawing\textures_image_drawing.dproj"/>
+    </Target>
+    <Target Name="textures_image_drawing:Clean">
+        <MSBuild Projects="textures_image_drawing\textures_image_drawing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_image_drawing:Make">
+        <MSBuild Projects="textures_image_drawing\textures_image_drawing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_image_generation">
+        <MSBuild Projects="textures_image_generation\textures_image_generation.dproj"/>
+    </Target>
+    <Target Name="textures_image_generation:Clean">
+        <MSBuild Projects="textures_image_generation\textures_image_generation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_image_generation:Make">
+        <MSBuild Projects="textures_image_generation\textures_image_generation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_image_loading">
+        <MSBuild Projects="textures_image_loading\textures_image_loading.dproj"/>
+    </Target>
+    <Target Name="textures_image_loading:Clean">
+        <MSBuild Projects="textures_image_loading\textures_image_loading.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_image_loading:Make">
+        <MSBuild Projects="textures_image_loading\textures_image_loading.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_image_processing">
+        <MSBuild Projects="textures_image_processing\textures_image_processing.dproj"/>
+    </Target>
+    <Target Name="textures_image_processing:Clean">
+        <MSBuild Projects="textures_image_processing\textures_image_processing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_image_processing:Make">
+        <MSBuild Projects="textures_image_processing\textures_image_processing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_image_text">
+        <MSBuild Projects="textures_image_text\textures_image_text.dproj"/>
+    </Target>
+    <Target Name="textures_image_text:Clean">
+        <MSBuild Projects="textures_image_text\textures_image_text.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_image_text:Make">
+        <MSBuild Projects="textures_image_text\textures_image_text.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_to_image">
+        <MSBuild Projects="textures_to_image\textures_to_image.dproj"/>
+    </Target>
+    <Target Name="textures_to_image:Clean">
+        <MSBuild Projects="textures_to_image\textures_to_image.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_to_image:Make">
+        <MSBuild Projects="textures_to_image\textures_to_image.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_raw_data">
+        <MSBuild Projects="textures_raw_data\textures_raw_data.dproj"/>
+    </Target>
+    <Target Name="textures_raw_data:Clean">
+        <MSBuild Projects="textures_raw_data\textures_raw_data.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_raw_data:Make">
+        <MSBuild Projects="textures_raw_data\textures_raw_data.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_particles_blending">
+        <MSBuild Projects="textures_particles_blending\textures_particles_blending.dproj"/>
+    </Target>
+    <Target Name="textures_particles_blending:Clean">
+        <MSBuild Projects="textures_particles_blending\textures_particles_blending.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_particles_blending:Make">
+        <MSBuild Projects="textures_particles_blending\textures_particles_blending.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_npatch_drawing">
+        <MSBuild Projects="textures_npatch_drawing\textures_npatch_drawing.dproj"/>
+    </Target>
+    <Target Name="textures_npatch_drawing:Clean">
+        <MSBuild Projects="textures_npatch_drawing\textures_npatch_drawing.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_npatch_drawing:Make">
+        <MSBuild Projects="textures_npatch_drawing\textures_npatch_drawing.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_background_scrolling">
+        <MSBuild Projects="textures_background_scrolling\textures_background_scrolling.dproj"/>
+    </Target>
+    <Target Name="textures_background_scrolling:Clean">
+        <MSBuild Projects="textures_background_scrolling\textures_background_scrolling.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_background_scrolling:Make">
+        <MSBuild Projects="textures_background_scrolling\textures_background_scrolling.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_sprite_anim">
+        <MSBuild Projects="textures_sprite_anim\textures_sprite_anim.dproj"/>
+    </Target>
+    <Target Name="textures_sprite_anim:Clean">
+        <MSBuild Projects="textures_sprite_anim\textures_sprite_anim.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_sprite_anim:Make">
+        <MSBuild Projects="textures_sprite_anim\textures_sprite_anim.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_sprite_button">
+        <MSBuild Projects="textures_sprite_button\textures_sprite_button.dproj"/>
+    </Target>
+    <Target Name="textures_sprite_button:Clean">
+        <MSBuild Projects="textures_sprite_button\textures_sprite_button.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_sprite_button:Make">
+        <MSBuild Projects="textures_sprite_button\textures_sprite_button.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_sprite_explosion">
+        <MSBuild Projects="textures_sprite_explosion\textures_sprite_explosion.dproj"/>
+    </Target>
+    <Target Name="textures_sprite_explosion:Clean">
+        <MSBuild Projects="textures_sprite_explosion\textures_sprite_explosion.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_sprite_explosion:Make">
+        <MSBuild Projects="textures_sprite_explosion\textures_sprite_explosion.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_bunnymark">
+        <MSBuild Projects="textures_bunnymark\textures_bunnymark.dproj"/>
+    </Target>
+    <Target Name="textures_bunnymark:Clean">
+        <MSBuild Projects="textures_bunnymark\textures_bunnymark.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_bunnymark:Make">
+        <MSBuild Projects="textures_bunnymark\textures_bunnymark.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_mouse_painting">
+        <MSBuild Projects="textures_mouse_painting\textures_mouse_painting.dproj"/>
+    </Target>
+    <Target Name="textures_mouse_painting:Clean">
+        <MSBuild Projects="textures_mouse_painting\textures_mouse_painting.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_mouse_painting:Make">
+        <MSBuild Projects="textures_mouse_painting\textures_mouse_painting.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_blend_modes">
+        <MSBuild Projects="textures_blend_modes\textures_blend_modes.dproj"/>
+    </Target>
+    <Target Name="textures_blend_modes:Clean">
+        <MSBuild Projects="textures_blend_modes\textures_blend_modes.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_blend_modes:Make">
+        <MSBuild Projects="textures_blend_modes\textures_blend_modes.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_draw_tiled">
+        <MSBuild Projects="textures_draw_tiled\textures_draw_tiled.dproj"/>
+    </Target>
+    <Target Name="textures_draw_tiled:Clean">
+        <MSBuild Projects="textures_draw_tiled\textures_draw_tiled.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_draw_tiled:Make">
+        <MSBuild Projects="textures_draw_tiled\textures_draw_tiled.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_polygon">
+        <MSBuild Projects="textures_polygon\textures_polygon.dproj"/>
+    </Target>
+    <Target Name="textures_polygon:Clean">
+        <MSBuild Projects="textures_polygon\textures_polygon.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_polygon:Make">
+        <MSBuild Projects="textures_polygon\textures_polygon.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_fog_of_war">
+        <MSBuild Projects="textures_fog_of_war\textures_fog_of_war.dproj"/>
+    </Target>
+    <Target Name="textures_fog_of_war:Clean">
+        <MSBuild Projects="textures_fog_of_war\textures_fog_of_war.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_fog_of_war:Make">
+        <MSBuild Projects="textures_fog_of_war\textures_fog_of_war.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="textures_gif_player">
+        <MSBuild Projects="textures_gif_player\textures_gif_player.dproj"/>
+    </Target>
+    <Target Name="textures_gif_player:Clean">
+        <MSBuild Projects="textures_gif_player\textures_gif_player.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="textures_gif_player:Make">
+        <MSBuild Projects="textures_gif_player\textures_gif_player.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="textures_logo_raylib;textures_srcrec_dstrec;textures_image_drawing;textures_image_generation;textures_image_loading;textures_image_processing;textures_image_text;textures_to_image;textures_raw_data;textures_particles_blending;textures_npatch_drawing;textures_background_scrolling;textures_sprite_anim;textures_sprite_button;textures_sprite_explosion;textures_bunnymark;textures_mouse_painting;textures_blend_modes;textures_draw_tiled;textures_polygon;textures_fog_of_war;textures_gif_player"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="textures_logo_raylib:Clean;textures_srcrec_dstrec:Clean;textures_image_drawing:Clean;textures_image_generation:Clean;textures_image_loading:Clean;textures_image_processing:Clean;textures_image_text:Clean;textures_to_image:Clean;textures_raw_data:Clean;textures_particles_blending:Clean;textures_npatch_drawing:Clean;textures_background_scrolling:Clean;textures_sprite_anim:Clean;textures_sprite_button:Clean;textures_sprite_explosion:Clean;textures_bunnymark:Clean;textures_mouse_painting:Clean;textures_blend_modes:Clean;textures_draw_tiled:Clean;textures_polygon:Clean;textures_fog_of_war:Clean;textures_gif_player:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="textures_logo_raylib:Make;textures_srcrec_dstrec:Make;textures_image_drawing:Make;textures_image_generation:Make;textures_image_loading:Make;textures_image_processing:Make;textures_image_text:Make;textures_to_image:Make;textures_raw_data:Make;textures_particles_blending:Make;textures_npatch_drawing:Make;textures_background_scrolling:Make;textures_sprite_anim:Make;textures_sprite_button:Make;textures_sprite_explosion:Make;textures_bunnymark:Make;textures_mouse_painting:Make;textures_blend_modes:Make;textures_draw_tiled:Make;textures_polygon:Make;textures_fog_of_war:Make;textures_gif_player:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
