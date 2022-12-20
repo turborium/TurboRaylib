@@ -46,5 +46,5 @@ FreePascal  | ✔        | ✔           | ❓ no tested |❓ no tested |
 Just add the "raylib" folder to your project, put the necessary dll next to the exe and get a fun!
 
 **Note:**
-- Some Raylib functions require the use of pointers, don't forget to enable {$POINTERMATH ON} option in your source code! 
-- Text strings for Raylib must be in UTF8String format, just wrap your string in UTF8String(). Ex: UTF8String('My String').
+- Some Raylib functions require the use of pointers, don't forget to enable ```{$POINTERMATH ON}``` option in your source code! 
+- Text strings in Raylib uses UTF8 format, but Delphi uses WideSrtirng, because wrap your string in ```UTF8String()```. Ex: ```UTF8String('My String')```.
