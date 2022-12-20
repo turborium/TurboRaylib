@@ -35,10 +35,10 @@ rlgl.h     | :heavy_check_mark: |
 
 **Platforms**
 
-Comiler     | Windows  | OSX          | Linux        |
------------ | -------- | ------------ | ------------ |
-Delphi      | ✔        | ❓ no tested | ❓ no tested |
-FreePascal  | ✔        | ❓ no tested | ❓ no tested |
+Comiler     | Windows 32 | Windows 64 | OSX          | Linux        |
+----------- | -------- | -------------| ------------ | ------------ |
+Delphi      | ✔        | ✔           | ❓ no tested | ❓ no tested |
+FreePascal  | ✔        | ✔           | ❓ no tested |❓ no tested |
 
 ---
 
