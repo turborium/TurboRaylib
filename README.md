@@ -8,6 +8,13 @@ Unlike other bindings, this version works stably in Win32 and Win64 in Delphi an
 The raylib library has a lot of ABI problems when using DLLs, all known problems have been fixed in these bindings.  
 TurboRaylib has a lot of test coverage (see examples).  
 
+**Foldes:**
+- "raylib" - TurboRaylib bindings
+- "binaries" - Dynamic libraries suitable for TurboRaylib bindings
+- "examples" - Many examples for Delphi
+
+You can download official DLL here: https://github.com/raysan5/raylib/releases/tag/4.2.0  
+
 ---
 
 ![TurboRaylib](logo/raylib_logo_animation.gif)
