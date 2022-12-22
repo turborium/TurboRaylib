@@ -51,14 +51,15 @@ Just add the "raylib" folder to your project, put the necessary dll next to the 
 - Text strings in Raylib uses UTF8 format, but Delphi uses WideSrtirng, because wrap your string in ```UTF8String()```. Ex: ```UTF8String('My String')```.
 - The examples are mostly converted for testing purposes and are not examples of good Object Pascal code.
 
-### Заводим на OSX
-Первое - надо принять что UNIX создан для страдания. 
-Второе - использование хоть чего-то не стандартного в UNIX это боль (например не С-89).
-Третье - динамические библиотеки в UNIX - боль.
+### Заводим на OSX (Lazarus)
+Первое - надо принять что UNIX создан для страдания.   
+Второе - использование хоть чего-то не стандартного в UNIX это боль (например не С-89).  
+Третье - динамические библиотеки в UNIX - боль.  
+Главное - UNIX - SUXXX.  
 
 #### Меньше страданий
-1) Скачиваем бинарь raylib для osx.
-2) Копируем ВСЕ файлы из /lib в место где будет расположен бинарь вашего приложения.
+1) Скачиваем бинарь raylib для osx. (https://github.com/raysan5/raylib/releases).  
+2) Копируем ВСЕ файлы из /lib в место где будет расположен бинарь вашего приложения. **(сюда и только сюда)**
 3) Указываем линкеру что юзаем libraylib.dylib, а также говорим где искать бинарь либы:  
 Пример для бинаря в папке /app:  
 ![TurboRaylib](logo/unix-way.png)  
@@ -70,9 +71,11 @@ Just add the "raylib" folder to your project, put the necessary dll next to the 
 2) распаковываем архив и открываем "lib"
 3) запускаем "otool -L libraylib.dylib" из терминала (о да, каеф)  
 ![TurboRaylib](logo/unix-way-hard.png)  
-Мы получили "истинное имя библиотеки" - "libraylib.420.dylib", именно это и будет грузить наше приложение.
-Если мы не хотим таскать с собой сразу 3 файла, 
-то надо переименовать "libraylib.4.2.0.dylib"(истинный бинарь) в "libraylib.420.dylib" и передавать линкуру его.
-Ex: "libraylib.420.dylib -rpath @executable_path/".
+Мы получили "истинное имя библиотеки" - "libraylib.420.dylib", именно это и будет грузить наше приложение.   
+Если мы не хотим таскать с собой сразу 3 файла,   
+то надо переименовать "libraylib.4.2.0.dylib"(истинный бинарь) в "libraylib.420.dylib" и передавать линкуру его.   
+Ex: "libraylib.420.dylib -rpath @executable_path/".    
+В целом "долбежка" описана тут: http://clarkkromenaker.com/post/library-dynamic-loading-mac/.    
+И да - нам еще повезло что либа raylib собрана с корректным @rpath(да в XUIN каждая либа указывает откуда ее запускать лол), иначе без "патчинга" вообще ипользовать невозможно было бы.     
 
 
