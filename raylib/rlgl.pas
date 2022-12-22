@@ -449,9 +449,9 @@ procedure rlEnableVertexAttribute(Index: Cardinal);
 procedure rlDisableVertexAttribute(Index: Cardinal);
 {$IFDEF DESKTOP_OPENGL}
 // Enable attribute state pointer
-procedure rlEnableStatePointer(VertexAttribType: Integer; Buffer: Pointer);
+// procedure rlEnableStatePointer(VertexAttribType: Integer; Buffer: Pointer);
 // Disable attribute state pointer
-procedure rlDisableStatePointer(VertexAttribType: Integer);
+// procedure rlDisableStatePointer(VertexAttribType: Integer);
 {$ENDIF}
 
 // Textures state
