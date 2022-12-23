@@ -16,10 +16,12 @@
 
  Headers licensed under an unmodified MIT license, that allows static linking with closed source software
 
- Copyright (c) 2022-2022 Turborium (https://github.com/turborium/)
+ Copyright (c) 2022-2022 Turborium (https://github.com/turborium/TurboRaylib)
 -------------------------------------------------------------------------------------------------------------------
 ```
-
+  
+TurboRaylib - https://github.com/turborium/TurboRaylib  
+  
 This folder contains the Raylib header files for the Object Pascal language.
 The core files are supplied under the MIT license.
 

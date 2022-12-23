@@ -24,7 +24,7 @@
 //
 //  Headers licensed under an unmodified MIT license, that allows static linking with closed source software
 //
-//  Copyright (c) 2022-2022 Turborium (https://github.com/turborium/)
+//  Copyright (c) 2022-2022 Turborium (https://github.com/turborium/TurboRaylib)
 // -------------------------------------------------------------------------------------------------------------------
 
 // Declare RAY_STATIC for static linking. You will have to deal with adding lib's.
