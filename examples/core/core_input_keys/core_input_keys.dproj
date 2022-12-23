@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <Base>True</Base>
         <AppType>Console</AppType>
@@ -6,7 +6,7 @@
         <FrameworkType>None</FrameworkType>
         <MainSource>core_input_keys.dpr</MainSource>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <ProjectGuid>{7436D02C-ED51-4CC1-8A51-18A6178EF7CD}</ProjectGuid>
+        <ProjectGuid>{F3AF60F8-DA40-4963-B747-000000000013}</ProjectGuid>
         <ProjectVersion>19.4</ProjectVersion>
         <TargetedPlatforms>3</TargetedPlatforms>
     </PropertyGroup>
@@ -53,6 +53,7 @@
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <DCC_UsePackage>vclwinx;DataSnapServer;fmx;emshosting;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;IndyIPClient;dbxcds;vcledge;bindcompvclwinx;FmxTeeUI;EsVclComponents;emsedge;bindcompfmx;DBXFirebirdDriver;inetdb;ibmonitor;FireDACSqliteDriver;DbxClientDriver;FireDACASADriver;Tee;soapmidas;vclactnband;TeeUI;fmxFireDAC;dbexpress;FireDACInfxDriver;DBXMySQLDriver;VclSmp;inet;DataSnapCommon;vcltouch;fmxase;DBXOdbcDriver;dbrtl;FireDACDBXDriver;FireDACOracleDriver;fmxdae;TeeDB;FireDACMSAccDriver;CustomIPTransport;FireDACMSSQLDriver;DataSnapIndy10ServerTransport;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;FireDACMongoDBDriver;IndySystem;FireDACTDataDriver;vcldb;ibxbindings;vclFireDAC;bindcomp;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;IndyCore;RESTBackendComponents;bindcompdbx;rtl;FireDACMySQLDriver;FireDACADSDriver;RESTComponents;DBXSqliteDriver;vcl;IndyIPServer;dsnapxml;dsnapcon;DataSnapClient;DataSnapProviderClient;adortl;DBXSybaseASEDriver;DBXDb2Driver;vclimg;DataSnapFireDAC;emsclientfiredac;FireDACPgDriver;FireDAC;FireDACDSDriver;inetdbxpress;xmlrtl;tethering;ibxpress;bindcompvcl;dsnap;CloudService;DBXSybaseASADriver;DBXOracleDriver;FireDACDb2Driver;DBXInformixDriver;vclib;fmxobj;bindcompvclsmp;FMXTee;DataSnapNativeClient;DatasnapConnectorsFreePascal;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
         <Manifest_File>(None)</Manifest_File>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
@@ -63,6 +64,7 @@
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
         <DCC_UsePackage>vclwinx;DataSnapServer;fmx;emshosting;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;IndyIPClient;dbxcds;vcledge;bindcompvclwinx;FmxTeeUI;EsVclComponents;emsedge;bindcompfmx;DBXFirebirdDriver;inetdb;ibmonitor;FireDACSqliteDriver;DbxClientDriver;FireDACASADriver;Tee;soapmidas;vclactnband;TeeUI;fmxFireDAC;dbexpress;FireDACInfxDriver;DBXMySQLDriver;VclSmp;inet;DataSnapCommon;vcltouch;fmxase;DBXOdbcDriver;dbrtl;FireDACDBXDriver;FireDACOracleDriver;fmxdae;TeeDB;FireDACMSAccDriver;CustomIPTransport;FireDACMSSQLDriver;DataSnapIndy10ServerTransport;DataSnapConnectors;vcldsnap;DBXInterBaseDriver;FireDACMongoDBDriver;IndySystem;FireDACTDataDriver;vcldb;ibxbindings;vclFireDAC;bindcomp;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;IndyCore;RESTBackendComponents;bindcompdbx;rtl;FireDACMySQLDriver;FireDACADSDriver;RESTComponents;DBXSqliteDriver;vcl;IndyIPServer;dsnapxml;dsnapcon;DataSnapClient;DataSnapProviderClient;adortl;DBXSybaseASEDriver;DBXDb2Driver;vclimg;DataSnapFireDAC;emsclientfiredac;FireDACPgDriver;FireDAC;FireDACDSDriver;inetdbxpress;xmlrtl;tethering;ibxpress;bindcompvcl;dsnap;CloudService;DBXSybaseASADriver;DBXOracleDriver;FireDACDb2Driver;DBXInformixDriver;vclib;fmxobj;bindcompvclsmp;FMXTee;DataSnapNativeClient;DatasnapConnectorsFreePascal;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
         <Manifest_File>(None)</Manifest_File>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
@@ -90,6 +92,9 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\..\..\raylib\raylib.pas"/>
+        <DCCReference Include="..\..\..\raylib\raymath.pas"/>
+        <DCCReference Include="..\..\..\raylib\rlgl.pas"/>
+        <DCCReference Include="core_input_keys_src.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

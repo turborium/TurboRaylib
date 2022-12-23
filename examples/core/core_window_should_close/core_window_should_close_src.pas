@@ -23,8 +23,8 @@ implementation
 uses
   SysUtils,
   Math,
-  raylib in '..\..\..\raylib\raylib.pas',
-  raymath in '..\..\..\raylib\raymath.pas';
+  raylib,
+  raymath;
 
 //------------------------------------------------------------------------------------
 // Program main entry point

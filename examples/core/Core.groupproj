@@ -18,7 +18,7 @@
         <Projects Include="core_2d_camera\core_2d_camera.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="core_2d_camera_mose_zoom\core_2d_camera_mouse_zoom.dproj">
+        <Projects Include="core_2d_camera_mouse_zoom\core_2d_camera_mouse_zoom.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="core_2d_camera_platformer\core_2d_camera_platformer.dproj">
@@ -132,13 +132,13 @@
         <MSBuild Projects="core_2d_camera\core_2d_camera.dproj" Targets="Make"/>
     </Target>
     <Target Name="core_2d_camera_mouse_zoom">
-        <MSBuild Projects="core_2d_camera_mose_zoom\core_2d_camera_mouse_zoom.dproj"/>
+        <MSBuild Projects="core_2d_camera_mouse_zoom\core_2d_camera_mouse_zoom.dproj"/>
     </Target>
     <Target Name="core_2d_camera_mouse_zoom:Clean">
-        <MSBuild Projects="core_2d_camera_mose_zoom\core_2d_camera_mouse_zoom.dproj" Targets="Clean"/>
+        <MSBuild Projects="core_2d_camera_mouse_zoom\core_2d_camera_mouse_zoom.dproj" Targets="Clean"/>
     </Target>
     <Target Name="core_2d_camera_mouse_zoom:Make">
-        <MSBuild Projects="core_2d_camera_mose_zoom\core_2d_camera_mouse_zoom.dproj" Targets="Make"/>
+        <MSBuild Projects="core_2d_camera_mouse_zoom\core_2d_camera_mouse_zoom.dproj" Targets="Make"/>
     </Target>
     <Target Name="core_2d_camera_platformer">
         <MSBuild Projects="core_2d_camera_platformer\core_2d_camera_platformer.dproj"/>
