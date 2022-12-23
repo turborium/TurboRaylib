@@ -24,7 +24,7 @@ implementation
 
 uses
   SysUtils,
-  raylib in '..\..\..\raylib\raylib.pas';
+  raylib;
 
 type
   TGameScreen = (gsLogo, gsTitle, gsGameplay, gsEnding);

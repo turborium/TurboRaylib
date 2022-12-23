@@ -25,7 +25,7 @@ implementation
 uses
   SysUtils,
   Classes,
-  raylib in '..\..\..\raylib\raylib.pas';
+  raylib;
 
 var
   DataLoaded: Boolean = False;

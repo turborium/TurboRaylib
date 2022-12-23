@@ -24,9 +24,9 @@ implementation
 
 uses
   SysUtils,
-  raylib in '..\..\..\raylib\raylib.pas',
-  raymath in '..\..\..\raylib\raymath.pas',
-  rlgl in '..\..\..\raylib\rlgl.pas';
+  raylib,
+  raymath,
+  rlgl;
 
 const
   STORAGE_DATA_FILE = 'storage.data'; // Storage file

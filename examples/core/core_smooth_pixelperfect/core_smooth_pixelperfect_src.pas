@@ -25,7 +25,7 @@ implementation
 
 uses
   SysUtils,
-  raylib in '..\..\..\raylib\raylib.pas';
+  raylib;
 
 //------------------------------------------------------------------------------------
 // Program main entry point

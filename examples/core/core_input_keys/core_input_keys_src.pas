@@ -22,7 +22,7 @@ implementation
 
 uses
   SysUtils,
-  raylib in '..\..\..\raylib\raylib.pas';
+  raylib;
 
 procedure Main();
 const
