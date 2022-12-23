@@ -1,6 +1,10 @@
 program core_loading_thread;
 
 uses
+  {$IFDEF UNIX}
+  cthreads,
+  cmem,
+  {$ENDIF}
   SysUtils,
   core_loading_thread_src;
 

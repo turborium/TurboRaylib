@@ -240,11 +240,14 @@ def make_dproj_file(project_name, index, libs):
 </Project>
 """.split('\n', 1)[1]
 
-def make_lpr_file(project_name):
+def make_lpr_file(project_name, libs):
+	text_libs = ''
+	if 'cthreads' in libs:
+		text_libs += "\n  {$IFDEF UNIX}\n  cthreads,\n  cmem,\n  {$ENDIF}"
 	return f"""
 program {project_name};
 
-uses
+uses{text_libs}
   SysUtils,
   {project_name}_src;
 
@@ -308,7 +311,7 @@ def make_lazarus_project(params, index):
 		file.write(make_lpi_file(project_name, 'libraylib.420.dylib', extra_libs))
 	# lpr
 	with open(os.path.join(dir, project_name + '.lpr'), 'w') as file:
-		file.write(make_lpr_file(project_name))
+		file.write(make_lpr_file(project_name, extra_libs))
 	# dproj
 	with open(os.path.join(dir, project_name + '.dproj'), 'w') as file:
 		file.write(make_dproj_file(project_name, index, extra_libs))
@@ -334,7 +337,7 @@ samples = [
 	'core/core_input_keys',
 	'core/core_input_mouse',
 	'core/core_input_mouse_wheel',
-	'core/core_loading_thread',
+	['core/core_loading_thread', ['cthreads']],
 	'core/core_random_values',
 	'core/core_scissor_test',
 	'core/core_smooth_pixelperfect',
