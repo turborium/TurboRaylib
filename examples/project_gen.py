@@ -353,7 +353,28 @@ samples = [
 	'audio/audio_music_stream',
 	'audio/audio_raw_stream',
 	'audio/audio_sound_loading',
+	# models
+	'models/models_animation',
+	'models/models_billboard',
+	'models/models_box_collisions',
+	'models/models_cubicmap',
+	'models/models_first_person_maze',
+	'models/models_geometric_shapes',
+	'models/models_heightmap',
+	'models/models_loading',
+	'models/models_loading_gltf',
+	'models/models_loading_m3d',
+	'models/models_loading_vox',
+	'models/models_mesh_generation',
+	'models/models_mesh_picking',
+	'models/models_orthographic_projection',
+	'models/models_rlgl_solar_system',
+	'models/models_waving_cubes',
+	'models/models_yaw_pitch_roll',
 ]
 
 for index, sample in enumerate(samples):
 	make_lazarus_project(sample, index + 1)
+	
+	
+	

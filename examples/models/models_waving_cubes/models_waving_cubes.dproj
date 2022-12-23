@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <Base>True</Base>
         <AppType>Console</AppType>
@@ -6,7 +6,7 @@
         <FrameworkType>None</FrameworkType>
         <MainSource>models_waving_cubes.dpr</MainSource>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <ProjectGuid>{D8E81885-92BC-49F2-8063-986E6E65C293}</ProjectGuid>
+        <ProjectGuid>{F3AF60F8-DA40-4963-B747-000000000046}</ProjectGuid>
         <ProjectVersion>19.4</ProjectVersion>
         <TargetedPlatforms>3</TargetedPlatforms>
     </PropertyGroup>
@@ -94,6 +94,7 @@
         <DCCReference Include="..\..\..\raylib\raylib.pas"/>
         <DCCReference Include="..\..\..\raylib\raymath.pas"/>
         <DCCReference Include="..\..\..\raylib\rlgl.pas"/>
+        <DCCReference Include="models_waving_cubes_src.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
