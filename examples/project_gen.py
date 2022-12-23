@@ -347,6 +347,12 @@ samples = [
 	'core/core_window_letterbox',
 	'core/core_window_should_close',
 	'core/core_world_screen',
+	#audio
+	'audio/audio_module_playing',
+	'audio/audio_multichannel_sound',
+	'audio/audio_music_stream',
+	'audio/audio_raw_stream',
+	'audio/audio_sound_loading',
 ]
 
 for index, sample in enumerate(samples):
