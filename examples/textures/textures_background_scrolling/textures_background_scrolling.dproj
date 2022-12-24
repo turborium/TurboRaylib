@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <Base>True</Base>
         <AppType>Console</AppType>
@@ -6,7 +6,7 @@
         <FrameworkType>None</FrameworkType>
         <MainSource>textures_background_scrolling.dpr</MainSource>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <ProjectGuid>{F55B5B37-C4EB-475A-B7C3-3848C14DBD6B}</ProjectGuid>
+        <ProjectGuid>{F3AF60F8-DA40-4963-B747-000000000086}</ProjectGuid>
         <ProjectVersion>19.4</ProjectVersion>
         <TargetedPlatforms>3</TargetedPlatforms>
     </PropertyGroup>
@@ -92,6 +92,9 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\..\..\raylib\raylib.pas"/>
+        <DCCReference Include="..\..\..\raylib\raymath.pas"/>
+        <DCCReference Include="..\..\..\raylib\rlgl.pas"/>
+        <DCCReference Include="textures_background_scrolling_src.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

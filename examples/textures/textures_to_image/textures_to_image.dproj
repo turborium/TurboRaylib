@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <Base>True</Base>
         <AppType>Console</AppType>
@@ -6,7 +6,7 @@
         <FrameworkType>None</FrameworkType>
         <MainSource>textures_to_image.dpr</MainSource>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <ProjectGuid>{27334615-B8E5-47DF-83E0-5346438DC8A3}</ProjectGuid>
+        <ProjectGuid>{F3AF60F8-DA40-4963-B747-000000000107}</ProjectGuid>
         <ProjectVersion>19.4</ProjectVersion>
         <TargetedPlatforms>3</TargetedPlatforms>
     </PropertyGroup>
@@ -92,6 +92,9 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\..\..\raylib\raylib.pas"/>
+        <DCCReference Include="..\..\..\raylib\raymath.pas"/>
+        <DCCReference Include="..\..\..\raylib\rlgl.pas"/>
+        <DCCReference Include="textures_to_image_src.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
