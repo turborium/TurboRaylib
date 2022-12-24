@@ -410,7 +410,17 @@ samples = [
 	'shapes/shapes_logo_raylib',	
 	'shapes/shapes_logo_raylib_anim',	
 	'shapes/shapes_rectangle_scaling',	
-	'shapes/shapes_top_down_lights',	
+	'shapes/shapes_top_down_lights',
+	# text
+	'text/text_font_filters',
+	'text/text_font_loading',
+	'text/text_font_sdf',
+	'text/text_font_spritefont',
+	'text/text_format_text',
+	'text/text_input_box',
+	'text/text_raylib_fonts',
+	'text/text_rectangle_bounds',
+	'text/text_writing_anim',
 ]
 
 for index, sample in enumerate(samples):

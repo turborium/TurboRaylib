@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <Base>True</Base>
         <AppType>Console</AppType>
@@ -6,7 +6,7 @@
         <FrameworkType>None</FrameworkType>
         <MainSource>text_font_loading.dpr</MainSource>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <ProjectGuid>{24F8F1C3-C46B-4C12-8065-F831AED2B82B}</ProjectGuid>
+        <ProjectGuid>{F3AF60F8-DA40-4963-B747-000000000078}</ProjectGuid>
         <ProjectVersion>19.4</ProjectVersion>
         <TargetedPlatforms>3</TargetedPlatforms>
     </PropertyGroup>
@@ -92,6 +92,9 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\..\..\raylib\raylib.pas"/>
+        <DCCReference Include="..\..\..\raylib\raymath.pas"/>
+        <DCCReference Include="..\..\..\raylib\rlgl.pas"/>
+        <DCCReference Include="text_font_loading_src.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -1,82 +1,15 @@
-(*******************************************************************************************
-*
-*   raylib [text] example - Text formatting
-*
-*   Example originally created with raylib 1.1, last time updated with raylib 3.0
-*
-*   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
-*   BSD-like license that allows static linking with closed source software
-*
-*   Copyright (c) 2014-2022 Ramon Santamaria (@raysan5)
-*
-********************************************************************************************)
 program text_format_text;
 
-{$IFDEF FPC}{$MODE DELPHIUNICODE}{$ENDIF}
 {$APPTYPE CONSOLE}
-
-{$POINTERMATH ON}
 
 {$R *.res}
 
 uses
   SysUtils,
-  raylib in '..\..\..\raylib\raylib.pas';
-
-
-//------------------------------------------------------------------------------------
-// Program main entry point
-//------------------------------------------------------------------------------------
-procedure Main();
-const
-  ScreenWidth = 800;
-  ScreenHeight = 450;
-var
-  Score, Hiscore, Lives: Integer;
-begin
-  // Initialization
-  //---------------------------------------------------------------------------------------------
-  SetConfigFlags(FLAG_MSAA_4X_HINT or FLAG_WINDOW_HIGHDPI);
-  InitWindow(ScreenWidth, ScreenHeight, UTF8String('raylib [text] example - text formatting'));
-
-  Score := 100020;
-  Hiscore := 200450;
-  Lives := 5;
-
-  SetTargetFPS(60); // Set our game to run at 60 frames-per-second
-  //---------------------------------------------------------------------------------------------
-
-  // Main game loop
-  while not WindowShouldClose() do // Detect window close button or ESC key
-  begin
-    // Update
-    //-------------------------------------------------------------------------------------------
-
-    //-------------------------------------------------------------------------------------------
-
-    // Draw
-    //-------------------------------------------------------------------------------------------
-    BeginDrawing();
-
-      ClearBackground(RAYWHITE);
-
-      DrawText(TextFormat(UTF8String('Score: %08i'), Score), 200, 80, 20, RED);
-
-      DrawText(TextFormat(UTF8String('HiScore: %08i'), Hiscore), 200, 120, 20, GREEN);
-
-      DrawText(TextFormat(UTF8String('Lives: %02i'), Lives), 200, 160, 40, BLUE);
-
-      DrawText(TextFormat(UTF8String('Elapsed Time: %02.02f ms'), Single(GetFrameTime() * 1000)), 200, 220, 20, BLACK);
-
-    EndDrawing();
-    //-------------------------------------------------------------------------------------------
-  end;
-
-  // De-Initialization
-  //---------------------------------------------------------------------------------------------
-  CloseWindow(); // Close window and OpenGL context
-  //---------------------------------------------------------------------------------------------
-end;
+  raylib in '..\..\..\raylib\raylib.pas',
+  raymath in '..\..\..\raylib\raymath.pas',
+  rlgl in '..\..\..\raylib\rlgl.pas',
+  text_format_text_src in 'text_format_text_src.pas';
 
 begin
   try
@@ -86,4 +19,3 @@ begin
       Writeln(E.ClassName, ': ', E.Message);
   end;
 end.
-
