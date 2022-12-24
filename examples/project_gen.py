@@ -2,6 +2,8 @@ def make_lpi_file(project_name, osx_lib_name, libs):
 	text_libs = ''
 	if 'reasings' in libs:
 		text_libs += '\n      <Unit>\n        <Filename Value="../../../raylib/extras/reasings.pas"/>\n        <IsPartOfProject Value="True"/>\n      </Unit>'
+	if 'rlights' in libs:
+		text_libs += '\n      <Unit>\n        <Filename Value="rlights.pas"/>\n        <IsPartOfProject Value="True"/>\n      </Unit>'
 	return f"""
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
@@ -48,7 +50,7 @@ def make_lpi_file(project_name, osx_lib_name, libs):
       <Unit>
         <Filename Value="../../../raylib/rlgl.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit>
+      </Unit>{text_libs}
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -101,6 +103,8 @@ def make_dproj_file(project_name, index, libs):
 	text_libs = ''
 	if 'reasings' in libs:
 		text_libs += '\n        <DCCReference Include="..\..\..\\raylib\extras\\reasings.pas"/>'
+	if 'rlights' in libs:
+		text_libs += '\n        <DCCReference Include="rlights.pas"/>'
 	return f"""
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
@@ -265,6 +269,8 @@ def make_dpr_file(project_name, libs):
 	text_libs = ''
 	if 'reasings' in libs:
 		text_libs += "\n  reasings in '..\..\..\\raylib\extras\\reasings.pas',"
+	if 'rlights' in libs:
+		text_libs += "\n  rlights in 'rlights.pas',"
 	return f"""
 program {project_name};
 
@@ -371,6 +377,22 @@ samples = [
 	'models/models_rlgl_solar_system',
 	'models/models_waving_cubes',
 	'models/models_yaw_pitch_roll',
+	# shaders
+	['shaders/shaders_basic_lighting', ['rlights']],
+	'shaders/shaders_custom_uniform',
+	'shaders/shaders_eratosthenes',
+	['shaders/shaders_fog', ['rlights']],
+	'shaders/shaders_julia_set',
+	['shaders/shaders_mesh_instancing', ['rlights']],
+	'shaders/shaders_model_shader',
+	'shaders/shaders_palette_switch',
+	'shaders/shaders_postprocessing',
+	'shaders/shaders_raymarching',
+	'shaders/shaders_shapes_textures',
+	'shaders/shaders_simple_mask',
+	'shaders/shaders_texture_drawing',
+	'shaders/shaders_texture_outline',
+	'shaders/shaders_texture_waves',
 ]
 
 for index, sample in enumerate(samples):
