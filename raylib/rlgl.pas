@@ -954,19 +954,19 @@ begin
 end;
 
 {$IFDEF DESKTOP_OPENGL}
-procedure Lib_rlEnableStatePointer(VertexAttribType: Integer; Buffer: Pointer);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlEnableStatePointer';
-procedure rlEnableStatePointer(VertexAttribType: Integer; Buffer: Pointer);
-begin
-  Lib_rlEnableStatePointer(VertexAttribType, Buffer);
-end;
-
-procedure Lib_rlDisableStatePointer(VertexAttribType: Integer);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlDisableStatePointer';
-procedure rlDisableStatePointer(VertexAttribType: Integer);
-begin
-  Lib_rlDisableStatePointer(VertexAttribType);
-end;
+//procedure Lib_rlEnableStatePointer(VertexAttribType: Integer; Buffer: Pointer);
+//  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlEnableStatePointer';
+//procedure rlEnableStatePointer(VertexAttribType: Integer; Buffer: Pointer);
+//begin
+//  Lib_rlEnableStatePointer(VertexAttribType, Buffer);
+//end;
+//
+//procedure Lib_rlDisableStatePointer(VertexAttribType: Integer);
+//  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlDisableStatePointer';
+//procedure rlDisableStatePointer(VertexAttribType: Integer);
+//begin
+//  Lib_rlDisableStatePointer(VertexAttribType);
+//end;
 {$ENDIF}
 
 // Textures state
