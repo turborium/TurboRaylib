@@ -4,6 +4,9 @@ def make_lpi_file(project_name, osx_lib_name, libs):
 		text_libs += '\n      <Unit>\n        <Filename Value="../../../raylib/extras/reasings.pas"/>\n        <IsPartOfProject Value="True"/>\n      </Unit>'
 	if 'rlights' in libs:
 		text_libs += '\n      <Unit>\n        <Filename Value="rlights.pas"/>\n        <IsPartOfProject Value="True"/>\n      </Unit>'
+	text_units = ''
+	if 'reasings' in libs:
+		text_units += ';../../../raylib/extras'
 	return f"""
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
@@ -57,7 +60,7 @@ def make_lpi_file(project_name, osx_lib_name, libs):
     <Version Value="11"/>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="../../../raylib"/>
+      <OtherUnitFiles Value="../../../raylib{text_units}"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Conditionals Value="// libs
@@ -393,6 +396,21 @@ samples = [
 	'shaders/shaders_texture_drawing',
 	'shaders/shaders_texture_outline',
 	'shaders/shaders_texture_waves',
+	# shapes
+	'shapes/shapes_basic_shapes',	
+	'shapes/shapes_bouncing_ball',
+	'shapes/shapes_collision_area',	
+	'shapes/shapes_colors_palette',	
+	'shapes/shapes_draw_ring',	
+	['shapes/shapes_easings_ball_anim', ['reasings']],	
+	['shapes/shapes_easings_box_anim', ['reasings']],	
+	['shapes/shapes_easings_rectangle_array', ['reasings']],
+	'shapes/shapes_following_eyes',	
+	'shapes/shapes_lines_bezier',	
+	'shapes/shapes_logo_raylib',	
+	'shapes/shapes_logo_raylib_anim',	
+	'shapes/shapes_rectangle_scaling',	
+	'shapes/shapes_top_down_lights',	
 ]
 
 for index, sample in enumerate(samples):
