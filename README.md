@@ -83,7 +83,7 @@ UNIX-оводы, в большинстве своем, только делают
 то надо переименовать "libraylib.4.2.0.dylib"(истинный бинарь) в "libraylib.420.dylib" и передавать линкуру его.   
 Ex: "libraylib.420.dylib -rpath @executable_path/".    
   
-В целом "долбежка" описана тут: http://clarkkromenaker.com/post/library-dynamic-loading-mac/.    
+В целом "долбежка" описана тут: http://clarkkromenaker.com/post/library-dynamic-loading-mac/. И тут: https://habr.com/ru/post/220961/.      
 И да - нам еще повезло что либа raylib собрана с корректным @rpath(да в XUIN каждая либа указывает откуда ее запускать лол), иначе без "патчинга" вообще ипользовать невозможно было бы.     
 Почему истинный бинарь raylib обозван "libraylib.4.2.0.dylib", хотя внутри назван "libraylib.420.dylib" остаеться загадкой, возможно кто собирал - тоже не смог осознать "преимущества UNIX" и запутался.  
   
