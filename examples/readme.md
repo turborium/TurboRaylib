@@ -1,1 +1,2 @@
-Right now the examples are only for Delphi, but you can easily convert them for Lazarus.
+## Examples for Delphi and Lazarus.  
+Works - ok on Windows, OSX, Linux.
