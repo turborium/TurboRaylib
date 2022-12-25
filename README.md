@@ -91,4 +91,5 @@ Ex: "libraylib.420.dylib -rpath @executable_path/".
   
 ### Заводим на Linux (Lazarus)
 Смотрите примеры, я завел и вы справитесь. Или нет, тогда поставьте Windows :)  
+![TurboRaylib](logo/mozoli.png)  
 
