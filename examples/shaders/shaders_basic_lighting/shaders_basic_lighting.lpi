@@ -60,8 +60,15 @@
     <Conditionals Value="// libs
 if TargetOS = &apos;darwin&apos; then
 begin
-  LinkerOptions += &apos; ../../output/osx/libraylib.420.dylib -rpath @executable_path/&apos;;
+  LinkerOptions += &apos; ../../output/osx/libraylib.dylib -rpath @executable_path/&apos;;
+  LibraryPath += &apos; ../../output/osx/&apos;;
   OutputDir := &apos;../../output/osx/&apos;;
+end;
+if TargetOS = &apos;linux&apos; then
+begin
+  LinkerOptions += &apos; ../../output/linux/libraylib.so -rpath=./&apos;;
+  LibraryPath += &apos; ../../output/linux/&apos;;
+  OutputDir := &apos;../../output/linux/&apos;;
 end;
 if TargetOS = &apos;win64&apos; then
 begin

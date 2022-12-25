@@ -39,13 +39,12 @@ unit raymath;
 
 interface
 
-{$INCLUDE raylib.inc}
-
 {$IFNDEF INDEPNDENT_RAYMATH}
 uses
   raylib;
 {$ENDIF}
 
+{$INCLUDE raylib.inc}
 
 const
   RAYMATH_VERSION = 1.5;

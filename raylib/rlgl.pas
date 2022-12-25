@@ -39,12 +39,12 @@ unit rlgl;
 
 interface
 
-{$INCLUDE raylib.inc}
-
 {$IFNDEF INDEPNDENT_RLGL}
 uses
   raylib;
 {$ENDIF}
+
+{$INCLUDE raylib.inc}
 
 const
   RLGL_VERSION = 4.0;

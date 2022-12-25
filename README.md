@@ -39,7 +39,7 @@ rlgl.h     | :heavy_check_mark: |
 Comiler     | Windows 32 | Windows 64 | OSX          | Linux        |
 ----------- | -------- | -------------| ------------ | ------------ |
 Delphi      | ✔        | ✔           | ❓ no tested | ❓ no tested |
-FreePascal  | ❓ no tested | ✔           | ✔       |❓ no tested |
+FreePascal  | ❓ no tested | ✔           | ✔       | ✔          |
 
 ---
 
@@ -88,5 +88,7 @@ Ex: "libraylib.420.dylib -rpath @executable_path/".
 Почему истинный бинарь raylib обозван "libraylib.4.2.0.dylib", хотя внутри назван "libraylib.420.dylib" остаеться загадкой, возможно кто собирал - тоже не смог осознать "преимущества UNIX" и запутался.  
   
 *Удачной долбежки!*
-
+  
+### Заводим на Linux (Lazarus)
+Смотрите примеры, я завел и вы справитесь. Или нет, тогда поставьте Windows :)  
 

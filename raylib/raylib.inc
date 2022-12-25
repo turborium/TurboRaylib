@@ -33,8 +33,5 @@
 // You can declare names of binary files for dll here, use LibName const.
 // const LibName = 'raylib32.dll'; // for example
 
-// INDEPNDENT_RLGL allows make rlgl.pas independent of raylib.pas
-{.$DEFINE INDEPNDENT_RLGL}
-
-// INDEPNDENT_RAYMATH allows make raymath.pas independent of raylib.pas
-{.$DEFINE INDEPNDENT_RAYMATH}
+// Define INDEPNDENT_RLGL to allow make rlgl.pas independent of raylib.pas
+// Define INDEPNDENT_RAYMATH to allow make raymath.pas independent of raylib.pas

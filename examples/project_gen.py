@@ -1,4 +1,4 @@
-def make_lpi_file(project_name, osx_lib_name, libs):
+def make_lpi_file(project_name, osx_lib_name, linux_lib_name, libs):
 	text_libs = ''
 	if 'reasings' in libs:
 		text_libs += '\n      <Unit>\n        <Filename Value="../../../raylib/extras/reasings.pas"/>\n        <IsPartOfProject Value="True"/>\n      </Unit>'
@@ -67,7 +67,14 @@ def make_lpi_file(project_name, osx_lib_name, libs):
 if TargetOS = &apos;darwin&apos; then
 begin
   LinkerOptions += &apos; ../../output/osx/{osx_lib_name} -rpath @executable_path/&apos;;
+  LibraryPath += &apos; ../../output/osx/&apos;;
   OutputDir := &apos;../../output/osx/&apos;;
+end;
+if TargetOS = &apos;linux&apos; then
+begin
+  LinkerOptions += &apos; ../../output/linux/{linux_lib_name} -rpath=./&apos;;
+  LibraryPath += &apos; ../../output/linux/&apos;;
+  OutputDir := &apos;../../output/linux/&apos;;
 end;
 if TargetOS = &apos;win64&apos; then
 begin
@@ -265,7 +272,7 @@ begin
     // when App opened from Finder, etc. This breaks load resources. 10/10.
     SetCurrentDir(ExtractFilePath(ParamStr(0)));
     {{$ENDIF}} 
-    
+
     Main();
   except
     on E: Exception do
@@ -319,11 +326,9 @@ def make_lazarus_project(params, index):
 
 	print(f'work with: "{project_name}"')
 	
-	
-	
 	# lpi
 	with open(os.path.join(dir, project_name + '.lpi'), 'w') as file:
-		file.write(make_lpi_file(project_name, 'libraylib.420.dylib', extra_libs))
+		file.write(make_lpi_file(project_name, 'libraylib.dylib', 'libraylib.so', extra_libs))
 	# lpr
 	with open(os.path.join(dir, project_name + '.lpr'), 'w') as file:
 		file.write(make_lpr_file(project_name, extra_libs))

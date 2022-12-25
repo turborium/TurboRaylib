@@ -43,7 +43,7 @@ begin
    LOG_DEBUG: write('[DEBUG] : ');
   end;
 
-  vprintf(text, args);
+  vprintf(text, args-4);
   writeln;
 end;
 
