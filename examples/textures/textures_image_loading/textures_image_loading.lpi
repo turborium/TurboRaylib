@@ -48,6 +48,9 @@
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
+    <Target>
+      <Filename Value="../../output/$(TargetOS)/textures_image_loading"/>
+    </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
       <OtherUnitFiles Value="../../../raylib"/>
@@ -56,23 +59,23 @@
     <Conditionals Value="// libs
 if TargetOS = &apos;darwin&apos; then
 begin
-  LinkerOptions += &apos; ../../output/osx/libraylib.dylib -rpath @executable_path/&apos;;
-  LibraryPath += &apos; ../../output/osx/&apos;;
-  OutputDir := &apos;../../output/osx/&apos;;
+  LinkerOptions += &apos; ../../output/darwin/libraylib.dylib -rpath @executable_path/&apos;;
+  LibraryPath += &apos; ../../output/darwin/&apos;;
+  // OutputDir := &apos;../../output/darwin/&apos;;
 end;
 if TargetOS = &apos;linux&apos; then
 begin
   LinkerOptions += &apos; ../../output/linux/libraylib.so -rpath=./&apos;;
   LibraryPath += &apos; ../../output/linux/&apos;;
-  OutputDir := &apos;../../output/linux/&apos;;
+  // OutputDir := &apos;../../output/linux/&apos;;
 end;
 if TargetOS = &apos;win64&apos; then
 begin
-  OutputDir := &apos;../../output/win64/&apos;;
+  // OutputDir := &apos;../../output/win64/&apos;;
 end;
 if TargetOS = &apos;win32&apos; then
 begin
-  OutputDir := &apos;../../output/win32/&apos;;
+  // OutputDir := &apos;../../output/win32/&apos;;
 end;"/>
     <Linking>
       <Debugging>

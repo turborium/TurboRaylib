@@ -58,6 +58,9 @@ def make_lpi_file(project_name, osx_lib_name, linux_lib_name, libs):
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
+    <Target>
+      <Filename Value="../../output/$(TargetOS)/{project_name}"/>
+    </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
       <OtherUnitFiles Value="../../../raylib{text_units}"/>
@@ -66,23 +69,23 @@ def make_lpi_file(project_name, osx_lib_name, linux_lib_name, libs):
     <Conditionals Value="// libs
 if TargetOS = &apos;darwin&apos; then
 begin
-  LinkerOptions += &apos; ../../output/osx/{osx_lib_name} -rpath @executable_path/&apos;;
-  LibraryPath += &apos; ../../output/osx/&apos;;
-  OutputDir := &apos;../../output/osx/&apos;;
+  LinkerOptions += &apos; ../../output/darwin/{osx_lib_name} -rpath @executable_path/&apos;;
+  LibraryPath += &apos; ../../output/darwin/&apos;;
+  // OutputDir := &apos;../../output/darwin/&apos;;
 end;
 if TargetOS = &apos;linux&apos; then
 begin
   LinkerOptions += &apos; ../../output/linux/{linux_lib_name} -rpath=./&apos;;
   LibraryPath += &apos; ../../output/linux/&apos;;
-  OutputDir := &apos;../../output/linux/&apos;;
+  // OutputDir := &apos;../../output/linux/&apos;;
 end;
 if TargetOS = &apos;win64&apos; then
 begin
-  OutputDir := &apos;../../output/win64/&apos;;
+  // OutputDir := &apos;../../output/win64/&apos;;
 end;
 if TargetOS = &apos;win32&apos; then
 begin
-  OutputDir := &apos;../../output/win32/&apos;;
+  // OutputDir := &apos;../../output/win32/&apos;;
 end;"/>
     <Linking>
       <Debugging>
