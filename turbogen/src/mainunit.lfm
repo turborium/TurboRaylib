@@ -97,6 +97,7 @@ object FormMain: TFormMain
         Top = 0
         Width = 636
         Align = alClient
+        OnChange = EditMainUnitNameChange
         TabOrder = 0
         Text = 'ProjectMain'
         TextHint = 'Enter Main Unit Name'
@@ -137,6 +138,7 @@ object FormMain: TFormMain
         Top = 0
         Width = 572
         Align = alClient
+        OnChange = EditProjectPathChange
         TabOrder = 0
         TextHint = 'Select Path For Your Project ->'
       end

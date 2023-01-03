@@ -56,19 +56,18 @@ type
     procedure CopyBin(SrcName, DstName: string; Dir: string='');
     procedure CopyRaylibBindings();
     procedure CopyDlls();
-    function GetAbsoluteExePath: string;
-    procedure MakeDelphiProject;
-    procedure MakeLazarusProject;
-    procedure MakeMainUnitFile;
+    function GetAbsoluteExePath(): string;
+    procedure MakeDelphiProject();
+    procedure MakeLazarusProject();
+    function MakeMainUnitFile(): Boolean;
     procedure MakeSourceFile(SrcName, DstName: string);
-    procedure Validate;
+    procedure Validate();
   public const
     DefaultProjectName = 'Project';
     DefaultMainUnitName = 'ProjectMain';
   public
     class function ValidateProjectName(ProjectName: string): Boolean;
     class function ValidateMainUnitName(UnitName: string): Boolean;
-    class function ValidateProjectPath(ProjectPath: string): Boolean;
     class function ValidateOutputPath(OutputPath: string): Boolean;
 
     property TurboRaylibPath: string read FTurboRaylibPath;
@@ -83,7 +82,7 @@ type
     constructor Create();
     destructor Destroy(); override;
 
-    procedure Make();
+    function Make(): Boolean;
   end;
 
 implementation
@@ -149,11 +148,6 @@ begin
     end;
 end;
 
-class function TProjectGenerator.ValidateProjectPath(ProjectPath: string): Boolean;
-begin
-  Result := not DirectoryExists(ProjectPath);
-end;
-
 class function TProjectGenerator.ValidateOutputPath(OutputPath: string): Boolean;
 begin
   Result := not MatchText(OutputPath, InvalidFileNameChars);
@@ -185,7 +179,7 @@ begin
   Result := UniDelim(IncludeTrailingBackslash(Result));
 end;
 
-function TProjectGenerator.CalcExeName: string;
+function TProjectGenerator.CalcExeName(): string;
 var
   Path: string;
 begin
@@ -235,7 +229,7 @@ begin
   end;
 end;
 
-function TProjectGenerator.GetAbsoluteExePath: string;
+function TProjectGenerator.GetAbsoluteExePath(): string;
 begin
   Result := TrimFilename(ConcatPaths([FProjectPath, FOutputPath]));
 end;
@@ -268,9 +262,12 @@ begin
   end;
 end;
 
-procedure TProjectGenerator.MakeMainUnitFile();
+function TProjectGenerator.MakeMainUnitFile(): Boolean;
 begin
+  if FileExists(ConcatPaths([ProjectPath, MainUnitName + '.pas'])) then
+    exit(True);
   MakeSourceFile('/turbogen/templates/main_unit_template.pas', MainUnitName + '.pas');
+  Result := False;
 end;
 
 procedure TProjectGenerator.MakeLazarusProject();
@@ -309,7 +306,7 @@ begin
     raise Exception.Create('Invalid OsSet, at least one OS must be selected!');
 end;
 
-procedure TProjectGenerator.Make();
+function TProjectGenerator.Make(): Boolean;
 begin
   Validate();
 
@@ -330,7 +327,7 @@ begin
   end;
 
   // make main pascal file
-  MakeMainUnitFile();
+  Result := MakeMainUnitFile();
 
   // copy dll's
   CopyDlls();

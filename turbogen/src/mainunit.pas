@@ -67,7 +67,9 @@ type
     procedure ButtonMakeClick(Sender: TObject);
     procedure ButtonProjectFolderClick(Sender: TObject);
     procedure CheckBoxOutputPathChange(Sender: TObject);
+    procedure EditMainUnitNameChange(Sender: TObject);
     procedure EditProjectNameChange(Sender: TObject);
+    procedure EditProjectPathChange(Sender: TObject);
     procedure FormChangeBounds(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -81,7 +83,7 @@ var
 implementation
 
 uses
-  Math;
+  Math{$IFDEF MSWINDOWS}, WinDirs{$ENDIF};
 
 {$R *.lfm}
 
@@ -90,11 +92,17 @@ uses
 procedure TFormMain.EditProjectNameChange(Sender: TObject);
 begin
   EditMainUnitName.Text := EditProjectName.Text + 'Main';
+  EditProjectPath.Text := ConcatPaths([{$IFDEF MSWINDOWS}GetWindowsSpecialDir(CSIDL_PERSONAL){$ELSE}GetUserDir(){$ENDIF}, EditProjectName.Text]);
+end;
+
+procedure TFormMain.EditProjectPathChange(Sender: TObject);
+begin
 end;
 
 procedure TFormMain.ButtonMakeClick(Sender: TObject);
 var
   Generator: TProjectGenerator;
+  NoGenMain: Boolean;
 begin
   Generator := TProjectGenerator.Create();
   try
@@ -133,7 +141,25 @@ begin
 
     // make
     try
-      Generator.Make();
+      NoGenMain := Generator.Make();
+
+      if NoGenMain then
+      begin
+        MessageDlg('Info', 'The MainUnit already exists, it''s generation is skipped!',
+          TMsgDlgType.mtWarning, [TMsgDlgBtn.mbOK], 0);
+      end;
+
+      {$IFDEF MSWINDOWS}
+      if MessageDlg('Success', 'The project was created successfully!'#10'Open the folder?',
+        TMsgDlgType.mtConfirmation, [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0) = mrYes then
+      begin
+        SysUtils.ExecuteProcess('explorer.exe', Generator.ProjectPath, []);
+      end;
+      {$ELSE}
+      MessageDlg('Success', 'The project was created successfully!',
+        TMsgDlgType.mtInformation, [TMsgDlgBtn.mbOK], 0);
+      {$ENDIF}
+
     except
       on E: Exception do
         MessageDlg('Error', E.Message, TMsgDlgType.mtError, [TMsgDlgBtn.mbOK], 0);
@@ -145,13 +171,17 @@ end;
 
 procedure TFormMain.ButtonProjectFolderClick(Sender: TObject);
 begin
-  SelectDirectoryDialog.Execute;
-  EditProjectPath.Text := SelectDirectoryDialog.FileName;
+  if SelectDirectoryDialog.Execute then
+    EditProjectPath.Text := SelectDirectoryDialog.FileName;
 end;
 
 procedure TFormMain.CheckBoxOutputPathChange(Sender: TObject);
 begin
   EditOutputPath.Enabled := CheckBoxOutputPath.Checked;
+end;
+
+procedure TFormMain.EditMainUnitNameChange(Sender: TObject);
+begin
 end;
 
 procedure TFormMain.FormChangeBounds(Sender: TObject);
@@ -182,6 +212,12 @@ begin
   CheckGroupSupportOs.Checked[1] := {$IFDEF MSWINDOWS}True{$ELSE}False{$ENDIF};// win x64
   CheckGroupSupportOs.Checked[2] := {$IFDEF DARWIN}True{$ELSE}False{$ENDIF};// osx
   CheckGroupSupportOs.Checked[3] := {$IFDEF LINUX}True{$ELSE}False{$ENDIF};// linux
+
+  // default path
+  SelectDirectoryDialog.FileName := {$IFDEF MSWINDOWS}GetWindowsSpecialDir(CSIDL_PERSONAL){$ELSE}GetUserDir(){$ENDIF};
+
+  // temp hack
+  EditProjectNameChange(nil);
 end;
 
 procedure TFormMain.ChangeBounds(ALeft, ATop, AWidth, AHeight: Integer; AKeepBase: Boolean);
