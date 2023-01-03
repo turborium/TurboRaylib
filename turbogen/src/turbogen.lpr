@@ -17,6 +17,7 @@ uses
 
 begin
   RequireDerivedFormResource:=True;
+  Application.Title:='TurboGen';
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TFormMain, FormMain);

@@ -3,7 +3,7 @@ object FormMain: TFormMain
   Height = 585
   Top = 632
   Width = 834
-  Caption = 'FormMain'
+  Caption = 'TurboGen'
   ClientHeight = 585
   ClientWidth = 834
   Constraints.MinWidth = 640
