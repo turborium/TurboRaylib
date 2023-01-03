@@ -43,8 +43,12 @@ FreePascal  | ❓ no tested | ✔           | ✔       | ✔          |
 
 ---
 
+## You can use TurboGen for generate new TurboRaylib project for Delphi/Lazarus and all OS 
+![TurboRaylib](logo/generator.png)
+
 ### How to use?
-Just add the "raylib" folder to your project, put the necessary dll next to the exe and get a fun!
+Just add the "raylib" folder to your project, put the necessary dll next to the exe and get a fun!  
+Or use turbogen application.
 
 **Notes:**
 - Some Raylib functions require the use of pointers, don't forget to enable ```{$POINTERMATH ON}``` option in your source code! 
