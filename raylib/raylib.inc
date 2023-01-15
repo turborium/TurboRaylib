@@ -1,4 +1,4 @@
-// ------------------------------------------------------------------------------------------------------------------
+﻿// ------------------------------------------------------------------------------------------------------------------
 //  ▄████▄▓██   ██▓ ▄▄▄▄   ▓█████  ██▀███   ██▓███    ██████▓██   ██▓ ▄████▄   ██░ ██  ▒█████    ██████  ██▓  ██████
 // ▒██▀ ▀█ ▒██  ██▒▓█████▄ ▓█   ▀ ▓██ ▒ ██▒▓██░  ██▒▒██    ▒ ▒██  ██▒▒██▀ ▀█  ▓██░ ██▒▒██▒  ██▒▒██    ▒ ▓██▒▒██    ▒
 // ▒▓█    ▄ ▒██ ██░▒██▒ ▄██▒███   ▓██ ░▄█ ▒▓██░ ██▓▒░ ▓██▄    ▒██ ██░▒▓█    ▄ ▒██▀▀██░▒██░  ██▒░ ▓██▄   ▒██▒░ ▓██▄
@@ -24,11 +24,14 @@
 //
 //  Headers licensed under an unmodified MIT license, that allows static linking with closed source software
 //
-//  Copyright (c) 2022-2022 Turborium (https://github.com/turborium/TurboRaylib)
+//  Copyright (c) 2022-2023 Turborium (https://github.com/turborium/TurboRaylib)
 // -------------------------------------------------------------------------------------------------------------------
 
 // Declare RAY_STATIC for static linking. You will have to deal with adding lib's.
 {.$DEFINE RAY_STATIC}
+
+// Some functions from RLGL trunk
+{.$DEFINE RAY_RLGL_BACKPORT}
 
 // You can declare names of binary files for dll here, use LibName const.
 // const LibName = 'raylib32.dll'; // for example

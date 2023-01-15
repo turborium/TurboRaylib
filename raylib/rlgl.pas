@@ -371,6 +371,16 @@ const
   RL_SHADER_ATTRIB_VEC3  = TRlShaderAttributeDataType(2); // Shader attribute type: vec3 (3 float)
   RL_SHADER_ATTRIB_VEC4  = TRlShaderAttributeDataType(3); // Shader attribute type: vec4 (4 float)
 
+{$IFDEF RAY_RLGL_BACKPORT}
+// Face culling mode
+type
+  PRlCullMode = ^TRlCullMode;
+  TRlCullMode = Integer;
+const
+  RL_CULL_FACE_FRONT = TRlCullMode(0);
+  RL_CULL_FACE_BACK = TRlCullMode(1);
+{$ENDIF}
+
 //------------------------------------------------------------------------------------
 // Functions Declaration - Matrix operations
 //------------------------------------------------------------------------------------
@@ -503,6 +513,10 @@ procedure rlDisableDepthMask();
 procedure rlEnableBackfaceCulling();
 // Disable backface culling
 procedure rlDisableBackfaceCulling();
+{$IFDEF RAY_RLGL_BACKPORT}
+// Set face culling mode
+procedure rlSetCullFace(Mode: TRlCullMode);
+{$ENDIF}
 // Enable scissor test
 procedure rlEnableScissorTest();
 // Disable scissor test
@@ -737,12 +751,12 @@ procedure rlLoadDrawQuad();
 
 implementation
 
-{$IF not Declared(RAYLIB_VERSION)}
-{$IFDEF FPC}
 uses
-  Math;
+  Math
+{$IFDEF RAY_RLGL_BACKPORT}
+  ,{$IFNDEF FPC}OpenGL{$ELSE}GL{$ENDIF}
 {$ENDIF}
-{$ENDIF}
+  ;
 
 // Functions Declaration - Matrix operations
 
@@ -1109,6 +1123,18 @@ procedure rlDisableBackfaceCulling();
 begin
   Lib_rlDisableBackfaceCulling();
 end;
+
+{$IFDEF RAY_RLGL_BACKPORT}
+procedure rlSetCullFace(Mode: TRlCullMode);
+begin
+  case Mode of
+    RL_CULL_FACE_BACK:
+      glCullFace(GL_BACK);
+    RL_CULL_FACE_FRONT:
+      glCullFace(GL_FRONT);
+  end;
+end;
+{$ENDIF}
 
 procedure Lib_rlEnableScissorTest();
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlEnableScissorTest';
