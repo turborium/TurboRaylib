@@ -47,7 +47,7 @@ begin
   rlBegin(RL_TRIANGLES);
     rlColor4ub(Color.R, Color.G, Color.B, Color.A);
 
-    for I := 0 to Rings + 1 do
+    for I := 0 to Rings + 0 do
     begin
       for J := 0 to Slices - 1 do
       begin
