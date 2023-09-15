@@ -2,12 +2,11 @@
 *
 *   raylib [text] example - Text Writing Animation
 *
-*   Example originally created with raylib 1.4, last time updated with raylib 1.4
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2016-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2016-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit text_writing_anim_src;

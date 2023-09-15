@@ -6,7 +6,7 @@
         <FrameworkType>None</FrameworkType>
         <MainSource>shapes_easings_ball_anim.dpr</MainSource>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <ProjectGuid>{F3AF60F8-DA40-4963-B747-000000000068}</ProjectGuid>
+        <ProjectGuid>{F3AF60F8-DA40-4963-B747-000000000071}</ProjectGuid>
         <ProjectVersion>19.4</ProjectVersion>
         <TargetedPlatforms>3</TargetedPlatforms>
     </PropertyGroup>

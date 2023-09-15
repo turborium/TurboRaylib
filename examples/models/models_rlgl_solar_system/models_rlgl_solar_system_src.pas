@@ -4,12 +4,11 @@
 *
 *   NOTE: This example uses [rlgl] module functionality (pseudo-OpenGL 1.1 style coding)
 *
-*   Example originally created with raylib 2.5, last time updated with raylib 4.0
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2018-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2018-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit models_rlgl_solar_system_src;
@@ -104,8 +103,6 @@ begin
   Camera.Fovy := 45.0;                                   // Camera field-of-view Y
   Camera.Projection := CAMERA_PERSPECTIVE;               // Camera mode type
 
-  SetCameraMode(Camera, CAMERA_FREE);
-
   RotationSpeed := 0.2;         // General system rotation speed
 
   EarthRotation := 0.0;         // Rotation of earth around itself (days) in degrees
@@ -121,7 +118,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_ORBITAL);
 
     EarthRotation := EarthRotation + (5.0 * RotationSpeed);
     EarthOrbitRotation := EarthOrbitRotation + (365 / 360.0 * (5.0 * RotationSpeed) * RotationSpeed);

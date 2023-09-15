@@ -2,14 +2,13 @@
 *
 *   raylib [shaders] example - Mesh instancing
 *
-*   Example originally created with raylib 3.7, last time updated with raylib 4.2
-*
 *   Example contributed by @seanpringle and reviewed by Max (@moliad) and Ramon Santamaria (@raysan5)
 *
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2020-2022 @seanpringle, Max (@moliad) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2020-2023 @seanpringle, Max (@moliad) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit shaders_mesh_instancing_src;
@@ -114,9 +113,6 @@ begin
   MatDefault := LoadMaterialDefault();
   MatDefault.Maps[MATERIAL_MAP_DIFFUSE].Color := BLUE;
 
-  // Set an orbital camera mode
-  SetCameraMode(Camera, CAMERA_ORBITAL);
-
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
 
@@ -125,7 +121,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_ORBITAL);
 
     // Update the light shader with the camera view position
     CameraPos := [Camera.Position.X, Camera.Position.Y, Camera.Position.Z];

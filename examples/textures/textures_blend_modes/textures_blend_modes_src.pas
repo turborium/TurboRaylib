@@ -4,14 +4,13 @@
 *
 *   NOTE: Images are loaded in CPU memory (RAM); textures are loaded in GPU memory (VRAM)
 *
-*   Example originally created with raylib 3.5, last time updated with raylib 3.5
-*
 *   Example contributed by Karlo Licudine (@accidentalrebel) and reviewed by Ramon Santamaria (@raysan5)
 *
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2020-2022 Karlo Licudine (@accidentalrebel)
+*   Copyright (c) 2020-2023 Karlo Licudine (@accidentalrebel)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit textures_blend_modes_src;

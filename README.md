@@ -1,8 +1,8 @@
-![TurboRaylib](logo/TurboRaylib.png)
+﻿![TurboRaylib](logo/TurboRaylib.png)
 
 ### **TurboRaylib is a cool and clean Raylib bindings for Object Pascal (Delphi and FreePascal)**
 
-**TurboRaylib sticks to the stable versions of RayLib, the current version is 4.2.**  
+**TurboRaylib sticks to the stable versions of RayLib, the current version is 4.5.0**
 
 Unlike other bindings, this version works stably in Win32 and Win64 in Delphi and Lazarus.  
 The raylib library has a lot of ABI problems when using DLLs, all known problems have been fixed in these bindings.  
@@ -13,7 +13,7 @@ TurboRaylib has a lot of test coverage (see examples).
 - "binaries" - Dynamic libraries suitable for TurboRaylib bindings
 - "examples" - Many examples for Delphi
 
-You can download official DLL here: https://github.com/raysan5/raylib/releases/tag/4.2.0  
+You can download official DLL here: https://github.com/raysan5/raylib/releases/tag/4.5.0
 
 ---
 
@@ -62,11 +62,6 @@ Or use turbogen application.
 4) PROFIT!  
 
 ### Заводим на OSX (Lazarus)
-Первое - надо принять что UNIX создан для страдания.   
-Второе - использование хоть чего-то не стандартного в UNIX это боль (например не С-89).  
-Третье - динамические библиотеки в UNIX - боль.  
-Главное - UNIX - SUXXX.  
-UNIX-оводы, в большинстве своем, только делают вид что "знаю как все работает", по факту - выполняют набор магических ритуалов в консоли.
 
 #### Меньше страданий
 1) Скачиваем бинарь raylib для osx. (https://github.com/raysan5/raylib/releases).  
@@ -87,9 +82,9 @@ UNIX-оводы, в большинстве своем, только делают
 то надо переименовать "libraylib.4.2.0.dylib"(истинный бинарь) в "libraylib.420.dylib" и передавать линкуру его.   
 Ex: "libraylib.420.dylib -rpath @executable_path/".    
   
-В целом "долбежка" описана тут: http://clarkkromenaker.com/post/library-dynamic-loading-mac/. И тут: https://habr.com/ru/post/220961/.      
+В целом "инфа" описана тут: http://clarkkromenaker.com/post/library-dynamic-loading-mac/. И тут: https://habr.com/ru/post/220961/.
 И да - нам еще повезло что либа raylib собрана с корректным @rpath(да в XUIN каждая либа указывает откуда ее запускать лол), иначе без "патчинга" вообще ипользовать невозможно было бы.     
-Почему истинный бинарь raylib обозван "libraylib.4.2.0.dylib", хотя внутри назван "libraylib.420.dylib" остаеться загадкой, возможно кто собирал - тоже не смог осознать "преимущества UNIX" и запутался.  
+Почему истинный бинарь raylib обозван "libraylib.4.5.0.dylib", хотя внутри назван "libraylib.420.dylib" остаеться загадкой, возможно кто собирал - тоже не смог осознать "преимущества UNIX" и запутался.
   
 *Удачной долбежки!*
   

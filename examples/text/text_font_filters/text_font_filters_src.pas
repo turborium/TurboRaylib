@@ -6,12 +6,11 @@
 *   display of the font when scaling it to different sizes, that way, it's not required
 *   to generate multiple fonts at multiple sizes (as long as the scaling is not very different)
 *
-*   Example originally created with raylib 1.3, last time updated with raylib 4.2
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
 *   Copyright (c) 2015-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit text_font_filters_src;

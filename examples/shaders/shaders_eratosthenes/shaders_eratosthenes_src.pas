@@ -14,14 +14,13 @@
 *
 *   NOTE: Shaders used in this example are #version 330 (OpenGL 3.3).
 *
-*   Example originally created with raylib 2.5, last time updated with raylib 4.0
-*
 *   Example contributed by ProfJski and reviewed by Ramon Santamaria (@raysan5)
 *
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2019-2022 ProfJski and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2019-2023 ProfJski and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit shaders_eratosthenes_src;

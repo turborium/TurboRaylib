@@ -2,12 +2,11 @@
 *
 *   raylib [core] example - World to screen
 *
-*   Example originally created with raylib 1.3, last time updated with raylib 1.4
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2015-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2015-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit core_world_screen_src;
@@ -52,7 +51,7 @@ begin
   CubePosition := TVector3.Create(0.0, 0.0, 0.0);
   CubeScreenPosition := TVector2.Create(0.0, 0.0);
 
-  SetCameraMode(Camera, CAMERA_FREE); // Set a free camera mode
+  DisableCursor(); // Limit cursor to relative movement inside the window
 
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
@@ -64,7 +63,7 @@ begin
     //-------------------------------------------------------------------------------------------
     // TODO: Update your variables here
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_THIRD_PERSON);
 
     // Calculate cube screen space position (with a little offset to be in top)
     CubeScreenPosition := GetWorldToScreen(TVector3.Create(CubePosition.X, CubePosition.Y + 2.5, CubePosition.Z), Camera);
@@ -93,13 +92,10 @@ begin
         BLACK
       );
 
-      DrawText(
-        UTF8String('Text is always on top of the cube'),
-        Trunc((screenWidth - MeasureText(UTF8String('Text is always on top of the cube'), 20)) / 2),
-        25,
-        20,
-        GRAY
-      );
+      DrawText(TextFormat(UTF8String('Cube position in screen space coordinates: [%i, %i]'),
+        Integer(Trunc(cubeScreenPosition.X)),
+        Integer(Trunc(CubeScreenPosition.Y))), 10, 10, 20, LIME);
+      DrawText(UTF8String('Text 2d should be always on top of the cube'), 10, 40, 20, GRAY);
 
     EndDrawing();
     //-------------------------------------------------------------------------------------------

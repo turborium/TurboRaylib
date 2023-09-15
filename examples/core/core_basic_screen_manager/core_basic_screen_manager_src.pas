@@ -4,12 +4,11 @@
 *
 *   NOTE: This example illustrates a very simple screen manager based on a states machines
 *
-*   Example originally created with raylib 4.0, last time updated with raylib 4.0
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2021-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2021-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit core_basic_screen_manager_src;

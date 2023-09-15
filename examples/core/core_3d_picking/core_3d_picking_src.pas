@@ -2,12 +2,11 @@
 *
 *   raylib [core] example - Picking in 3d mode
 *
-*   Example originally created with raylib 1.3, last time updated with raylib 4.0
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2015-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2015-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit core_3d_picking_src;
@@ -49,16 +48,14 @@ begin
   Camera.Target := TVector3.Create(0.0, 0.0, 0.0);      // Camera looking at point
   Camera.Up := TVector3.Create(0.0, 1.0, 0.0);          // Camera up vector (rotation towards target)
   Camera.Fovy := 45.0;                                  // Camera field-of-view Y
-  Camera.Projection := CAMERA_PERSPECTIVE;              // Camera mode type
+  Camera.Projection := CAMERA_PERSPECTIVE;              // Camera projection type
 
   CubePosition := TVector3.Create(0.0, 1.0, 0.0);
   CubeSize := TVector3.Create(2.0, 2.0, 2.0);
 
   Ray := Default(TRay); // Picking line ray
 
-  Collision := Default(TRayCollision);
-
-  SetCameraMode(Camera, CAMERA_FREE); // Set a free camera mode
+  Collision := Default(TRayCollision); // Ray collision hit info
 
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
@@ -70,7 +67,16 @@ begin
     //-------------------------------------------------------------------------------------------
     // TODO: Update your variables here
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    if IsCursorHidden() then UpdateCamera(@Camera, CAMERA_FIRST_PERSON);
+
+    // Toggle camera controls
+    if IsMouseButtonPressed(MOUSE_BUTTON_RIGHT) then
+    begin
+      if IsCursorHidden() then
+        EnableCursor()
+      else
+        DisableCursor();
+    end;
 
     if IsMouseButtonPressed(MOUSE_BUTTON_LEFT) then
     begin
@@ -117,10 +123,12 @@ begin
 
       EndMode3D();
 
-      DrawText(UTF8String('Try selecting the box with mouse!'), 240, 10, 20, DARKGRAY);
+      DrawText(UTF8String('Try clicking on the box with your mouse!'), 240, 10, 20, DARKGRAY);
 
       if Collision.Hit then
         DrawText(UTF8String('BOX SELECTED'), (ScreenWidth - MeasureText(UTF8String('BOX SELECTED'), 30)) div 2, Trunc(ScreenHeight * 0.1), 30, GREEN);
+
+      DrawText(UTF8String('Right click mouse to toggle camera controls'), 10, 430, 10, GRAY);
 
       DrawFPS(10, 10);
 

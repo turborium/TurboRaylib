@@ -2,12 +2,11 @@
 *
 *   raylib [core] example - Window should close
 *
-*   Example originally created with raylib 4.2, last time updated with raylib 4.2
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2013-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2013-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit core_window_should_close_src;

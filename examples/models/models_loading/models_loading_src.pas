@@ -15,12 +15,11 @@
 *     - M3D  > Binary file format. Model 3D format:
 *              https://bztsrc.gitlab.io/model3d
 *
-*   Example originally created with raylib 2.0, last time updated with raylib 4.2
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
 *   Copyright (c) 2014-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit models_loading_src;
@@ -80,7 +79,7 @@ begin
   // NOTE: bounds are calculated from the original size of the model,
   // if model is scaled on drawing, bounds must be also scaled
 
-  SetCameraMode(Camera, CAMERA_FREE);     // Set a free camera mode
+  DisableCursor();                // Limit cursor to relative movement inside the window
 
   Selected := False;          // Selected object flag
 
@@ -92,7 +91,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_FIRST_PERSON);
 
     // Load new models/textures on drag&drop
     if IsFileDropped() then

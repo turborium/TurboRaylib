@@ -51,6 +51,15 @@
         <Projects Include="models_heightmap\models_heightmap.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="models_draw_cube_texture\models_draw_cube_texture.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_loading_m3d\models_loading_m3d.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="models_skybox\models_skybox.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -203,14 +212,41 @@
     <Target Name="models_heightmap:Make">
         <MSBuild Projects="models_heightmap\models_heightmap.dproj" Targets="Make"/>
     </Target>
+    <Target Name="models_draw_cube_texture">
+        <MSBuild Projects="models_draw_cube_texture\models_draw_cube_texture.dproj"/>
+    </Target>
+    <Target Name="models_draw_cube_texture:Clean">
+        <MSBuild Projects="models_draw_cube_texture\models_draw_cube_texture.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_draw_cube_texture:Make">
+        <MSBuild Projects="models_draw_cube_texture\models_draw_cube_texture.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_loading_m3d">
+        <MSBuild Projects="models_loading_m3d\models_loading_m3d.dproj"/>
+    </Target>
+    <Target Name="models_loading_m3d:Clean">
+        <MSBuild Projects="models_loading_m3d\models_loading_m3d.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_loading_m3d:Make">
+        <MSBuild Projects="models_loading_m3d\models_loading_m3d.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="models_skybox">
+        <MSBuild Projects="models_skybox\models_skybox.dproj"/>
+    </Target>
+    <Target Name="models_skybox:Clean">
+        <MSBuild Projects="models_skybox\models_skybox.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="models_skybox:Make">
+        <MSBuild Projects="models_skybox\models_skybox.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="models_animation;models_billboard;models_box_collisions;models_cubicmap;models_first_person_maze;models_geometric_shapes;models_mesh_generation;models_mesh_picking;models_loading;models_loading_gltf;models_loading_vox;models_orthographic_projection;models_rlgl_solar_system;models_yaw_pitch_roll;models_waving_cubes;models_heightmap"/>
+        <CallTarget Targets="models_animation;models_billboard;models_box_collisions;models_cubicmap;models_first_person_maze;models_geometric_shapes;models_mesh_generation;models_mesh_picking;models_loading;models_loading_gltf;models_loading_vox;models_orthographic_projection;models_rlgl_solar_system;models_yaw_pitch_roll;models_waving_cubes;models_heightmap;models_draw_cube_texture;models_loading_m3d;models_skybox"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="models_animation:Clean;models_billboard:Clean;models_box_collisions:Clean;models_cubicmap:Clean;models_first_person_maze:Clean;models_geometric_shapes:Clean;models_mesh_generation:Clean;models_mesh_picking:Clean;models_loading:Clean;models_loading_gltf:Clean;models_loading_vox:Clean;models_orthographic_projection:Clean;models_rlgl_solar_system:Clean;models_yaw_pitch_roll:Clean;models_waving_cubes:Clean;models_heightmap:Clean"/>
+        <CallTarget Targets="models_animation:Clean;models_billboard:Clean;models_box_collisions:Clean;models_cubicmap:Clean;models_first_person_maze:Clean;models_geometric_shapes:Clean;models_mesh_generation:Clean;models_mesh_picking:Clean;models_loading:Clean;models_loading_gltf:Clean;models_loading_vox:Clean;models_orthographic_projection:Clean;models_rlgl_solar_system:Clean;models_yaw_pitch_roll:Clean;models_waving_cubes:Clean;models_heightmap:Clean;models_draw_cube_texture:Clean;models_loading_m3d:Clean;models_skybox:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="models_animation:Make;models_billboard:Make;models_box_collisions:Make;models_cubicmap:Make;models_first_person_maze:Make;models_geometric_shapes:Make;models_mesh_generation:Make;models_mesh_picking:Make;models_loading:Make;models_loading_gltf:Make;models_loading_vox:Make;models_orthographic_projection:Make;models_rlgl_solar_system:Make;models_yaw_pitch_roll:Make;models_waving_cubes:Make;models_heightmap:Make"/>
+        <CallTarget Targets="models_animation:Make;models_billboard:Make;models_box_collisions:Make;models_cubicmap:Make;models_first_person_maze:Make;models_geometric_shapes:Make;models_mesh_generation:Make;models_mesh_picking:Make;models_loading:Make;models_loading_gltf:Make;models_loading_vox:Make;models_orthographic_projection:Make;models_rlgl_solar_system:Make;models_yaw_pitch_roll:Make;models_waving_cubes:Make;models_heightmap:Make;models_draw_cube_texture:Make;models_loading_m3d:Make;models_skybox:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

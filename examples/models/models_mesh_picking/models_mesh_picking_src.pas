@@ -2,14 +2,13 @@
 *
 *   raylib [models] example - Mesh picking in 3d mode, ground plane, triangle, mesh
 *
-*   Example originally created with raylib 1.7, last time updated with raylib 4.0
-*
 *   Example contributed by Joel Davis (@joeld42) and reviewed by Ramon Santamaria (@raysan5)
 *
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2017-2022 Joel Davis (@joeld42) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2017-2023 Joel Davis (@joeld42) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit models_mesh_picking_src;
@@ -92,8 +91,6 @@ begin
   Sp := TVector3.Create(-30.0, 5.0, 5.0);
   Sr := 4.0;
 
-  SetCameraMode(Camera, CAMERA_FREE); // Set a free camera mode
-
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
 
@@ -102,7 +99,16 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    if IsCursorHidden() then UpdateCamera(@Camera, CAMERA_FIRST_PERSON);          // Update camera
+
+    // Toggle camera controls
+    if IsMouseButtonPressed(MOUSE_BUTTON_RIGHT) then
+    begin
+      if IsCursorHidden() then
+        EnableCursor()
+      else
+        DisableCursor();
+    end;
 
     // Display information about closest hit
     Collision := Default(TRayCollision);

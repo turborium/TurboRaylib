@@ -1,15 +1,4 @@
 ﻿// ------------------------------------------------------------------------------------------------------------------
-//  ▄████▄▓██   ██▓ ▄▄▄▄   ▓█████  ██▀███   ██▓███    ██████▓██   ██▓ ▄████▄   ██░ ██  ▒█████    ██████  ██▓  ██████
-// ▒██▀ ▀█ ▒██  ██▒▓█████▄ ▓█   ▀ ▓██ ▒ ██▒▓██░  ██▒▒██    ▒ ▒██  ██▒▒██▀ ▀█  ▓██░ ██▒▒██▒  ██▒▒██    ▒ ▓██▒▒██    ▒
-// ▒▓█    ▄ ▒██ ██░▒██▒ ▄██▒███   ▓██ ░▄█ ▒▓██░ ██▓▒░ ▓██▄    ▒██ ██░▒▓█    ▄ ▒██▀▀██░▒██░  ██▒░ ▓██▄   ▒██▒░ ▓██▄
-// ▒▓▓▄ ▄██▒░ ▐██▓░▒██░█▀  ▒▓█  ▄ ▒██▀▀█▄  ▒██▄█▓▒ ▒  ▒   ██▒ ░ ▐██▓░▒▓▓▄ ▄██▒░▓█ ░██ ▒██   ██░  ▒   ██▒░██░  ▒   ██▒
-// ▒ ▓███▀ ░░ ██▒▓░░▓█  ▀█▓░▒████▒░██▓ ▒██▒▒██▒ ░  ░▒██████▒▒ ░ ██▒▓░▒ ▓███▀ ░░▓█▒░██▓░ ████▓▒░▒██████▒▒░██░▒██████▒▒
-// ░ ░▒ ▒  ░ ██▒▒▒ ░▒▓███▀▒░░ ▒░ ░░ ▒▓ ░▒▓░▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░  ██▒▒▒ ░ ░▒ ▒  ░ ▒ ░░▒░▒░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░░▓  ▒ ▒▓▒ ▒ ░
-//   ░  ▒  ▓██ ░▒░ ▒░▒   ░  ░ ░  ░  ░▒ ░ ▒░░▒ ░     ░ ░▒  ░ ░▓██ ░▒░   ░  ▒    ▒ ░▒░ ░  ░ ▒ ▒░ ░ ░▒  ░ ░ ▒ ░░ ░▒  ░ ░
-// ░       ▒ ▒ ░░   ░    ░    ░     ░░   ░ ░░       ░  ░  ░  ▒ ▒ ░░  ░         ░  ░░ ░░ ░ ░ ▒  ░  ░  ░   ▒ ░░  ░  ░
-// ░ ░     ░ ░      ░         ░  ░   ░                    ░  ░ ░     ░ ░       ░  ░  ░    ░ ░        ░   ░        ░
-// ░       ░ ░           ░                                   ░ ░     ░
-// ------------------------------------------------------------------------------------------------------------------
 //    _  __ ________       _  __ ______     _ ________         _  __ ________________
 //   _  __ ____  __/___  ___________  /__________  __ \_____ _____  ____  /__(_)__  /_
 //       _  __  /  _  / / /_  ___/_  __ \  __ \_  /_/ /  __ `/_  / / /_  /__  /__  __ \
@@ -17,10 +6,10 @@
 //          /_/    \__,_/ /_/    /_.___/\____//_/ |_| \__,_/ _\__, / /_/  /_/  /_.___/
 //                                                           /____/
 //
-//  TurboRaylib - Delphi and FreePascal headers for Raylib 4.2.
+//  TurboRaylib - Delphi and FreePascal headers for Raylib 4.5.
 //  Raylib - A simple and easy-to-use library to enjoy videogames programming (www.raylib.com)
 //
-//  Download compilled Raylib 4.2 library: https://github.com/raysan5/raylib/releases/tag/4.2.0
+//  Download compilled Raylib 4.5 library: https://github.com/raysan5/raylib/releases/tag/4.5.0
 //
 //  Original files: rlgl.h
 //
@@ -28,7 +17,7 @@
 //
 //  Headers licensed under an unmodified MIT license, that allows static linking with closed source software
 //
-//  Copyright (c) 2022-2022 Turborium (https://github.com/turborium/TurboRaylib)
+//  Copyright (c) 2022-2023 Turborium (https://github.com/turborium/TurboRaylib)
 // -------------------------------------------------------------------------------------------------------------------
 
 unit rlgl;
@@ -47,7 +36,7 @@ uses
 {$INCLUDE raylib.inc}
 
 const
-  RLGL_VERSION = 4.0;
+  RLGL_VERSION = 4.5;
 
 {$IF not Declared(LibName)}
 const
@@ -101,6 +90,8 @@ const
   RL_TEXTURE_FILTER_LINEAR_MIP_NEAREST = $2701; // GL_LINEAR_MIPMAP_NEAREST
   RL_TEXTURE_FILTER_MIP_LINEAR         = $2703; // GL_LINEAR_MIPMAP_LINEAR
   RL_TEXTURE_FILTER_ANISOTROPIC        = $3000; // Anisotropic filter (custom identifier)
+  RL_TEXTURE_MIPMAP_BIAS_RATIO         = $4000; // Texture mipmap bias, percentage ratio (custom identifier)
+
   RL_TEXTURE_WRAP_REPEAT               = $2901; // GL_REPEAT
   RL_TEXTURE_WRAP_CLAMP                = $812F; // GL_CLAMP_TO_EDGE
   RL_TEXTURE_WRAP_MIRROR_REPEAT        = $8370; // GL_MIRRORED_REPEAT
@@ -128,7 +119,7 @@ const
   RL_UNSIGNED_BYTE                     = $1401; // GL_UNSIGNED_BYTE
   RL_FLOAT                             = $1406; // GL_FLOAT
 
-  // Buffer usage hint
+  // GL buffer usage hint
   RL_STREAM_DRAW                       = $88E0; // GL_STREAM_DRAW
   RL_STREAM_READ                       = $88E1; // GL_STREAM_READ
   RL_STREAM_COPY                       = $88E2; // GL_STREAM_COPY
@@ -144,47 +135,56 @@ const
   RL_VERTEX_SHADER                     = $8B31; // GL_VERTEX_SHADER
   RL_COMPUTE_SHADER                    = $91B9; // GL_COMPUTE_SHADER
 
+  // GL blending factors
+  RL_ZERO                              = 0;     // GL_ZERO
+  RL_ONE                               = 1;     // GL_ONE
+  RL_SRC_COLOR                         = $0300; // GL_SRC_COLOR
+  RL_ONE_MINUS_SRC_COLOR               = $0301; // GL_ONE_MINUS_SRC_COLOR
+  RL_SRC_ALPHA                         = $0302; // GL_SRC_ALPHA
+  RL_ONE_MINUS_SRC_ALPHA               = $0303; // GL_ONE_MINUS_SRC_ALPHA
+  RL_DST_ALPHA                         = $0304; // GL_DST_ALPHA
+  RL_ONE_MINUS_DST_ALPHA               = $0305; // GL_ONE_MINUS_DST_ALPHA
+  RL_DST_COLOR                         = $0306; // GL_DST_COLOR
+  RL_ONE_MINUS_DST_COLOR               = $0307; // GL_ONE_MINUS_DST_COLOR
+  RL_SRC_ALPHA_SATURATE                = $0308; // GL_SRC_ALPHA_SATURATE
+  RL_CONSTANT_COLOR                    = $8001; // GL_CONSTANT_COLOR
+  RL_ONE_MINUS_CONSTANT_COLOR          = $8002; // GL_ONE_MINUS_CONSTANT_COLOR
+  RL_CONSTANT_ALPHA                    = $8003; // GL_CONSTANT_ALPHA
+  RL_ONE_MINUS_CONSTANT_ALPHA          = $8004; // GL_ONE_MINUS_CONSTANT_ALPHA
+
+  // GL blending functions/equations
+  RL_FUNC_ADD                          = $8006; // GL_FUNC_ADD
+  RL_MIN                               = $8007; // GL_MIN
+  RL_MAX                               = $8008; // GL_MAX
+  RL_FUNC_SUBTRACT                     = $800A; // GL_FUNC_SUBTRACT
+  RL_FUNC_REVERSE_SUBTRACT             = $800B; // GL_FUNC_REVERSE_SUBTRACT
+  RL_BLEND_EQUATION                    = $8009; // GL_BLEND_EQUATION
+  RL_BLEND_EQUATION_RGB                = $8009; // GL_BLEND_EQUATION_RGB   // (Same as BLEND_EQUATION)
+  RL_BLEND_EQUATION_ALPHA              = $883D; // GL_BLEND_EQUATION_ALPHA
+  RL_BLEND_DST_RGB                     = $80C8; // GL_BLEND_DST_RGB
+  RL_BLEND_SRC_RGB                     = $80C9; // GL_BLEND_SRC_RGB
+  RL_BLEND_DST_ALPHA                   = $80CA; // GL_BLEND_DST_ALPHA
+  RL_BLEND_SRC_ALPHA                   = $80CB; // GL_BLEND_SRC_ALPHA
+  RL_BLEND_COLOR                       = $8005; // GL_BLEND_COLOR
+
 //----------------------------------------------------------------------------------
 // Types and Structures Definition
 //----------------------------------------------------------------------------------
 
+// Matrix, 4x4 components, column major, OpenGL style, right handed
+{$IF not Declared(TMatrix)}
 type
-  PRlGlVersion = ^TRlGlVersion;
-  TRlGlVersion = Integer;
-const
-  OPENGL_11 = TRlGlVersion(1);
-  OPENGL_21 = TRlGlVersion(2);
-  OPENGL_33 = TRlGlVersion(3);
-  OPENGL_43 = TRlGlVersion(4);
-  OPENGL_ES_20 = TRlGlVersion(5);
-
+  PRlMatrix = ^TRlMatrix;
+  TRlMatrix = record
+    M0, M4, M8, M12: Single;  // Matrix first row (4 components)
+    M1, M5, M9, M13: Single;  // Matrix second row (4 components)
+    M2, M6, M10, M14: Single; // Matrix third row (4 components)
+    M3, M7, M11, M15: Single; // Matrix fourth row (4 components)
+  end;
+{$ELSE}
 type
-  PRlFramebufferAttachType = ^TRlFramebufferAttachType;
-  TRlFramebufferAttachType = Integer;
-const
-  RL_ATTACHMENT_COLOR_CHANNEL0 = TRlFramebufferAttachType(0);
-  RL_ATTACHMENT_COLOR_CHANNEL1 = TRlFramebufferAttachType(1);
-  RL_ATTACHMENT_COLOR_CHANNEL2 = TRlFramebufferAttachType(2);
-  RL_ATTACHMENT_COLOR_CHANNEL3 = TRlFramebufferAttachType(3);
-  RL_ATTACHMENT_COLOR_CHANNEL4 = TRlFramebufferAttachType(4);
-  RL_ATTACHMENT_COLOR_CHANNEL5 = TRlFramebufferAttachType(5);
-  RL_ATTACHMENT_COLOR_CHANNEL6 = TRlFramebufferAttachType(6);
-  RL_ATTACHMENT_COLOR_CHANNEL7 = TRlFramebufferAttachType(7);
-  RL_ATTACHMENT_DEPTH          = TRlFramebufferAttachType(100);
-  RL_ATTACHMENT_STENCIL        = TRlFramebufferAttachType(200);
-
-type
-  PRlFramebufferAttachTextureType = ^TRlFramebufferAttachTextureType;
-  TRlFramebufferAttachTextureType = Integer;
-const
-  RL_ATTACHMENT_CUBEMAP_POSITIVE_X = TRlFramebufferAttachTextureType(0);
-  RL_ATTACHMENT_CUBEMAP_NEGATIVE_X = TRlFramebufferAttachTextureType(1);
-  RL_ATTACHMENT_CUBEMAP_POSITIVE_Y = TRlFramebufferAttachTextureType(2);
-  RL_ATTACHMENT_CUBEMAP_NEGATIVE_Y = TRlFramebufferAttachTextureType(3);
-  RL_ATTACHMENT_CUBEMAP_POSITIVE_Z = TRlFramebufferAttachTextureType(4);
-  RL_ATTACHMENT_CUBEMAP_NEGATIVE_Z = TRlFramebufferAttachTextureType(5);
-  RL_ATTACHMENT_TEXTURE2D          = TRlFramebufferAttachTextureType(100);
-  RL_ATTACHMENT_RENDERBUFFER       = TRlFramebufferAttachTextureType(200);
+  TRlMatrix = raylib.TMatrix;
+{$ENDIF}
 
 // Dynamic vertex buffers (position + texcoords + colors + indices arrays)
 type
@@ -228,20 +228,16 @@ type
     CurrentDepth: Single;          // Current depth value for next draw
   end;
 
-// Matrix, 4x4 components, column major, OpenGL style, right handed
-{$IF not Declared(TMatrix)}
+// OpenGL version
 type
-  PRlMatrix = ^TRlMatrix;
-  TRlMatrix = record
-    M0, M4, M8, M12: Single;  // Matrix first row (4 components)
-    M1, M5, M9, M13: Single;  // Matrix first row (4 components)
-    M2, M6, M10, M14: Single; // Matrix first row (4 components)
-    M3, M7, M11, M15: Single; // Matrix first row (4 components)
-  end;
-{$ELSE}
-type
-  TRlMatrix = raylib.TMatrix;
-{$ENDIF}
+  PRlGlVersion = ^TRlGlVersion;
+  TRlGlVersion = Integer;
+const
+  OPENGL_11 = TRlGlVersion(1);
+  OPENGL_21 = TRlGlVersion(2);
+  OPENGL_33 = TRlGlVersion(3);
+  OPENGL_43 = TRlGlVersion(4);
+  OPENGL_ES_20 = TRlGlVersion(5);
 
 // Trace log level
 // NOTE: Organized by priority level
@@ -258,7 +254,8 @@ const
   RL_LOG_FATAL   = TRlTraceLogLevel(6); // Fatal logging, used to abort program: exit(EXIT_FAILURE)
   RL_LOG_NONE    = TRlTraceLogLevel(7); // Disable logging
 
-// Texture formats (support depends on OpenGL version)
+// Texture formats
+// NOTE: Support depends on OpenGL version
 type
   PRlPixelFormat = ^TRlPixelFormat;
   TRlPixelFormat = Integer;
@@ -311,6 +308,7 @@ const
   RL_BLEND_SUBTRACT_COLORS = TRlBlendMode(4); // Blend textures subtracting colors (alternative)
   RL_BLEND_ALPHA_PREMUL    = TRlBlendMode(5); // Blend premultiplied textures considering alpha
   RL_BLEND_CUSTOM          = TRlBlendMode(6); // Blend textures using custom src/dst factors (use rlSetBlendFactors())
+  RL_BLEND_CUSTOM_SEPARATE = TRlBlendMode(7); // Blend textures using custom src/dst factors (use rlSetBlendFactorsSeparate())
 
 // Shader location point type
 type
@@ -371,7 +369,37 @@ const
   RL_SHADER_ATTRIB_VEC3  = TRlShaderAttributeDataType(2); // Shader attribute type: vec3 (3 float)
   RL_SHADER_ATTRIB_VEC4  = TRlShaderAttributeDataType(3); // Shader attribute type: vec4 (4 float)
 
-{$IFDEF RAY_RLGL_BACKPORT}
+// Framebuffer attachment type
+// NOTE: By default up to 8 color channels defined, but it can be more
+type
+  PRlFramebufferAttachType = ^TRlFramebufferAttachType;
+  TRlFramebufferAttachType = Integer;
+const
+  RL_ATTACHMENT_COLOR_CHANNEL0 = TRlFramebufferAttachType(0);   // Framebuffer attachment type: color 0
+  RL_ATTACHMENT_COLOR_CHANNEL1 = TRlFramebufferAttachType(1);   // Framebuffer attachment type: color 1
+  RL_ATTACHMENT_COLOR_CHANNEL2 = TRlFramebufferAttachType(2);   // Framebuffer attachment type: color 2
+  RL_ATTACHMENT_COLOR_CHANNEL3 = TRlFramebufferAttachType(3);   // Framebuffer attachment type: color 3
+  RL_ATTACHMENT_COLOR_CHANNEL4 = TRlFramebufferAttachType(4);   // Framebuffer attachment type: color 4
+  RL_ATTACHMENT_COLOR_CHANNEL5 = TRlFramebufferAttachType(5);   // Framebuffer attachment type: color 5
+  RL_ATTACHMENT_COLOR_CHANNEL6 = TRlFramebufferAttachType(6);   // Framebuffer attachment type: color 6
+  RL_ATTACHMENT_COLOR_CHANNEL7 = TRlFramebufferAttachType(7);   // Framebuffer attachment type: color 7
+  RL_ATTACHMENT_DEPTH          = TRlFramebufferAttachType(100); // Framebuffer attachment type: depth
+  RL_ATTACHMENT_STENCIL        = TRlFramebufferAttachType(200); // Framebuffer attachment type: stencil
+
+// Framebuffer texture attachment type
+type
+  PRlFramebufferAttachTextureType = ^TRlFramebufferAttachTextureType;
+  TRlFramebufferAttachTextureType = Integer;
+const
+  RL_ATTACHMENT_CUBEMAP_POSITIVE_X = TRlFramebufferAttachTextureType(0);   // Framebuffer texture attachment type: cubemap, +X side
+  RL_ATTACHMENT_CUBEMAP_NEGATIVE_X = TRlFramebufferAttachTextureType(1);   // Framebuffer texture attachment type: cubemap, -X side
+  RL_ATTACHMENT_CUBEMAP_POSITIVE_Y = TRlFramebufferAttachTextureType(2);   // Framebuffer texture attachment type: cubemap, +Y side
+  RL_ATTACHMENT_CUBEMAP_NEGATIVE_Y = TRlFramebufferAttachTextureType(3);   // Framebuffer texture attachment type: cubemap, -Y side
+  RL_ATTACHMENT_CUBEMAP_POSITIVE_Z = TRlFramebufferAttachTextureType(4);   // Framebuffer texture attachment type: cubemap, +Z side
+  RL_ATTACHMENT_CUBEMAP_NEGATIVE_Z = TRlFramebufferAttachTextureType(5);   // Framebuffer texture attachment type: cubemap, -Z side
+  RL_ATTACHMENT_TEXTURE2D          = TRlFramebufferAttachTextureType(100); // Framebuffer texture attachment type: texture2d
+  RL_ATTACHMENT_RENDERBUFFER       = TRlFramebufferAttachTextureType(200); // Framebuffer texture attachment type: renderbuffer
+
 // Face culling mode
 type
   PRlCullMode = ^TRlCullMode;
@@ -379,7 +407,6 @@ type
 const
   RL_CULL_FACE_FRONT = TRlCullMode(0);
   RL_CULL_FACE_BACK = TRlCullMode(1);
-{$ENDIF}
 
 //------------------------------------------------------------------------------------
 // Functions Declaration - Matrix operations
@@ -389,7 +416,7 @@ const
 procedure rlMatrixMode(Mode: TRlMatrixMode);
 // Push the current matrix to stack
 procedure rlPushMatrix();
-// Pop lattest inserted matrix from stack
+// Pop latest inserted matrix from stack
 procedure rlPopMatrix();
 // Reset current matrix to identity matrix
 procedure rlLoadIdentity();
@@ -400,7 +427,7 @@ procedure rlRotatef(Angle, X, Y, Z: Single);
 // Multiply the current matrix by a scaling matrix
 procedure rlScalef(X, Y, Z: Single);
 // Multiply the current matrix by another matrix
-{var}procedure rlMultMatrixf(Matf: PSingle);
+procedure rlMultMatrixf(const Matf: PSingle);
 // rlFrustum
 procedure rlFrustum(Left, Right, Bottom, Top, Znear, Zfar: Double);
 // rlOrtho
@@ -478,6 +505,8 @@ procedure rlEnableTextureCubemap(Id: Cardinal);
 procedure rlDisableTextureCubemap();
 // Set texture parameters (filter, wrap)
 procedure rlTextureParameters(Id: Cardinal; Param: Integer; Value: Integer);
+// Set cubemap parameters (filter, wrap)
+procedure rlCubemapParameters(Id: Cardinal; Param: Integer; Value: Integer);
 
 // Shader state
 
@@ -513,10 +542,8 @@ procedure rlDisableDepthMask();
 procedure rlEnableBackfaceCulling();
 // Disable backface culling
 procedure rlDisableBackfaceCulling();
-{$IFDEF RAY_RLGL_BACKPORT}
 // Set face culling mode
 procedure rlSetCullFace(Mode: TRlCullMode);
-{$ENDIF}
 // Enable scissor test
 procedure rlEnableScissorTest();
 // Disable scissor test
@@ -550,8 +577,10 @@ procedure rlClearScreenBuffers();
 procedure rlCheckErrors();
 // Set blending mode
 procedure rlSetBlendMode(Mode: TRlBlendMode);
- // Set blending mode factor and equation (using OpenGL factors)
+// Set blending mode factor and equation (using OpenGL factors)
 procedure rlSetBlendFactors(GlSrcFactor, GlDstFactor, GlEquation: Integer);
+// Set blending mode factors and equations separately (using OpenGL factors)
+procedure rlSetBlendFactorsSeparate(GlSrcRGB, GlDstRGB, GlSrcAlpha, GlDstAlpha, GlEqRGB, GlEqAlpha: Integer);
 
 //------------------------------------------------------------------------------------
 // Functions Declaration - rlgl functionality
@@ -561,7 +590,7 @@ procedure rlSetBlendFactors(GlSrcFactor, GlDstFactor, GlEquation: Integer);
 
 // Initialize rlgl (buffers, shaders, textures, states)
 procedure rlglInit(Width, Height: Integer);
-// De-inititialize rlgl (buffers, shaders, textures)
+// De-initialize rlgl (buffers, shaders, textures)
 procedure rlglClose();
 // Load OpenGL extensions (loader function required)
 procedure rlLoadExtensions(Loader: Pointer);
@@ -696,30 +725,30 @@ procedure rlSetShader(Id: Cardinal; Locs: PInteger);
 
 // Load compute shader program
 function rlLoadComputeShaderProgram(ShaderId: Cardinal): Cardinal;
-// Dispatch compute shader (equivalent to *draw* for graphics pilepine)
+// Dispatch compute shader (equivalent to *draw* for graphics pipeline)
 procedure rlComputeShaderDispatch(GroupX, GroupY, groupZ: Cardinal);
 
 // Shader buffer storage object management (ssbo)
 
 // Load shader storage buffer object (SSBO)
-function rlLoadShaderBuffer(Size: UInt64; const Data: Pointer; UsageHint: Integer): Cardinal;
+function rlLoadShaderBuffer(Size: Cardinal; const Data: Pointer; UsageHint: Integer): Cardinal;
 // Unload shader storage buffer object (SSBO)
 procedure rlUnloadShaderBuffer(SsboId: Cardinal);
 // Update SSBO buffer data
-procedure rlUpdateShaderBufferElements(Id: Cardinal; const Data: Pointer; DataSize: UInt64; Offset: UInt64);
-// Get SSBO buffer size
-function rlGetShaderBufferSize(Id: Cardinal): UInt64;
+procedure rlUpdateShaderBuffer(Id: Cardinal; const Data: Pointer; DataSize: Cardinal; Offset: Cardinal);
 // Bind SSBO buffer
-procedure rlReadShaderBufferElements(Id: Cardinal; Dest: Pointer; Count: UInt64; Offset: UInt64);
-// Copy SSBO buffer data
 procedure rlBindShaderBuffer(Id: Cardinal; Index: Cardinal);
+// Read SSBO buffer data (GPU->CPU)
+procedure rlReadShaderBuffer(Id: Cardinal; Dest: Pointer; Count: Cardinal; Offset: Cardinal);
+// Copy SSBO data between buffers
+procedure rlCopyShaderBuffer(DestId, SrcId: Cardinal; DestOffset, SrcOffset: Cardinal; Count: Cardinal);
+// Get SSBO buffer size
+function rlGetShaderBufferSize(Id: Cardinal): Cardinal;
 
 // Buffer management
 
-// Copy SSBO buffer data
-procedure rlCopyBuffersElements(DestId: Cardinal; SrcId: Cardinal; DestOffset: UInt64; SrcOffset: UInt64; Count: UInt64);
 // Bind image texture
-procedure rlBindImageTexture(Id: Cardinal; Index: Cardinal; Format: Cardinal; Readonly: Integer);
+procedure rlBindImageTexture(Id: Cardinal; Index: Cardinal; Format: Cardinal; Readonly: Boolean);
 
 // Matrix state management
 
@@ -752,11 +781,7 @@ procedure rlLoadDrawQuad();
 implementation
 
 uses
-  Math
-{$IFDEF RAY_RLGL_BACKPORT}
-  ,{$IFNDEF FPC}OpenGL{$ELSE}GL{$ENDIF}
-{$ENDIF}
-  ;
+  Math;
 
 // Functions Declaration - Matrix operations
 
@@ -809,9 +834,9 @@ begin
   Lib_rlScalef(X, Y, Z);
 end;
 
-procedure Lib_rlMultMatrixf(Matf: PSingle);
+procedure Lib_rlMultMatrixf(const Matf: PSingle);
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlMultMatrixf';
-procedure rlMultMatrixf(Matf: PSingle);
+procedure rlMultMatrixf(const Matf: PSingle);
 begin
   Lib_rlMultMatrixf(Matf);
 end;
@@ -1027,6 +1052,13 @@ begin
   Lib_rlTextureParameters(Id, Param, Value);
 end;
 
+procedure Lib_rlCubemapParameters(Id: Cardinal; Param: Integer; Value: Integer);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlCubemapParameters';
+procedure rlCubemapParameters(Id: Cardinal; Param: Integer; Value: Integer);
+begin
+  Lib_rlCubemapParameters(Id, Param, Value);
+end;
+
 // Shader state
 
 procedure Lib_rlEnableShader(Id: Cardinal);
@@ -1124,17 +1156,12 @@ begin
   Lib_rlDisableBackfaceCulling();
 end;
 
-{$IFDEF RAY_RLGL_BACKPORT}
+procedure Lib_rlSetCullFace(Mode: TRlCullMode);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlSetCullFace';
 procedure rlSetCullFace(Mode: TRlCullMode);
 begin
-  case Mode of
-    RL_CULL_FACE_BACK:
-      glCullFace(GL_BACK);
-    RL_CULL_FACE_FRONT:
-      glCullFace(GL_FRONT);
-  end;
+  Lib_rlSetCullFace(Mode);
 end;
-{$ENDIF}
 
 procedure Lib_rlEnableScissorTest();
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlEnableScissorTest';
@@ -1253,6 +1280,13 @@ procedure Lib_rlSetBlendFactors(GlSrcFactor, GlDstFactor, GlEquation: Integer);
 procedure rlSetBlendFactors(GlSrcFactor, GlDstFactor, GlEquation: Integer);
 begin
   Lib_rlSetBlendFactors(GlSrcFactor, GlDstFactor, GlEquation);
+end;
+
+procedure Lib_rlSetBlendFactorsSeparate(GlSrcRGB, GlDstRGB, GlSrcAlpha, GlDstAlpha, GlEqRGB, GlEqAlpha: Integer);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlSetBlendFactorsSeparate';
+procedure rlSetBlendFactorsSeparate(GlSrcRGB, GlDstRGB, GlSrcAlpha, GlDstAlpha, GlEqRGB, GlEqAlpha: Integer);
+begin
+  Lib_rlSetBlendFactorsSeparate(GlSrcRGB, GlDstRGB, GlSrcAlpha, GlDstAlpha, GlEqRGB, GlEqAlpha);
 end;
 
 // rlgl initialization functions
@@ -1675,9 +1709,9 @@ end;
 
 // Shader buffer storage object management (ssbo)
 
-function Lib_rlLoadShaderBuffer(Size: UInt64; const Data: Pointer; UsageHint: Integer): Cardinal;
+function Lib_rlLoadShaderBuffer(Size: Cardinal; const Data: Pointer; UsageHint: Integer): Cardinal;
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlLoadShaderBuffer';
-function rlLoadShaderBuffer(Size: UInt64; const Data: Pointer; UsageHint: Integer): Cardinal;
+function rlLoadShaderBuffer(Size: Cardinal; const Data: Pointer; UsageHint: Integer): Cardinal;
 begin
   Result := Lib_rlLoadShaderBuffer(Size, Data, UsageHint);
 end;
@@ -1689,25 +1723,11 @@ begin
   Lib_rlUnloadShaderBuffer(SsboId);
 end;
 
-procedure Lib_rlUpdateShaderBufferElements(Id: Cardinal; const Data: Pointer; DataSize: UInt64; Offset: UInt64);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlUpdateShaderBufferElements';
-procedure rlUpdateShaderBufferElements(Id: Cardinal; const Data: Pointer; DataSize: UInt64; Offset: UInt64);
+procedure Lib_rlUpdateShaderBuffer(Id: Cardinal; const Data: Pointer; DataSize: Cardinal; Offset: Cardinal);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlUpdateShaderBuffer';
+procedure rlUpdateShaderBuffer(Id: Cardinal; const Data: Pointer; DataSize: Cardinal; Offset: Cardinal);
 begin
-  Lib_rlUpdateShaderBufferElements(Id, Data, DataSize, Offset);
-end;
-
-function Lib_rlGetShaderBufferSize(Id: Cardinal): UInt64;
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlGetShaderBufferSize';
-function rlGetShaderBufferSize(Id: Cardinal): UInt64;
-begin
-  Result := Lib_rlGetShaderBufferSize(Id);
-end;
-
-procedure Lib_rlReadShaderBufferElements(Id: Cardinal; Dest: Pointer; Count: UInt64; Offset: UInt64);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlReadShaderBufferElements';
-procedure rlReadShaderBufferElements(Id: Cardinal; Dest: Pointer; Count: UInt64; Offset: UInt64);
-begin
-  Lib_rlReadShaderBufferElements(Id, Dest, Count, Offset);
+  Lib_rlUpdateShaderBuffer(Id, Data, DataSize, Offset);
 end;
 
 procedure Lib_rlBindShaderBuffer(Id: Cardinal; Index: Cardinal);
@@ -1717,18 +1737,32 @@ begin
   Lib_rlBindShaderBuffer(Id, Index);
 end;
 
-// Buffer management
-
-procedure Lib_rlCopyBuffersElements(DestId: Cardinal; SrcId: Cardinal; DestOffset: UInt64; SrcOffset: UInt64; Count: UInt64);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlCopyBuffersElements';
-procedure rlCopyBuffersElements(DestId: Cardinal; SrcId: Cardinal; DestOffset: UInt64; SrcOffset: UInt64; Count: UInt64);
+procedure Lib_rlReadShaderBuffer(Id: Cardinal; Dest: Pointer; Count: Cardinal; Offset: Cardinal);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlReadShaderBuffer';
+procedure rlReadShaderBuffer(Id: Cardinal; Dest: Pointer; Count: Cardinal; Offset: Cardinal);
 begin
-  Lib_rlCopyBuffersElements(DestId, SrcId, DestOffset, SrcOffset, Count);
+  Lib_rlReadShaderBuffer(Id, Dest, Count, Offset);
 end;
 
-procedure Lib_rlBindImageTexture(Id: Cardinal; Index: Cardinal; Format: Cardinal; Readonly: Integer);
+procedure Lib_rlCopyShaderBuffer(DestId, SrcId: Cardinal; DestOffset, SrcOffset: Cardinal; Count: Cardinal);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlCopyShaderBuffer';
+procedure rlCopyShaderBuffer(DestId, SrcId: Cardinal; DestOffset, SrcOffset: Cardinal; Count: Cardinal);
+begin
+  Lib_rlCopyShaderBuffer(DestId, SrcId, DestOffset, SrcOffset, Count);
+end;
+
+function Lib_rlGetShaderBufferSize(Id: Cardinal): Cardinal;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlGetShaderBufferSize';
+function rlGetShaderBufferSize(Id: Cardinal): Cardinal;
+begin
+  Result := Lib_rlGetShaderBufferSize(Id);
+end;
+
+// Buffer management
+
+procedure Lib_rlBindImageTexture(Id: Cardinal; Index: Cardinal; Format: Cardinal; Readonly: Boolean);
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'rlBindImageTexture';
-procedure rlBindImageTexture(Id: Cardinal; Index: Cardinal; Format: Cardinal; Readonly: Integer);
+procedure rlBindImageTexture(Id: Cardinal; Index: Cardinal; Format: Cardinal; Readonly: Boolean);
 begin
   Lib_rlBindImageTexture(Id, Index, Format, Readonly);
 end;

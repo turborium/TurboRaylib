@@ -2,14 +2,13 @@
 *
 *   raylib [models] example - Load models vox (MagicaVoxel)
 *
-*   Example originally created with raylib 4.0, last time updated with raylib 4.0
-*
 *   Example contributed by Johann Nadalutti (@procfxgen) and reviewed by Ramon Santamaria (@raysan5)
 *
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2021-2022 Johann Nadalutti (@procfxgen) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2021-2023 Johann Nadalutti (@procfxgen) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit models_loading_vox_src;
@@ -87,8 +86,6 @@ begin
 
   CurrentModel := 0;
 
-  SetCameraMode(Camera, CAMERA_ORBITAL);  // Set a orbital camera mode
-
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
 
@@ -97,7 +94,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_ORBITAL);
 
     // Cycle between models on mouse click
     if IsMouseButtonPressed(MOUSE_BUTTON_LEFT) then

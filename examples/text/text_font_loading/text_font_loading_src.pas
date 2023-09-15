@@ -1,4 +1,4 @@
-(*******************************************************************************************
+﻿(*******************************************************************************************
 *
 *   raylib [text] example - Font loading
 *
@@ -11,12 +11,11 @@
 *     - XNA Spritefont > Sprite font image, following XNA Spritefont conventions,
 *                 Characters in image must follow some spacing and order rules
 *
-*   Example originally created with raylib 1.4, last time updated with raylib 3.0
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
 *   Copyright (c) 2016-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit text_font_loading_src;

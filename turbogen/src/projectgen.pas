@@ -17,10 +17,10 @@
 //          /_/    \__,_/ /_/    /_.___/\____//_/ |_| \__,_/ _\__, / /_/  /_/  /_.___/
 //                                                           /____/
 //
-//  TurboRaylib - Delphi and FreePascal headers for Raylib 4.2.
+//  TurboRaylib - Delphi and FreePascal headers for Raylib 4.5.
 //  Raylib - A simple and easy-to-use library to enjoy videogames programming (www.raylib.com)
 //
-//  Download compilled Raylib 4.2 library: https://github.com/raysan5/raylib/releases/tag/4.2.0
+//  Download compilled Raylib 4.5 library: https://github.com/raysan5/raylib/releases/tag/4.5.0
 //
 //  Copyright (c) 2022-2023 Turborium (https://github.com/turborium/TurboRaylib)
 // -------------------------------------------------------------------------------------------------------------------
@@ -217,15 +217,15 @@ begin
   end;
   if TOs.Osx in OsSet then
   begin
-    CopyBin('binaries/darwin/libraylib.4.2.0.dylib', 'libraylib.4.2.0.dylib', OutputPath);
-    CopyBin('binaries/darwin/libraylib.420.dylib', 'libraylib.420.dylib', OutputPath);
+    CopyBin('binaries/darwin/libraylib.4.5.0.dylib', 'libraylib.4.5.0.dylib', OutputPath);
+    CopyBin('binaries/darwin/libraylib.450.dylib', 'libraylib.450.dylib', OutputPath);
     CopyBin('binaries/darwin/libraylib.dylib', 'libraylib.dylib', OutputPath);
   end;
   if TOs.Linux in OsSet then
   begin
     CopyBin('binaries/linux/libraylib.so', 'libraylib.so', OutputPath);
-    CopyBin('binaries/linux/libraylib.so.4.2.0', 'libraylib.so.4.2.0', OutputPath);
-    CopyBin('binaries/linux/libraylib.so.420', 'libraylib.so.420', OutputPath);
+    CopyBin('binaries/linux/libraylib.so.4.5.0', 'libraylib.so.4.5.0', OutputPath);
+    CopyBin('binaries/linux/libraylib.so.450', 'libraylib.so.450', OutputPath);
   end;
 end;
 

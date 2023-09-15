@@ -4,12 +4,11 @@
 *
 *   NOTE: Images are loaded in CPU memory (RAM); textures are loaded in GPU memory (VRAM)
 *
-*   Example originally created with raylib 1.4, last time updated with raylib 1.4
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2016-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2016-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit textures_image_drawing_src;
@@ -60,7 +59,7 @@ begin
 
   // Draw on the image with a few image draw methods
   ImageDrawPixel(@Parrots, 10, 10, RAYWHITE);
-  ImageDrawCircle(@Parrots, 10, 10, 5, RAYWHITE);
+  ImageDrawCircleLines(@Parrots, 10, 10, 5, RAYWHITE);
   ImageDrawRectangle(@Parrots, 5, 20, 10, 10, RAYWHITE);
 
   UnloadImage(cat); // Unload image from RAM

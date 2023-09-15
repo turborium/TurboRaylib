@@ -6,7 +6,7 @@
         <FrameworkType>None</FrameworkType>
         <MainSource>models_rlgl_solar_system.dpr</MainSource>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <ProjectGuid>{F3AF60F8-DA40-4963-B747-000000000045}</ProjectGuid>
+        <ProjectGuid>{F3AF60F8-DA40-4963-B747-000000000046}</ProjectGuid>
         <ProjectVersion>19.4</ProjectVersion>
         <TargetedPlatforms>3</TargetedPlatforms>
     </PropertyGroup>

@@ -9,12 +9,11 @@
 *         on OpenGL ES 2.0 platforms (Android, Raspberry Pi, HTML5), use #version 100 shaders
 *         raylib comes with shaders ready for both versions, check raylib/shaders install folder
 *
-*   Example originally created with raylib 1.3, last time updated with raylib 3.7
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2014-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2014-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit shaders_model_shader_src;
@@ -81,8 +80,6 @@ begin
 
   Position := TVector3.Create(0.0, 0.0, 0.0);    // Set model position
 
-  SetCameraMode(Camera, CAMERA_FREE);         // Set an orbital camera mode
-
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
 
@@ -91,7 +88,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_FIRST_PERSON);
     //-------------------------------------------------------------------------------------------
 
     // Draw

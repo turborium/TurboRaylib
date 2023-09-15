@@ -15,7 +15,10 @@
         <Projects Include="audio_sound_loading\audio_sound_loading.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="audio_multichannel_sound\audio_multichannel_sound.dproj">
+        <Projects Include="audio_mixed_processor\audio_mixed_processor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="audio_stream_effects\audio_stream_effects.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -62,23 +65,32 @@
     <Target Name="audio_sound_loading:Make">
         <MSBuild Projects="audio_sound_loading\audio_sound_loading.dproj" Targets="Make"/>
     </Target>
-    <Target Name="audio_multichannel_sound">
-        <MSBuild Projects="audio_multichannel_sound\audio_multichannel_sound.dproj"/>
+    <Target Name="audio_mixed_processor">
+        <MSBuild Projects="audio_mixed_processor\audio_mixed_processor.dproj"/>
     </Target>
-    <Target Name="audio_multichannel_sound:Clean">
-        <MSBuild Projects="audio_multichannel_sound\audio_multichannel_sound.dproj" Targets="Clean"/>
+    <Target Name="audio_mixed_processor:Clean">
+        <MSBuild Projects="audio_mixed_processor\audio_mixed_processor.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="audio_multichannel_sound:Make">
-        <MSBuild Projects="audio_multichannel_sound\audio_multichannel_sound.dproj" Targets="Make"/>
+    <Target Name="audio_mixed_processor:Make">
+        <MSBuild Projects="audio_mixed_processor\audio_mixed_processor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="audio_stream_effects">
+        <MSBuild Projects="audio_stream_effects\audio_stream_effects.dproj"/>
+    </Target>
+    <Target Name="audio_stream_effects:Clean">
+        <MSBuild Projects="audio_stream_effects\audio_stream_effects.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="audio_stream_effects:Make">
+        <MSBuild Projects="audio_stream_effects\audio_stream_effects.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="audio_module_playing;audio_music_stream;audio_raw_stream;audio_sound_loading;audio_multichannel_sound"/>
+        <CallTarget Targets="audio_module_playing;audio_music_stream;audio_raw_stream;audio_sound_loading;audio_mixed_processor;audio_stream_effects"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="audio_module_playing:Clean;audio_music_stream:Clean;audio_raw_stream:Clean;audio_sound_loading:Clean;audio_multichannel_sound:Clean"/>
+        <CallTarget Targets="audio_module_playing:Clean;audio_music_stream:Clean;audio_raw_stream:Clean;audio_sound_loading:Clean;audio_mixed_processor:Clean;audio_stream_effects:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="audio_module_playing:Make;audio_music_stream:Make;audio_raw_stream:Make;audio_sound_loading:Make;audio_multichannel_sound:Make"/>
+        <CallTarget Targets="audio_module_playing:Make;audio_music_stream:Make;audio_raw_stream:Make;audio_sound_loading:Make;audio_mixed_processor:Make;audio_stream_effects:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

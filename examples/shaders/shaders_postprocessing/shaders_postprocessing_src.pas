@@ -9,12 +9,11 @@
 *         on OpenGL ES 2.0 platforms (Android, Raspberry Pi, HTML5), use #version 100 shaders
 *         raylib comes with shaders ready for both versions, check raylib/shaders install folder
 *
-*   Example originally created with raylib 1.3, last time updated with raylib 4.0
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2015-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2015-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit shaders_postprocessing_src;
@@ -125,9 +124,6 @@ begin
   // Create a RenderTexture2D to be used for render to texture
   Target := LoadRenderTexture(ScreenWidth, ScreenHeight);
 
-  // Setup orbital camera
-  SetCameraMode(camera, CAMERA_ORBITAL);  // Set an orbital camera mode
-
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
 
@@ -136,7 +132,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_ORBITAL);
 
     if IsKeyPressed(KEY_RIGHT) then
       if CurrentShader < High(PostproShader) then

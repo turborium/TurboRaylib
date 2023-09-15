@@ -2,12 +2,11 @@
 *
 *   raylib [models] example - Drawing billboards
 *
-*   Example originally created with raylib 1.3, last time updated with raylib 3.5
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2015-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2015-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit models_billboard_src;
@@ -67,7 +66,6 @@ begin
   // Here we choose to rotate around the image center
   // NOTE: (-1, 1) is the range where origin.x, origin.y is inside the texture
   RotateOrigin := TVector2.Create(0.0, 0.0);
-  SetCameraMode(Camera, CAMERA_ORBITAL); // Set an orbital camera mode
 
   // Distance is needed for the correct billboard draw order
   // Larger distance (further away from the camera) should be drawn prior to smaller distance.
@@ -81,7 +79,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_ORBITAL);
     Rotation := Rotation + 0.4;
     DistanceStatic := Vector3Distance(Camera.Position, BillPositionStatic);
     DistanceRotating := Vector3Distance(Camera.Position, BillPositionRotating);

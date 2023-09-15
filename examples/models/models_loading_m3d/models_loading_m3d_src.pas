@@ -2,8 +2,6 @@
 *
 *   raylib [models] example - Load models M3D
 *
-*   Example originally created with raylib 4.5-dev, last time updated with raylib 4.5-dev
-*
 *   Example contributed by bzt (@bztsrc) and reviewed by Ramon Santamaria (@raysan5)
 *
 *   NOTES:
@@ -13,12 +11,11 @@
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2022 bzt (@bztsrc)
+*   Copyright (c) 2022-2023 bzt (@bztsrc)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit models_loading_m3d_src;
-
-// THIS EXAMPLE IS NOT WORKING, I THINK THIS IS RAYLIB BUG
 
 {$IFDEF FPC}{$MODE DELPHIUNICODE}{$ENDIF}
 
@@ -82,7 +79,7 @@ begin
   AnimId := 0;
   Anims := LoadModelAnimations(PAnsiChar(UTF8String(ModelFileName)), @AnimsCount); // Load skeletal animation data
 
-  SetCameraMode(camera, CAMERA_FREE);     // Set free camera mode
+  DisableCursor();                    // Limit cursor to relative movement inside the window
 
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
@@ -92,7 +89,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_FIRST_PERSON);
 
     if AnimsCount <> 0 then
     begin
@@ -196,7 +193,6 @@ begin
   UnloadModelAnimations(Anims, AnimsCount);
 
   UnloadModel(Model);         // Unload model
-
 
   CloseWindow(); // Close window and OpenGL context
   //---------------------------------------------------------------------------------------------

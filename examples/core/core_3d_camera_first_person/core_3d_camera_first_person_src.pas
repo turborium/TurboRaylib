@@ -2,12 +2,11 @@
 *
 *   raylib [core] example - 3d camera first person
 *
-*   Example originally created with raylib 1.3, last time updated with raylib 1.3
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2015-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2015-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit core_3d_camera_first_person_src;
@@ -22,7 +21,8 @@ implementation
 
 uses
   SysUtils,
-  raylib;
+  raylib,
+  StrUtils;
 
 const
   MAX_COLUMNS = 20;
@@ -40,6 +40,7 @@ var
   Positions: array [0..MAX_COLUMNS-1] of TVector3;
   Colors: array [0..MAX_COLUMNS-1] of TColor;
   I: Integer;
+  CameraMode: Integer;
 begin
   // Initialization
   //---------------------------------------------------------------------------------------------
@@ -48,11 +49,13 @@ begin
 
   // Define the camera to look into our 3d world
   Camera := Default(TCamera3D);
-  Camera.Position := TVector3.Create(4.0, 2.0, 4.0);    // Camera position
-  Camera.Target := TVector3.Create(0.0, 1.8, 0.0);      // Camera looking at point
+  Camera.Position := TVector3.Create(0.0, 2.0, 4.0);    // Camera position
+  Camera.Target := TVector3.Create(0.0, 2.0, 0.0);      // Camera looking at point
   Camera.Up := TVector3.Create(0.0, 1.0, 0.0);          // Camera up vector (rotation towards target)
   Camera.Fovy := 60.0;                                  // Camera field-of-view Y
   Camera.Projection := CAMERA_PERSPECTIVE;              // Camera mode type
+
+  CameraMode := CAMERA_FIRST_PERSON;
 
   // Generates some random columns
   for I := 0 to MAX_COLUMNS - 1 do
@@ -62,7 +65,7 @@ begin
     Colors[i] := TColor.Create(GetRandomValue(20, 255), GetRandomValue(10, 55), 30, 255);
   end;
 
-  SetCameraMode(Camera, CAMERA_FIRST_PERSON); // Set a first person camera mode
+  DisableCursor(); // Limit cursor to relative movement inside the window
 
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
@@ -74,7 +77,58 @@ begin
     //-------------------------------------------------------------------------------------------
     // TODO: Update your variables here
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    // Switch camera mode
+    if IsKeyPressed(KEY_ONE) then
+    begin
+      CameraMode := CAMERA_FREE;
+      Camera.Up := TVector3.Create(0.0, 1.0, 0.0); // Reset roll
+    end;
+    if IsKeyPressed(KEY_TWO) then
+    begin
+      CameraMode := CAMERA_FIRST_PERSON;
+      Camera.Up := TVector3.Create(0.0, 1.0, 0.0); // Reset roll
+    end;
+    if IsKeyPressed(KEY_THREE) then
+    begin
+      CameraMode := CAMERA_THIRD_PERSON;
+      Camera.Up := TVector3.Create(0.0, 1.0, 0.0); // Reset roll
+    end;
+    if IsKeyPressed(KEY_FOUR) then
+    begin
+      CameraMode := CAMERA_ORBITAL;
+      Camera.Up := TVector3.Create(0.0, 1.0, 0.0); // Reset roll
+    end;
+    // Switch camera projection
+    if IsKeyPressed(KEY_P) then
+    begin
+      if Camera.Projection = CAMERA_PERSPECTIVE then
+      begin
+        // Create isometric view
+        CameraMode := CAMERA_THIRD_PERSON;
+        // Note: The target distance is related to the render distance in the orthographic projection
+        Camera.Position := TVector3.Create(0.0, 2.0, -100.0);
+        Camera.Target := TVector3.Create(0.0, 2.0, 0.0);
+        Camera.Up := TVector3.Create(0.0, 1.0, 0.0);
+        Camera.Projection := CAMERA_ORTHOGRAPHIC;
+        Camera.Fovy := 20.0; // near plane width in CAMERA_ORTHOGRAPHIC
+        CameraYaw(@Camera, -135 * DEG2RAD, True);
+        CameraPitch(@Camera, -45 * DEG2RAD, True, True, False);
+      end
+      else if Camera.Projection = CAMERA_ORTHOGRAPHIC then
+      begin
+        // Reset to default view
+        CameraMode := CAMERA_THIRD_PERSON;
+        Camera.Position := TVector3.Create(0.0, 2.0, 10.0);
+        Camera.Target := TVector3.Create(0.0, 2.0, 0.0);
+        Camera.Up := TVector3.Create(0.0, 1.0, 0.0);
+        Camera.Projection := CAMERA_PERSPECTIVE;
+        Camera.Fovy := 60.0;
+      end;
+    end;
+    // Update camera computes movement internally depending on the camera mode
+    // Some default standard keyboard/mouse inputs are hardcoded to simplify use
+    // For advance camera controls, it's reecommended to compute camera movement manually
+    UpdateCamera(@Camera, CameraMode);
     //-------------------------------------------------------------------------------------------
 
     // Draw
@@ -97,14 +151,36 @@ begin
           DrawCubeWires(Positions[i], 2.0, Heights[i], 2.0, MAROON);
         end;
 
+        // Draw player cube
+        if CameraMode = CAMERA_THIRD_PERSON then
+        begin
+          DrawCube(Camera.Target, 0.5, 0.5, 0.5, PURPLE);
+          DrawCubeWires(Camera.Target, 0.5, 0.5, 0.5, DARKPURPLE);
+        end;
+
       EndMode3D();
 
-      DrawRectangle(10, 10, 220, 70, Fade(SKYBLUE, 0.5));
-      DrawRectangleLines( 10, 10, 220, 70, BLUE);
-
-      DrawText(UTF8String('First person camera default controls:'), 20, 20, 10, BLACK);
-      DrawText(UTF8String('- Move with keys: W, A, S, D'), 40, 40, 10, DARKGRAY);
-      DrawText(UTF8String('- Mouse move to look around'), 40, 60, 10, DARKGRAY);
+      // Draw info boxes
+      DrawRectangle(5, 5, 330, 100, Fade(SKYBLUE, 0.5));
+      DrawRectangleLines(5, 5, 330, 100, BLUE);
+      DrawText(UTF8String('Camera controls:'), 15, 15, 10, BLACK);
+      DrawText(UTF8String('- Move keys: W, A, S, D, Space, Left-Ctrl'), 15, 30, 10, BLACK);
+      DrawText(UTF8String('- Look around: arrow keys or mouse'), 15, 45, 10, BLACK);
+      DrawText(UTF8String('- Camera mode keys: 1, 2, 3, 4'), 15, 60, 10, BLACK);
+      DrawText(UTF8String('- Zoom keys: num-plus, num-minus or mouse scroll'), 15, 75, 10, BLACK);
+      DrawText(UTF8String('- Camera projection key: P'), 15, 90, 10, BLACK);
+      DrawRectangle(600, 5, 195, 100, Fade(SKYBLUE, 0.5));
+      DrawRectangleLines(600, 5, 195, 100, BLUE);
+      DrawText(UTF8String('Camera status:'), 610, 15, 10, BLACK);
+      DrawText(TextFormat(UTF8String('- Mode: %s'), UTF8String(IfThen(CameraMode = CAMERA_FREE, 'FREE',
+                                        IfThen(CameraMode = CAMERA_FIRST_PERSON, 'FIRST_PERSON',
+                                        IfThen(CameraMode = CAMERA_THIRD_PERSON, 'THIRD_PERSON',
+                                        IfThen(CameraMode = CAMERA_ORBITAL, 'ORBITAL', 'CUSTOM')))))), 610, 30, 10, BLACK);
+      DrawText(TextFormat(UTF8String('- Projection: %s'), UTF8String(IfThen(Camera.Projection = CAMERA_PERSPECTIVE, 'PERSPECTIVE',
+                                              IfThen(Camera.Projection = CAMERA_ORTHOGRAPHIC, 'ORTHOGRAPHIC', 'CUSTOM')))), 610, 45, 10, BLACK);
+      DrawText(TextFormat(UTF8String('- Position: (%06.3f, %06.3f, %06.3f)'), Camera.Position.X, Camera.Position.Y, Camera.Position.Z), 610, 60, 10, BLACK);
+      DrawText(TextFormat(UTF8String('- Target: (%06.3f, %06.3f, %06.3f)'), Camera.Target.X, Camera.Target.Y, Camera.Target.Z), 610, 75, 10, BLACK);
+      DrawText(TextFormat(UTF8String('- Up: (%06.3f, %06.3f, %06.3f)'), Camera.Up.X, Camera.Up.Y, Camera.Up.Z), 610, 90, 10, BLACK);
 
     EndDrawing();
     //-------------------------------------------------------------------------------------------

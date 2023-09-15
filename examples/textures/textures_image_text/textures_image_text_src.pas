@@ -2,12 +2,11 @@
 *
 *   raylib [texture] example - Image text drawing using TTF generated font
 *
-*   Example originally created with raylib 1.8, last time updated with raylib 4.0
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2017-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2017-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit textures_image_text_src;

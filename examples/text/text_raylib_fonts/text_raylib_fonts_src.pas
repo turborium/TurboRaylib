@@ -5,12 +5,11 @@
 *   NOTE: raylib is distributed with some free to use fonts (even for commercial pourposes!)
 *         To view details and credits for those fonts, check raylib license file
 *
-*   Example originally created with raylib 1.7, last time updated with raylib 3.7
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2017-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2017-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit text_raylib_fonts_src;

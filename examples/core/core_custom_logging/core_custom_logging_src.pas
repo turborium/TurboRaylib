@@ -2,19 +2,23 @@
 *
 *   raylib [core] example - Custom logging
 *
-*   Example originally created with raylib 2.5, last time updated with raylib 2.5
-*
 *   Example contributed by Pablo Marcos Oltra (@pamarcos) and reviewed by Ramon Santamaria (@raysan5)
 *
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
 *   Copyright (c) 2018-2022 Pablo Marcos Oltra (@pamarcos) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit core_custom_logging_src;
 
 {$IFDEF FPC}{$MODE DELPHIUNICODE}{$ENDIF}
+{$POINTERMATH ON}
+
+{$IFNDEF MSWINDOWS}
+  {$MESSAGE ERROR 'THIS SAMPLE ONLY FOR WINDOWS!'}
+{$ENDIF}
 
 interface
 
@@ -31,10 +35,8 @@ function vprintf(Fmt: PAnsiChar; Args: Pointer): Integer; cdecl; varargs; extern
 
 // Custom logging function
 procedure CustomLog(MsgType: TTraceLogLevel; const Text: PAnsiChar; Args: Pointer); cdecl;
-const
-  StackSlotSize = SizeOf(Pointer);
 begin
-  writeln('[', DateTimetoStr(Now{$IFNDEF FPC}, TFormatSettings.Create('en-gb'){$ENDIF}), ']');
+  write('[', DateTimetoStr(Now{$IFNDEF FPC}, TFormatSettings.Create('en-gb'){$ENDIF}), '] ');
 
   case MsgType of
    LOG_INFO: write('[INFO] : ');
@@ -43,7 +45,7 @@ begin
    LOG_DEBUG: write('[DEBUG] : ');
   end;
 
-  vprintf(text, args-4);
+  vprintf(text, args);
   writeln;
 end;
 

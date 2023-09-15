@@ -2,12 +2,11 @@
 *
 *   raylib [models] example - first person maze
 *
-*   Example originally created with raylib 2.5, last time updated with raylib 3.5
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2019-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2019-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit models_first_person_maze_src;
@@ -41,7 +40,7 @@ var
   Mesh: TMesh;
   Model: TModel;
   Texture: TTexture2D;
-  MapPosition, OldCamPos: TVector3;
+  MapPosition, OldCamPos, Position: TVector3;
   PlayerPos: TVector2;
   MapPixels: PColor;
   PlayerRadius: Single;
@@ -54,28 +53,31 @@ begin
   InitWindow(ScreenWidth, ScreenHeight, UTF8String('raylib [models] example - first person maze'));
 
   // Define the camera to look into our 3d world
-  Camera := TCamera.Create(
-    TVector3.Create(0.2, 0.4, 0.2),
-    TVector3.Create(0.0, 0.0, 0.0),
-    TVector3.Create(0.0, 1.0, 0.0),
-    45.0, 0);
+  Camera := Default(TCamera);
+  Camera.Position := TVector3.Create(0.2, 0.4, 0.2);
+  Camera.Target := TVector3.Create(0.185, 0.4, 0.0);
+  Camera.Up := TVector3.Create(0.0, 1.0, 0.0);
+  Camera.Fovy := 45.0;
+  Camera.Projection := CAMERA_PERSPECTIVE;
 
-  ImMap := LoadImage(UTF8String('resources/models/cubicmap.png'));      // Load cubicmap image (RAM)
-  Cubicmap := LoadTextureFromImage(ImMap);                               // Convert image to texture to display (VRAM)
+  Position := TVector3.Create(0, 0, 0);
+
+  ImMap := LoadImage(UTF8String('resources/models/cubicmap.png')); // Load cubicmap image (RAM)
+  Cubicmap := LoadTextureFromImage(ImMap); // Convert image to texture to display (VRAM)
   Mesh := GenMeshCubicmap(ImMap, TVector3.Create(1.0, 1.0, 1.0));
   Model := LoadModelFromMesh(Mesh);
 
   // NOTE: By default each cube is mapped to one part of texture atlas
-  Texture := LoadTexture(UTF8String('resources/models/cubicmap_atlas.png'));    // Load map texture
-  Model.Materials[0].Maps[MATERIAL_MAP_DIFFUSE].Texture := Texture;             // Set map diffuse texture
+  Texture := LoadTexture(UTF8String('resources/models/cubicmap_atlas.png')); // Load map texture
+  Model.Materials[0].Maps[MATERIAL_MAP_DIFFUSE].Texture := Texture; // Set map diffuse texture
 
   // Get map image data to be used for collision detection
   MapPixels := LoadImageColors(ImMap);
-  UnloadImage(ImMap);             // Unload image from RAM
+  UnloadImage(ImMap); // Unload image from RAM
 
-  MapPosition := TVector3.Create(-16.0, 0.0, -8.0);  // Set model position
+  MapPosition := TVector3.Create(-16.0, 0.0, -8.0); // Set model position
 
-  SetCameraMode(Camera, CAMERA_FIRST_PERSON);     // Set camera mode
+  DisableCursor(); // Limit cursor to relative movement inside the window
 
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
@@ -87,7 +89,7 @@ begin
     //-------------------------------------------------------------------------------------------
     OldCamPos := Camera.Position;    // Store old camera position
 
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_FIRST_PERSON);
 
     // Check player collision (we simplify to 2D collision detection)
     PlayerPos := TVector2.Create(Camera.Position.X, Camera.Position.Z);

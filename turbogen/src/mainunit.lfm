@@ -1,7 +1,7 @@
 object FormMain: TFormMain
-  Left = 860
+  Left = 685
   Height = 585
-  Top = 632
+  Top = 569
   Width = 834
   Caption = 'TurboGen'
   ClientHeight = 585
@@ -12,6 +12,7 @@ object FormMain: TFormMain
   OnChangeBounds = FormChangeBounds
   OnCreate = FormCreate
   Position = poScreenCenter
+  LCLVersion = '3.0.0.1'
   object PanelProps: TPanel
     Left = 0
     Height = 392
@@ -175,10 +176,10 @@ object FormMain: TFormMain
       ClientWidth = 802
       TabOrder = 3
       object EditOutputPath: TEdit
-        Left = 202
+        Left = 198
         Height = 33
         Top = 0
-        Width = 600
+        Width = 604
         Align = alClient
         Enabled = False
         TabOrder = 1
@@ -186,7 +187,7 @@ object FormMain: TFormMain
         TextHint = 'Enter Subdir For Binaries'
       end
       object BevelOutputFolder: TBevel
-        Left = 163
+        Left = 159
         Height = 1
         Top = 0
         Width = 31
@@ -198,7 +199,7 @@ object FormMain: TFormMain
         Left = 0
         Height = 33
         Top = 0
-        Width = 155
+        Width = 151
         Align = alLeft
         Caption = 'Use Output Dir'
         OnChange = CheckBoxOutputPathChange
@@ -633,6 +634,23 @@ object FormMain: TFormMain
       }
       Proportional = True
       StretchInEnabled = False
+    end
+    object LabelVersion: TLabel
+      AnchorSideRight.Control = ImageLogo
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Control = ImageLogo
+      AnchorSideBottom.Side = asrBottom
+      Left = 633
+      Height = 25
+      Top = 55
+      Width = 47
+      Anchors = [akRight, akBottom]
+      Caption = 'v4.5.0'
+      Font.Color = clGrayText
+      Font.Height = -19
+      ParentColor = False
+      ParentFont = False
+      OnClick = LabelVersionClick
     end
   end
   object SelectDirectoryDialog: TSelectDirectoryDialog

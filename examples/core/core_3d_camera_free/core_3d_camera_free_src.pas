@@ -2,12 +2,11 @@
 *
 *   raylib [core] example - Initialize 3d camera free
 *
-*   Example originally created with raylib 1.3, last time updated with raylib 1.3
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2015-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2015-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit core_3d_camera_free_src;
@@ -46,11 +45,11 @@ begin
   Camera.Target := TVector3.Create(0.0, 0.0, 0.0);      // Camera looking at point
   Camera.Up := TVector3.Create(0.0, 1.0, 0.0);          // Camera up vector (rotation towards target)
   Camera.Fovy := 45.0;                                  // Camera field-of-view Y
-  Camera.Projection := CAMERA_PERSPECTIVE;              // Camera mode type
+  Camera.Projection := CAMERA_PERSPECTIVE;              // Camera projection type
 
   CubePosition := TVector3.Create(0.0, 0.0, 0.0);
 
-  SetCameraMode(Camera, CAMERA_FREE); // Set a free camera mode
+  DisableCursor(); // Limit cursor to relative movement inside the window
 
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
@@ -62,7 +61,7 @@ begin
     //-------------------------------------------------------------------------------------------
     // TODO: Update your variables here
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_FREE);
 
     if IsKeyDown(KEY_Z) then
       Camera.Target := TVector3.Create(0.0, 0.0, 0.0);

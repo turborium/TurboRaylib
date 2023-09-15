@@ -1,15 +1,4 @@
 ﻿// ------------------------------------------------------------------------------------------------------------------
-//  ▄████▄▓██   ██▓ ▄▄▄▄   ▓█████  ██▀███   ██▓███    ██████▓██   ██▓ ▄████▄   ██░ ██  ▒█████    ██████  ██▓  ██████
-// ▒██▀ ▀█ ▒██  ██▒▓█████▄ ▓█   ▀ ▓██ ▒ ██▒▓██░  ██▒▒██    ▒ ▒██  ██▒▒██▀ ▀█  ▓██░ ██▒▒██▒  ██▒▒██    ▒ ▓██▒▒██    ▒
-// ▒▓█    ▄ ▒██ ██░▒██▒ ▄██▒███   ▓██ ░▄█ ▒▓██░ ██▓▒░ ▓██▄    ▒██ ██░▒▓█    ▄ ▒██▀▀██░▒██░  ██▒░ ▓██▄   ▒██▒░ ▓██▄
-// ▒▓▓▄ ▄██▒░ ▐██▓░▒██░█▀  ▒▓█  ▄ ▒██▀▀█▄  ▒██▄█▓▒ ▒  ▒   ██▒ ░ ▐██▓░▒▓▓▄ ▄██▒░▓█ ░██ ▒██   ██░  ▒   ██▒░██░  ▒   ██▒
-// ▒ ▓███▀ ░░ ██▒▓░░▓█  ▀█▓░▒████▒░██▓ ▒██▒▒██▒ ░  ░▒██████▒▒ ░ ██▒▓░▒ ▓███▀ ░░▓█▒░██▓░ ████▓▒░▒██████▒▒░██░▒██████▒▒
-// ░ ░▒ ▒  ░ ██▒▒▒ ░▒▓███▀▒░░ ▒░ ░░ ▒▓ ░▒▓░▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░  ██▒▒▒ ░ ░▒ ▒  ░ ▒ ░░▒░▒░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░░▓  ▒ ▒▓▒ ▒ ░
-//   ░  ▒  ▓██ ░▒░ ▒░▒   ░  ░ ░  ░  ░▒ ░ ▒░░▒ ░     ░ ░▒  ░ ░▓██ ░▒░   ░  ▒    ▒ ░▒░ ░  ░ ▒ ▒░ ░ ░▒  ░ ░ ▒ ░░ ░▒  ░ ░
-// ░       ▒ ▒ ░░   ░    ░    ░     ░░   ░ ░░       ░  ░  ░  ▒ ▒ ░░  ░         ░  ░░ ░░ ░ ░ ▒  ░  ░  ░   ▒ ░░  ░  ░
-// ░ ░     ░ ░      ░         ░  ░   ░                    ░  ░ ░     ░ ░       ░  ░  ░    ░ ░        ░   ░        ░
-// ░       ░ ░           ░                                   ░ ░     ░
-// ------------------------------------------------------------------------------------------------------------------
 //    _  __ ________       _  __ ______     _ ________         _  __ ________________
 //   _  __ ____  __/___  ___________  /__________  __ \_____ _____  ____  /__(_)__  /_
 //       _  __  /  _  / / /_  ___/_  __ \  __ \_  /_/ /  __ `/_  / / /_  /__  /__  __ \
@@ -17,10 +6,10 @@
 //          /_/    \__,_/ /_/    /_.___/\____//_/ |_| \__,_/ _\__, / /_/  /_/  /_.___/
 //                                                           /____/
 //
-//  TurboRaylib - Delphi and FreePascal headers for Raylib 4.2.
+//  TurboRaylib - Delphi and FreePascal headers for Raylib 4.5.
 //  Raylib - A simple and easy-to-use library to enjoy videogames programming (www.raylib.com)
 //
-//  Download compilled Raylib 4.2 library: https://github.com/raysan5/raylib/releases/tag/4.2.0
+//  Download compilled Raylib 4.5 library: https://github.com/raysan5/raylib/releases/tag/4.5.0
 //
 //  Original files: raylib.h
 //
@@ -28,7 +17,7 @@
 //
 //  Headers licensed under an unmodified MIT license, that allows static linking with closed source software
 //
-//  Copyright (c) 2022-2022 Turborium (https://github.com/turborium/TurboRaylib)
+//  Copyright (c) 2022-2023 Turborium (https://github.com/turborium/TurboRaylib)
 // -------------------------------------------------------------------------------------------------------------------
 
 unit raylib;
@@ -42,7 +31,7 @@ interface
 {$INCLUDE raylib.inc}
 
 const
-  RAYLIB_VERSION = 4.2;
+  RAYLIB_VERSION = 4.5;
 
 {$IF not Declared(LibName)}
 const
@@ -258,7 +247,7 @@ const
   MOUSE_CURSOR_RESIZE_NS     = TMouseCursor(6);  // Vertical resize/move arrow shape
   MOUSE_CURSOR_RESIZE_NWSE   = TMouseCursor(7);  // Top-left to bottom-right diagonal resize/move arrow shape
   MOUSE_CURSOR_RESIZE_NESW   = TMouseCursor(8);  // The top-right to bottom-left diagonal resize/move arrow shape
-  MOUSE_CURSOR_RESIZE_ALL    = TMouseCursor(9);  // The omni-directional resize/move cursor shape
+  MOUSE_CURSOR_RESIZE_ALL    = TMouseCursor(9);  // The omnidirectional resize/move cursor shape
   MOUSE_CURSOR_NOT_ALLOWED   = TMouseCursor(10); // The operation-not-allowed shape
 
 // Gamepad buttons
@@ -434,7 +423,7 @@ type
 const
   CUBEMAP_LAYOUT_AUTO_DETECT         = TCubemapLayout(0); // Automatically detect layout type
   CUBEMAP_LAYOUT_LINE_VERTICAL       = TCubemapLayout(1); // Layout is defined by a vertical line with faces
-  CUBEMAP_LAYOUT_LINE_HORIZONTAL     = TCubemapLayout(2); // Layout is defined by an horizontal line with faces
+  CUBEMAP_LAYOUT_LINE_HORIZONTAL     = TCubemapLayout(2); // Layout is defined by a horizontal line with faces
   CUBEMAP_LAYOUT_CROSS_THREE_BY_FOUR = TCubemapLayout(3); // Layout is defined by a 3x4 cross with cubemap faces
   CUBEMAP_LAYOUT_CROSS_FOUR_BY_THREE = TCubemapLayout(4); // Layout is defined by a 4x3 cross with cubemap faces
   CUBEMAP_LAYOUT_PANORAMA            = TCubemapLayout(5); // Layout is defined by a panorama image (equirectangular map)
@@ -459,10 +448,11 @@ const
   BLEND_ADD_COLORS        = TBlendMode(3); // Blend textures adding colors (alternative)
   BLEND_SUBTRACT_COLORS   = TBlendMode(4); // Blend textures subtracting colors (alternative)
   BLEND_ALPHA_PREMULTIPLY = TBlendMode(5); // Blend premultiplied textures considering alpha
-  BLEND_CUSTOM            = TBlendMode(6); // Blend textures using custom src/dst factors (use rlSetBlendMode())
+  BLEND_CUSTOM            = TBlendMode(6); // Blend textures using custom src/dst factors (use rlSetBlendFactors())
+  BLEND_CUSTOM_SEPARATE   = TBlendMode(7); // Blend textures using custom rgb/alpha separate src/dst factors (use rlSetBlendFactorsSeparate())
 
 // Gestures
-// NOTE: It could be used as flags to enable only some gestures
+// NOTE: Provided as bit-wise flags to enable only desired gestures
 type
   PGesture = ^TGesture;
   TGesture = Cardinal;
@@ -508,7 +498,7 @@ const
   NPATCH_THREE_PATCH_HORIZONTAL = TNPatchLayout(2); // Npatch layout: 3x1 tiles
 
 // Callbacks to hook some internal functions
-// WARNING: This callbacks are intended for advance users
+// WARNING: These callbacks are intended for advance users
 type
   // Logging: Redirect trace log messages
   TTraceLogCallback = procedure(LogLevel: TTraceLogLevel; const Text: PAnsiChar; Args: Pointer); cdecl varargs;
@@ -557,13 +547,13 @@ type
   PQuaternion = ^TQuaternion;
   TQuaternion = TVector4;
 
-  // Matrix, 4x4 components, column major, OpenGL style, right handed
+  // Matrix, 4x4 components, column major, OpenGL style, right-handed
   PMatrix = ^TMatrix;
   TMatrix = record
     M0, M4, M8, M12: Single;  // Matrix first row (4 components)
-    M1, M5, M9, M13: Single;  // Matrix first row (4 components)
-    M2, M6, M10, M14: Single; // Matrix first row (4 components)
-    M3, M7, M11, M15: Single; // Matrix first row (4 components)
+    M1, M5, M9, M13: Single;  // Matrix second row (4 components)
+    M2, M6, M10, M14: Single; // Matrix third row (4 components)
+    M3, M7, M11, M15: Single; // Matrix fourth row (4 components)
   end;
 
   // Color, 4 components, R8G8B8A8 (32bit)
@@ -785,8 +775,8 @@ type
   PRayCollision = ^TRayCollision;
   TRayCollision = record
     Hit: Boolean;     // Did the ray hit something?
-    Distance: Single; // Distance to nearest hit
-    Point: TVector3;  // Point of nearest hit
+    Distance: Single; // Distance to the nearest hit
+    Point: TVector3;  // Point of the nearest hit
     Normal: TVector3; // Surface normal of hit
   end;
 
@@ -953,8 +943,10 @@ procedure MaximizeWindow();
 procedure MinimizeWindow();
 // Set window state: not minimized/maximized (only PLATFORM_DESKTOP)
 procedure RestoreWindow();
-// Set icon for window (only PLATFORM_DESKTOP)
+// Set icon for window (single image, RGBA 32bit, only PLATFORM_DESKTOP)
 procedure SetWindowIcon(Image: TImage);
+// Set icon for window (multiple images, RGBA 32bit, only PLATFORM_DESKTOP)
+procedure SetWindowIcons(Image: PImage; Count: Integer);
 // Set title for window (only PLATFORM_DESKTOP)
 procedure SetWindowTitle(const Title: PAnsiChar);
 // Set window position on screen (only PLATFORM_DESKTOP)
@@ -1086,6 +1078,8 @@ procedure UnloadVrStereoConfig(Config: TVrStereoConfig);
 function LoadShader(const VsFileName, FsFileName: PAnsiChar): TShader;
 // Load shader from code strings and bind default locations
 function LoadShaderFromMemory(const VsCode, FsCode: PAnsiChar): TShader;
+// Check if a shader is ready
+function IsShaderReady(Shader: TShader): Boolean;
 // Get shader uniform location
 function GetShaderLocation(Shader: TShader; const UniformName: PAnsiChar): Integer;
 // Get shader attribute location
@@ -1145,9 +1139,9 @@ procedure TraceLog(LogLevel: TTraceLogLevel; const Text: PAnsiChar); cdecl varar
 // Set the current threshold (minimum) log level
 procedure SetTraceLogLevel(LogLevel: TTraceLogLevel);
 // Internal memory allocator
-function MemAlloc(Size: Integer): Pointer;
+function MemAlloc(Size: Cardinal): Pointer;
 // Internal memory reallocator
-function MemRealloc(Ptr: Pointer; Size: Integer): Pointer;
+function MemRealloc(Ptr: Pointer; Size: Cardinal): Pointer;
 // Internal memory free
 procedure MemFree(Ptr: Pointer);
 
@@ -1354,19 +1348,25 @@ function GetGesturePinchAngle(): Single;
 // Camera System Functions (Module: rcamera)
 //------------------------------------------------------------------------------------
 
-// Set camera mode (multiple camera modes available)
-procedure SetCameraMode(Camera: TCamera; Mode: TCameraMode);
 // Update camera position for selected mode
-procedure UpdateCamera(Camera: PCamera);
-//- procedure UpdateCamera(var Camera: TCamera);
-// Set camera pan key to combine with mouse movement (free camera)
-procedure SetCameraPanControl(KeyPan: TKeyboardKey);
-// Set camera alt key to combine with mouse movement (free camera)
-procedure SetCameraAltControl(KeyAlt: TKeyboardKey);
-// Set camera smooth zoom key to combine with mouse (free camera)
-procedure SetCameraSmoothZoomControl(KeySmoothZoom: TKeyboardKey);
-// Set camera move controls (1st person and 3rd person cameras)
-procedure SetCameraMoveControls(KeyFront, KeyBack, KeyRight, KeyLeft, KeyUp, KeyDown: TKeyboardKey);
+procedure UpdateCamera(Camera: PCamera; Mode: TCameraMode);
+// Update camera movement/rotation
+procedure UpdateCameraPro(Camera: PCamera; Movement, Rotation, Zoom: TVector3);
+
+function GetCameraForward(Camera: PCamera): TVector3;
+function GetCameraUp(Camera: PCamera): TVector3;
+function GetCameraRight(Camera: PCamera): TVector3;
+// Camera movement
+procedure CameraMoveForward(Camera: PCamera; Distance: Single; MoveInWorldPlane: Boolean);
+procedure CameraMoveUp(Camera: PCamera; Distance: Single);
+procedure CameraMoveRight(Camera: PCamera; Distance: Single; MoveInWorldPlane: Boolean);
+procedure CameraMoveToTarget(Camera: PCamera; Delta: Single);
+// Camera rotation
+procedure CameraYaw(Camera: PCamera; Angle: Single; RotateAroundTarget: Boolean);
+procedure CameraPitch(Camera: PCamera; Angle: Single; LockView: Boolean; RotateAroundTarget, RotateUp: Boolean);
+procedure CameraRoll(Camera: PCamera; Angle: Single);
+function GetCameraViewMatrix(Camera: PCamera): TMatrix;
+function GetCameraProjectionMatrix(Camera: PCamera; Aspect: Single): TMatrix;
 
 //------------------------------------------------------------------------------------
 // Basic Shapes Drawing Functions (Module: shapes)
@@ -1469,6 +1469,8 @@ function CheckCollisionPointRec(Point: TVector2; Rec: TRectangle): Boolean;
 function CheckCollisionPointCircle(Point, Center: TVector2; Radius: Single): Boolean;
 // Check if point is inside a triangle
 function CheckCollisionPointTriangle(Point, P1, P2, P3: TVector2): Boolean;
+// Check if point is within a polygon described by array of vertices
+function CheckCollisionPointPoly(Point: TVector2; Points: PVector2; PointCount: Integer): Boolean;
 // Check the collision between two lines defined by two points each, returns collision point by reference
 function CheckCollisionLines(StartPos1, EndPos1, StartPos2, EndPos2: TVector2; CollisionPoint: PVector2): Boolean;
 // Check if point belongs to line created between two points [p1] and [p2] with defined margin in pixels [threshold]
@@ -1481,7 +1483,7 @@ function GetCollisionRec(Rec1, Rec2: TRectangle): TRectangle;
 //------------------------------------------------------------------------------------
 
 // Image loading functions
-// NOTE: This functions do not require GPU access
+// NOTE: These functions do not require GPU access
 
 // Load image from file into CPU memory (RAM)
 function LoadImage(const FileName: PAnsiChar): TImage;
@@ -1496,6 +1498,8 @@ function LoadImageFromMemory(const FileType: PAnsiChar; const FileData: PByte; D
 function LoadImageFromTexture(Texture: TTexture2D): TImage;
 // Load image from screen buffer and (screenshot)
 function LoadImageFromScreen(): TImage;
+// Check if an image is ready
+function IsImageReady(Image: TImage): Boolean;
 // Unload image from CPU memory (RAM)
 procedure UnloadImage(Image: TImage);
 // Export image data to file, returns true on success
@@ -1517,8 +1521,12 @@ function GenImageGradientRadial(Width, Height: Integer; Density: Single; Inner, 
 function GenImageChecked(Width, Height, ChecksX, ChecksY: Integer; Col1, Col2: TColor): TImage;
 // Generate image: white noise
 function GenImageWhiteNoise(Width, Height: Integer; Factor: Single): TImage;
+// Generate image: perlin noise
+function GenImagePerlinNoise(Width, Height, OffsetX, OffsetY: Integer; Scale: Single): TImage;
 // Generate image: cellular algorithm, bigger tileSize means bigger cells
 function GenImageCellular(Width, Height, TileSize: Integer): TImage;
+// Generate image: grayscale image from text data
+function GenImageText(Width, Height: Integer; const Text: PAnsiChar): TImage;
 
 // Image manipulation functions
 
@@ -1551,6 +1559,9 @@ procedure ImageAlphaMask(Image: PImage; AlphaMask: TImage);
 // Premultiply alpha channel
 procedure ImageAlphaPremultiply(Image: PImage);
 //- procedure ImageAlphaPremultiply(var Image: TImage);
+// Apply Gaussian blur using a box blur approximation
+procedure ImageBlurGaussian(Image: PImage; BlurSize: Integer);
+//- procedure ImageBlurGaussian(var Image: TImage; BlurSize: Integer);
 // Resize image (Bicubic scaling algorithm)
 procedure ImageResize(Image: PImage; NewWidth, NewHeight: Integer);
 //- procedure ImageResize(var Image: TImage; NewWidth, NewHeight: Integer);
@@ -1628,12 +1639,18 @@ procedure ImageDrawLine(Dst: PImage; StartPosX, StartPosY, EndPosX, EndPosY: Int
 // Draw line within an image (Vector version)
 procedure ImageDrawLineV(Dst: PImage; Start, End_: TVector2; Color: TColor);
 //- procedure ImageDrawLineV(var Dst: TImage; Start, End_: TVector2; Color: TColor);
-// Draw circle within an image
+// Draw a filled circle within an image
 procedure ImageDrawCircle(Dst: PImage; CenterX, CenterY, Radius: Integer; Color: TColor);
 //- procedure ImageDrawCircle(var Dst: TImage; CenterX, CenterY, Radius: Integer; Color: TColor);
-// Draw circle within an image (Vector version)
+// Draw a filled circle within an image (Vector version)
 procedure ImageDrawCircleV(Dst: PImage; Center: TVector2; Radius: Integer; Color: TColor);
 //- procedure ImageDrawCircleV(var Dst: TImage; Center: TVector2; Radius: Integer; Color: TColor);
+// Draw circle outline within an image
+procedure ImageDrawCircleLines(Dst: PImage; CenterX, CenterY, Radius: Integer; Color: TColor);
+//- procedure ImageDrawCircleLines(var Dst: TImage; CenterX, CenterY, Radius: Integer; Color: TColor);
+// Draw circle outline within an image (Vector version)
+procedure ImageDrawCircleLinesV(Dst: PImage; Center: TVector2; Radius: Integer; Color: TColor);
+//- procedure ImageDrawCircleLinesV(var Dst: TImage; Center: TVector2; Radius: Integer; Color: TColor);
 // Draw rectangle within an image
 procedure ImageDrawRectangle(Dst: PImage; PosX, PosY, Width, Height: Integer; Color: TColor);
 //- procedure ImageDrawRectangle(var Dst: TImage; PosX, PosY, Width, Height: Integer; Color: TColor);
@@ -1667,8 +1684,12 @@ function LoadTextureFromImage(Image: TImage): TTexture2D;
 function LoadTextureCubemap(Image: TImage; Layout: TCubemapLayout): TTextureCubemap;
 // Load texture for rendering (framebuffer)
 function LoadRenderTexture(Width, Height: Integer): TRenderTexture2D;
+// Check if a texture is ready
+function IsTextureReady(Texture: TTexture2D): Boolean;
 // Unload texture from GPU memory (VRAM)
 procedure UnloadTexture(Texture: TTexture2D);
+// Check if a render texture is ready
+function IsRenderTextureReady(Texture: TRenderTexture2D): Boolean;
 // Unload render texture from GPU memory (VRAM)
 procedure UnloadRenderTexture(Target: TRenderTexture2D);
 // Update GPU texture with new data
@@ -1696,16 +1717,10 @@ procedure DrawTextureV(Texture: TTexture2D; Position: TVector2; Tint: TColor);
 procedure DrawTextureEx(Texture: TTexture2D; Position: TVector2; Rotation, Scale: Single; Tint: TColor);
 // Draw a part of a texture defined by a rectangle
 procedure DrawTextureRec(Texture: TTexture2D; Source: TRectangle; Position: TVector2; Tint: TColor);
-// Draw texture quad with tiling and offset parameters
-procedure DrawTextureQuad(Texture: TTexture2D; Tiling, Offset: TVector2; Quad: TRectangle; Tint: TColor);
-// Draw part of a texture (defined by a rectangle) with rotation and scale tiled into dest.
-procedure DrawTextureTiled(Texture: TTexture2D; Source, Dest: TRectangle; Origin: TVector2; Rotation, Scale: Single; Tint: TColor);
 // Draw a part of a texture defined by a rectangle with 'pro' parameters
 procedure DrawTexturePro(Texture: TTexture2D; Source, Dest: TRectangle; Origin: TVector2; Rotation: Single; Tint: TColor);
 // Draws a texture (or part of it) that stretches or shrinks nicely
 procedure DrawTextureNPatch(Texture: TTexture2D; NPatchInfo: TNPatchInfo; Dest: TRectangle; Origin: TVector2; Rotation: Single; Tint: TColor);
-// Draw a textured polygon
-procedure DrawTexturePoly(Texture: TTexture2D; Center: TVector2; Points: PVector2; Texcoords: PVector2; PointCount: Integer; Tint: TColor);
 
 // Color/pixel related functions
 
@@ -1721,6 +1736,12 @@ function ColorFromNormalized(Normalized: TVector4): TColor;
 function ColorToHSV(Color: TColor): TVector3;
 // Get a Color from HSV values, hue [0..360], saturation/value [0..1]
 function ColorFromHSV(Hue, Saturation, Value: Single): TColor;
+// Get color multiplied with another color
+function ColorTint(Color, Tint: TColor): TColor;
+// Get color with brightness correction, brightness factor goes from -1.0f to 1.0f
+function ColorBrightness(Color: TColor; Factor: Single): TColor;
+// Get color with contrast correction, contrast values between -1.0f and 1.0f
+function ColorContrast(Color: TColor; Contrast: Single): TColor;
 // Get color with alpha applied, alpha goes from 0.0f to 1.0f
 function ColorAlpha(Color: TColor; Alpha: Single): TColor;
 // Get src alpha-blended into dst color with tint
@@ -1750,6 +1771,8 @@ function LoadFontEx(const FileName: PAnsiChar; FontSize: Integer; FontChars: PIn
 function LoadFontFromImage(Image: TImage; Key: TColor; FirstChar: Integer): TFont;
 // Load font from memory buffer, fileType refers to extension: i.e. '.ttf'
 function LoadFontFromMemory(const FileType: PAnsiChar; const FileData: PByte; DataSize, FontSize: Integer; FontChars: PInteger; GlyphCount: Integer): TFont;
+// Check if a font is ready
+function IsFontReady(Font: TFont): Boolean;
 // Load font data for further uses
 function LoadFontData(const FileData: PByte; DataSize, FontSize: Integer; FontChars: PInteger; GlyphCount, Type_: TFontType): PGlyphInfo;
 // Generate image font atlas using chars info
@@ -1792,6 +1815,10 @@ function GetGlyphAtlasRec(Font: TFont; Codepoint: Integer): TRectangle;
 
 // Text codepoints management functions (unicode characters)
 
+// Load UTF-8 text encoded from codepoints array
+function LoadUTF8(const Codepoints: PInteger; Length: Integer): PAnsiChar;
+// Unload UTF-8 text encoded from codepoints array
+procedure UnloadUTF8(Text: PAnsiChar);
 // Load all codepoints from a UTF-8 text string, codepoints count returned by parameter
 function LoadCodepoints(const Text: PAnsiChar; Count: PInteger): PInteger;
 //- function LoadCodepoints(const Text: PAnsiChar; out Count: Integer): PInteger;
@@ -1800,13 +1827,14 @@ procedure UnloadCodepoints(Codepoints: PInteger);
 // Get total number of codepoints in a UTF-8 encoded string
 function GetCodepointCount(const Text: PAnsiChar): Integer;
 // Get next codepoint in a UTF-8 encoded string, 0x3f('?') is returned on failure
-function GetCodepoint(const Text: PAnsiChar; BytesProcessed: PInteger): Integer;
-//- function GetCodepoint(const Text: PAnsiChar; out BytesProcessed: Integer): Integer;
+function GetCodepoint(const Text: PAnsiChar; CodepointSize: PInteger): Integer;
+// Get next codepoint in a UTF-8 encoded string, 0x3f('?') is returned on failure
+function GetCodepointNext(const Text: PAnsiChar; CodepointSize: PInteger): Integer;
+// Get previous codepoint in a UTF-8 encoded string, 0x3f('?') is returned on failure
+function GetCodepointPrevious(const Text: PAnsiChar; CodepointSize: PInteger): Integer;
 // Encode one codepoint into UTF-8 byte array (array length returned as parameter)
-function CodepointToUTF8(Codepoint: Integer; ByteSize: PInteger): PAnsiChar;
-//- function CodepointToUTF8(Codepoint: Integer; out ByteSize: Integer): PAnsiChar;
-// Encode text as codepoints array into UTF-8 text string (WARNING: memory must be freed!)
-function TextCodepointsToUTF8(const Codepoints: PInteger; Length: Integer): PAnsiChar;
+function CodepointToUTF8(Codepoint: Integer; Utf8Size: PInteger): PAnsiChar;
+//- function CodepointToUTF8(Codepoint: Integer; out Utf8Size: Integer): PAnsiChar;
 
 // Text strings management functions (no UTF-8 strings, only byte chars)
 // NOTE: Some strings allocate memory internally for returned strings, just be careful!
@@ -1868,10 +1896,6 @@ procedure DrawCubeV(Position, Size: TVector3; Color: TColor);
 procedure DrawCubeWires(Position: TVector3; Width, Height, Length: Single; Color: TColor);
 // Draw cube wires (Vector version)
 procedure DrawCubeWiresV(Position, Size: TVector3; Color: TColor);
-// Draw cube textured
-procedure DrawCubeTexture(Texture: TTexture2D; Position: TVector3; Width, Height, Length: Single; Color: TColor);
-// Draw cube with a region of a texture
-procedure DrawCubeTextureRec(Texture: TTexture2D; Source: TRectangle; Position: TVector3; Width, Height, Length: Single; Color: TColor);
 // Draw sphere
 procedure DrawSphere(CenterPos: TVector3; Radius: Single; Color: TColor);
 // Draw sphere with extended parameters
@@ -1886,6 +1910,10 @@ procedure DrawCylinderEx(StartPos, EndPos: TVector3; StartRadius, EndRadius: Sin
 procedure DrawCylinderWires(Position: TVector3; RadiusTop, RadiusBottom, Height: Single; Slices: Integer; Color: TColor);
 // Draw a cylinder wires with base at startPos and top at endPos
 procedure DrawCylinderWiresEx(StartPos, EndPos: TVector3; StartRadius, EndRadius: Single; Sides: Integer; Color: TColor);
+// Draw a capsule with the center of its sphere caps at startPos and endPos
+procedure DrawCapsule(StartPos, EndPos: TVector3; Radius: Single; Slices, Rings: Integer; Color: TColor);
+// Draw capsule wireframe with the center of its sphere caps at startPos and endPos
+procedure DrawCapsuleWires(StartPos, EndPos: TVector3; Radius: Single; Slices, Rings: Integer; Color: TColor);
 // Draw a plane XZ
 procedure DrawPlane(CenterPos: TVector3; Size: TVector2; Color: TColor);
 // Draw a ray line
@@ -1903,10 +1931,10 @@ procedure DrawGrid(Slices: Integer; Spacing: Single);
 function LoadModel(const FileName: PAnsiChar): TModel;
 // Load model from generated mesh (default material)
 function LoadModelFromMesh(Mesh: TMesh): TModel;
+// Check if a model is ready
+function IsModelReady(Model: TModel): Boolean;
 // Unload model (including meshes) from memory (RAM and/or VRAM)
 procedure UnloadModel(Model: TModel);
-// Unload model (but not meshes) from memory (RAM and/or VRAM)
-procedure UnloadModelKeepMeshes(Model: TModel);
 // Compute model bounding box limits (considers all meshes)
 function GetModelBoundingBox(Model: TModel): TBoundingBox;
 
@@ -1982,6 +2010,8 @@ function LoadMaterials(const FileName: PAnsiChar; MaterialCount: PInteger): PMat
 //- function LoadMaterials(const FileName: PAnsiChar; out MaterialCount: Integer): PMaterial;
 // Load default material (Supports: DIFFUSE, SPECULAR, NORMAL maps)
 function LoadMaterialDefault(): TMaterial;
+// Check if a material is ready
+function IsMaterialReady(Material: TMaterial): Boolean;
 // Unload material from GPU memory (VRAM)
 procedure UnloadMaterial(Material: TMaterial);
 // Set texture for a material map type (MATERIAL_MAP_DIFFUSE, MATERIAL_MAP_SPECULAR...)
@@ -2049,10 +2079,14 @@ procedure SetMasterVolume(Volume: Single);
 function LoadWave(const FileName: PAnsiChar): TWave;
 // Load wave from memory buffer, fileType refers to extension: i.e. '.wav'
 function LoadWaveFromMemory(const FileType: PAnsiChar; const FileData: PByte; DataSize: Integer): TWave;
+// Checks if wave data is ready
+function IsWaveReady(Wave: TWave): Boolean;
 // Load sound from file
 function LoadSound(const FileName: PAnsiChar): TSound;
 // Load sound from wave data
 function LoadSoundFromWave(Wave: TWave): TSound;
+// Checks if a sound is ready
+function IsSoundReady(Sound: TSound): Boolean;
 // Update sound buffer with new data
 procedure UpdateSound(Sound: TSound; const Data: Pointer; SampleCount: Integer);
 // Unload wave data
@@ -2074,12 +2108,6 @@ procedure StopSound(Sound: TSound);
 procedure PauseSound(Sound: TSound);
 // Resume a paused sound
 procedure ResumeSound(Sound: TSound);
-// Play a sound (using multichannel buffer pool)
-procedure PlaySoundMulti(Sound: TSound);
-// Stop any sound playing (using multichannel buffer pool)
-procedure StopSoundMulti();
-// Get number of sounds playing in the multichannel
-function GetSoundsPlaying(): Integer;
 // Check if a sound is currently playing
 function IsSoundPlaying(Sound: TSound): Boolean;
 // Set volume for a sound (1.0 is max level)
@@ -2107,6 +2135,8 @@ procedure UnloadWaveSamples(Samples: PSingle);
 function LoadMusicStream(const FileName: PAnsiChar): TMusic;
 // Load music stream from data
 function LoadMusicStreamFromMemory(const FileType: PAnsiChar; const Data: PByte; DataSize: Integer): TMusic;
+// Checks if a music stream is ready
+function IsMusicReady(Music: TMusic): Boolean;
 // Unload music stream
 procedure UnloadMusicStream(Music: TMusic);
 // Start music playing
@@ -2138,6 +2168,8 @@ function GetMusicTimePlayed(Music: TMusic): Single;
 
 // Load audio stream (to stream raw audio pcm data)
 function LoadAudioStream(SampleRate, SampleSize, Channels: Cardinal): TAudioStream;
+// Checks if an audio stream is ready
+function IsAudioStreamReady(Stream: TAudioStream): Boolean;
 // Unload audio stream and free memory
 procedure UnloadAudioStream(Stream: TAudioStream);
 // Update audio stream buffers with data
@@ -2164,10 +2196,16 @@ procedure SetAudioStreamPan(Stream: TAudioStream; Pan: Single);
 procedure SetAudioStreamBufferSizeDefault(Size: Integer);
 // Audio thread callback to request new data
 procedure SetAudioStreamCallback(Stream: TAudioStream; Callback: TAudioCallback);
+
 // Attach audio stream processor to stream
 procedure AttachAudioStreamProcessor(Stream: TAudioStream; Processor: TAudioCallback);
 // Detach audio stream processor from stream
 procedure DetachAudioStreamProcessor(Stream: TAudioStream; Processor: TAudioCallback);
+
+// Attach audio stream processor to the entire audio pipeline
+procedure AttachAudioMixedProcessor(Processor: TAudioCallback);
+// Detach audio stream processor from the entire audio pipeline
+procedure DetachAudioMixedProcessor(Processor: TAudioCallback);
 
 implementation
 
@@ -2306,6 +2344,13 @@ procedure Lib_SetWindowIcon(Image: TImage);
 procedure SetWindowIcon(Image: TImage);
 begin
   Lib_SetWindowIcon(Image);
+end;
+
+procedure Lib_SetWindowIcons(Image: PImage; Count: Integer);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'SetWindowIcons';
+procedure SetWindowIcons(Image: PImage; Count: Integer);
+begin
+  Lib_SetWindowIcons(Image, Count);
 end;
 
 procedure Lib_SetWindowTitle(const Title: PAnsiChar);
@@ -2710,6 +2755,13 @@ begin
   Result := TShader(Lib_LoadShaderFromMemory(VsCode, FsCode));
 end;
 
+function Lib_IsShaderReady(Shader: TShader): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsShaderReady';
+function IsShaderReady(Shader: TShader): Boolean;
+begin
+  Result := Lib_IsShaderReady(Shader);
+end;
+
 function Lib_GetShaderLocation(Shader: TShader; const UniformName: PAnsiChar): Integer;
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GetShaderLocation';
 function GetShaderLocation(Shader: TShader; const UniformName: PAnsiChar): Integer;
@@ -2880,16 +2932,16 @@ begin
   Lib_SetTraceLogLevel(LogLevel);
 end;
 
-function Lib_MemAlloc(Size: Integer): Pointer;
+function Lib_MemAlloc(Size: Cardinal): Pointer;
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'MemAlloc';
-function MemAlloc(Size: Integer): Pointer;
+function MemAlloc(Size: Cardinal): Pointer;
 begin
   Result := Lib_MemAlloc(Size);
 end;
 
-function Lib_MemRealloc(Ptr: Pointer; Size: Integer): Pointer;
+function Lib_MemRealloc(Ptr: Pointer; Size: Cardinal): Pointer;
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'MemRealloc';
-function MemRealloc(Ptr: Pointer; Size: Integer): Pointer;
+function MemRealloc(Ptr: Pointer; Size: Cardinal): Pointer;
 begin
   Result := Lib_MemRealloc(Ptr, Size);
 end;
@@ -3486,46 +3538,94 @@ end;
 
 // Camera System Functions (Module: rcamera)
 
-procedure Lib_SetCameraMode(Camera: TCamera; Mode: TCameraMode);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'SetCameraMode';
-procedure SetCameraMode(Camera: TCamera; Mode: TCameraMode);
-begin
-  Lib_SetCameraMode(Camera, Mode);
-end;
-
-procedure Lib_UpdateCamera(Camera: PCamera);
+procedure Lib_UpdateCamera(Camera: PCamera; Mode: TCameraMode);
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'UpdateCamera';
-procedure UpdateCamera(Camera: PCamera);
+procedure UpdateCamera(Camera: PCamera; Mode: TCameraMode);
 begin
-  Lib_UpdateCamera(Camera);
+  Lib_UpdateCamera(Camera, Mode);
 end;
 
-procedure Lib_SetCameraPanControl(KeyPan: TKeyboardKey);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'SetCameraPanControl';
-procedure SetCameraPanControl(KeyPan: TKeyboardKey);
+procedure Lib_UpdateCameraPro(Camera: PCamera; Movement, Rotation, Zoom: TVector3);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'UpdateCameraPro';
+procedure UpdateCameraPro(Camera: PCamera; Movement, Rotation, Zoom: TVector3);
 begin
-  Lib_SetCameraPanControl(KeyPan);
+  Lib_UpdateCameraPro(Camera, Movement, Rotation, Zoom);
 end;
 
-procedure Lib_SetCameraAltControl(KeyAlt: TKeyboardKey);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'SetCameraAltControl';
-procedure SetCameraAltControl(KeyAlt: TKeyboardKey);
+function Lib_GetCameraForward(Camera: PCamera): TVector3;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GetCameraForward';
+function GetCameraForward(Camera: PCamera): TVector3;
 begin
-  Lib_SetCameraAltControl(KeyAlt);
+  Result := Lib_GetCameraForward(Camera);
 end;
 
-procedure Lib_SetCameraSmoothZoomControl(KeySmoothZoom: TKeyboardKey);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'SetCameraSmoothZoomControl';
-procedure SetCameraSmoothZoomControl(KeySmoothZoom: TKeyboardKey);
+function Lib_GetCameraUp(Camera: PCamera): TVector3;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GetCameraUp';
+function GetCameraUp(Camera: PCamera): TVector3;
 begin
-  Lib_SetCameraSmoothZoomControl(KeySmoothZoom);
+  Result := Lib_GetCameraUp(Camera);
 end;
 
-procedure Lib_SetCameraMoveControls(KeyFront, KeyBack, KeyRight, KeyLeft, KeyUp, KeyDown: TKeyboardKey);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'SetCameraMoveControls';
-procedure SetCameraMoveControls(KeyFront, KeyBack, KeyRight, KeyLeft, KeyUp, KeyDown: TKeyboardKey);
+function Lib_GetCameraRight(Camera: PCamera): TVector3;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GetCameraRight';
+function GetCameraRight(Camera: PCamera): TVector3;
 begin
-  Lib_SetCameraMoveControls(KeyFront, KeyBack, KeyRight, KeyLeft, KeyUp, KeyDown);
+  Result := Lib_GetCameraRight(Camera);
+end;
+
+procedure Lib_CameraMoveForward(Camera: PCamera; Distance: Single; MoveInWorldPlane: Boolean);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'CameraMoveForward';
+procedure CameraMoveForward(Camera: PCamera; Distance: Single; MoveInWorldPlane: Boolean);
+begin
+  Lib_CameraMoveForward(Camera, Distance, MoveInWorldPlane);
+end;
+procedure Lib_CameraMoveUp(Camera: PCamera; Distance: Single);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'CameraMoveUp';
+procedure CameraMoveUp(Camera: PCamera; Distance: Single);
+begin
+  Lib_CameraMoveUp(Camera, Distance);
+end;
+procedure Lib_CameraMoveRight(Camera: PCamera; Distance: Single; MoveInWorldPlane: Boolean);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'CameraMoveRight';
+procedure CameraMoveRight(Camera: PCamera; Distance: Single; MoveInWorldPlane: Boolean);
+begin
+  Lib_CameraMoveRight(Camera, Distance, MoveInWorldPlane);
+end;
+procedure Lib_CameraMoveToTarget(Camera: PCamera; Delta: Single);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'CameraMoveToTarget';
+procedure CameraMoveToTarget(Camera: PCamera; Delta: Single);
+begin
+  Lib_CameraMoveToTarget(Camera, Delta);
+end;
+procedure Lib_CameraYaw(Camera: PCamera; Angle: Single; RotateAroundTarget: Boolean);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'CameraYaw';
+procedure CameraYaw(Camera: PCamera; Angle: Single; RotateAroundTarget: Boolean);
+begin
+  Lib_CameraYaw(Camera, Angle, RotateAroundTarget);
+end;
+procedure Lib_CameraPitch(Camera: PCamera; Angle: Single; LockView: Boolean; RotateAroundTarget, RotateUp: Boolean);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'CameraPitch';
+procedure CameraPitch(Camera: PCamera; Angle: Single; LockView: Boolean; RotateAroundTarget, RotateUp: Boolean);
+begin
+  Lib_CameraPitch(Camera, Angle, LockView, RotateAroundTarget, RotateUp);
+end;
+procedure Lib_CameraRoll(Camera: PCamera; Angle: Single);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'CameraRoll';
+procedure CameraRoll(Camera: PCamera; Angle: Single);
+begin
+  Lib_CameraRoll(Camera, Angle);
+end;
+function Lib_GetCameraViewMatrix(Camera: PCamera): TMatrix;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GetCameraViewMatrix';
+function GetCameraViewMatrix(Camera: PCamera): TMatrix;
+begin
+  Result := Lib_GetCameraViewMatrix(Camera);
+end;
+function Lib_GetCameraProjectionMatrix(Camera: PCamera; Aspect: Single): TMatrix;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GetCameraProjectionMatrix';
+function GetCameraProjectionMatrix(Camera: PCamera; Aspect: Single): TMatrix;
+begin
+  Result := Lib_GetCameraProjectionMatrix(Camera, Aspect);
 end;
 
 // Set texture and rectangle to be used on shapes drawing
@@ -3842,6 +3942,13 @@ begin
   Result := Lib_CheckCollisionPointTriangle(Point, P1, P2, P3);
 end;
 
+function Lib_CheckCollisionPointPoly(Point: TVector2; Points: PVector2; PointCount: Integer): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'CheckCollisionPointPoly';
+function CheckCollisionPointPoly(Point: TVector2; Points: PVector2; PointCount: Integer): Boolean;
+begin
+  Result := Lib_CheckCollisionPointPoly(Point, Points, PointCount);
+end;
+
 function Lib_CheckCollisionLines(StartPos1, EndPos1, StartPos2, EndPos2: TVector2; CollisionPoint: PVector2): Boolean;
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'CheckCollisionLines';
 function CheckCollisionLines(StartPos1, EndPos1, StartPos2, EndPos2: TVector2; CollisionPoint: PVector2): Boolean;
@@ -3905,6 +4012,13 @@ function Lib_LoadImageFromScreen(): TImage;
 function LoadImageFromScreen(): TImage;
 begin
   Result := Lib_LoadImageFromScreen();
+end;
+
+function Lib_IsImageReady(Image: TImage): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsImageReady';
+function IsImageReady(Image: TImage): Boolean;
+begin
+  Result := Lib_IsImageReady(Image);
 end;
 
 procedure Lib_UnloadImage(Image: TImage);
@@ -3972,11 +4086,25 @@ begin
   Result := Lib_GenImageWhiteNoise(Width, Height, Factor);
 end;
 
+function Lib_GenImagePerlinNoise(Width, Height, OffsetX, OffsetY: Integer; Scale: Single): TImage;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GenImagePerlinNoise';
+function GenImagePerlinNoise(Width, Height, OffsetX, OffsetY: Integer; Scale: Single): TImage;
+begin
+  Result := Lib_GenImagePerlinNoise(Width, Height, OffsetX, OffsetY, Scale);
+end;
+
 function Lib_GenImageCellular(Width, Height, TileSize: Integer): TImage;
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GenImageCellular';
 function GenImageCellular(Width, Height, TileSize: Integer): TImage;
 begin
   Result := Lib_GenImageCellular(Width, Height, TileSize);
+end;
+
+function Lib_GenImageText(Width, Height: Integer; const Text: PAnsiChar): TImage;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GenImageText';
+function GenImageText(Width, Height: Integer; const Text: PAnsiChar): TImage;
+begin
+  Result := Lib_GenImageText(Width, Height, Text);
 end;
 
 // Image manipulation functions
@@ -4056,6 +4184,13 @@ procedure Lib_ImageAlphaPremultiply(Image: PImage);
 procedure ImageAlphaPremultiply(Image: PImage);
 begin
   Lib_ImageAlphaPremultiply(Image);
+end;
+
+procedure Lib_ImageBlurGaussian(Image: PImage; BlurSize: Integer);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'ImageBlurGaussian';
+procedure ImageBlurGaussian(Image: PImage; BlurSize: Integer);
+begin
+  Lib_ImageBlurGaussian(Image, BlurSize);
 end;
 
 procedure Lib_ImageResize(Image: PImage; NewWidth, NewHeight: Integer);
@@ -4256,6 +4391,20 @@ begin
   Lib_ImageDrawCircleV(Dst, Center, Radius, Color);
 end;
 
+procedure Lib_ImageDrawCircleLines(Dst: PImage; CenterX, CenterY, Radius: Integer; Color: TColor);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'ImageDrawCircleLines';
+procedure ImageDrawCircleLines(Dst: PImage; CenterX, CenterY, Radius: Integer; Color: TColor);
+begin
+  Lib_ImageDrawCircleLines(Dst, CenterX, CenterY, Radius, Color);
+end;
+
+procedure Lib_ImageDrawCircleLinesV(Dst: PImage; Center: TVector2; Radius: Integer; Color: TColor);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'ImageDrawCircleLinesV';
+procedure ImageDrawCircleLinesV(Dst: PImage; Center: TVector2; Radius: Integer; Color: TColor);
+begin
+  Lib_ImageDrawCircleLinesV(Dst, Center, Radius, Color);
+end;
+
 procedure Lib_ImageDrawRectangle(Dst: PImage; PosX, PosY, Width, Height: Integer; Color: TColor);
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'ImageDrawRectangle';
 procedure ImageDrawRectangle(Dst: PImage; PosX, PosY, Width, Height: Integer; Color: TColor);
@@ -4335,11 +4484,25 @@ begin
   Result := Lib_LoadRenderTexture(Width, Height);
 end;
 
+function Lib_IsTextureReady(Texture: TTexture2D): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsTextureReady';
+function IsTextureReady(Texture: TTexture2D): Boolean;
+begin
+  Result := Lib_IsTextureReady(Texture);
+end;
+
 procedure Lib_UnloadTexture(Texture: TTexture2D);
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'UnloadTexture';
 procedure UnloadTexture(Texture: TTexture2D);
 begin
   Lib_UnloadTexture(Texture);
+end;
+
+function Lib_IsRenderTextureReady(Texture: TRenderTexture2D): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsRenderTextureReady';
+function IsRenderTextureReady(Texture: TRenderTexture2D): Boolean;
+begin
+  Result := Lib_IsRenderTextureReady(Texture);
 end;
 
 procedure Lib_UnloadRenderTexture(Target: TRenderTexture2D);
@@ -4416,20 +4579,6 @@ begin
   Lib_DrawTextureRec(Texture, Source, Position, Tint);
 end;
 
-procedure Lib_DrawTextureQuad(Texture: TTexture2D; Tiling, Offset: TVector2; Quad: TRectangle; Tint: TColor);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DrawTextureQuad';
-procedure DrawTextureQuad(Texture: TTexture2D; Tiling, Offset: TVector2; Quad: TRectangle; Tint: TColor);
-begin
-  DrawTextureQuad(Texture, Tiling, Offset, Quad, Tint);
-end;
-
-procedure Lib_DrawTextureTiled(Texture: TTexture2D; Source, Dest: TRectangle; Origin: TVector2; Rotation, Scale: Single; Tint: TColor);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DrawTextureTiled';
-procedure DrawTextureTiled(Texture: TTexture2D; Source, Dest: TRectangle; Origin: TVector2; Rotation, Scale: Single; Tint: TColor);
-begin
-  Lib_DrawTextureTiled(Texture, Source, Dest, Origin, Rotation, Scale, Tint);
-end;
-
 procedure Lib_DrawTexturePro(Texture: TTexture2D; Source, Dest: TRectangle; Origin: TVector2; Rotation: Single; Tint: TColor);
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DrawTexturePro';
 procedure DrawTexturePro(Texture: TTexture2D; Source, Dest: TRectangle; Origin: TVector2; Rotation: Single; Tint: TColor);
@@ -4442,13 +4591,6 @@ procedure Lib_DrawTextureNPatch(Texture: TTexture2D; NPatchInfo: TNPatchInfo; De
 procedure DrawTextureNPatch(Texture: TTexture2D; NPatchInfo: TNPatchInfo; Dest: TRectangle; Origin: TVector2; Rotation: Single; Tint: TColor);
 begin
   Lib_DrawTextureNPatch(Texture, NPatchInfo, Dest, Origin, Rotation, Tint);
-end;
-
-procedure Lib_DrawTexturePoly(Texture: TTexture2D; Center: TVector2; Points: PVector2; Texcoords: PVector2; PointCount: Integer; Tint: TColor);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DrawTexturePoly';
-procedure DrawTexturePoly(Texture: TTexture2D; Center: TVector2; Points: PVector2; Texcoords: PVector2; PointCount: Integer; Tint: TColor);
-begin
-  Lib_DrawTexturePoly(Texture, Center, Points, Texcoords, PointCount, Tint);
 end;
 
 // Color/pixel related functions
@@ -4493,6 +4635,27 @@ function Lib_ColorFromHSV(Hue, Saturation, Value: Single): {$IFNDEF RET_TRICK}TC
 function ColorFromHSV(Hue, Saturation, Value: Single): TColor;
 begin
   Result := TColor(Lib_ColorFromHSV(Hue, Saturation, Value));
+end;
+
+function Lib_ColorTint(Color, Tint: TColor): {$IFNDEF RET_TRICK}TColor{$ELSE}UInt32{$ENDIF};
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'ColorTint';
+function ColorTint(Color, Tint: TColor): TColor;
+begin
+  Result := TColor(Lib_ColorTint(Color, Tint));
+end;
+
+function Lib_ColorBrightness(Color: TColor; Factor: Single): {$IFNDEF RET_TRICK}TColor{$ELSE}UInt32{$ENDIF};
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'ColorBrightness';
+function ColorBrightness(Color: TColor; Factor: Single): TColor;
+begin
+  Result := TColor(Lib_ColorBrightness(Color, Factor));
+end;
+
+function Lib_ColorContrast(Color: TColor; Contrast: Single): {$IFNDEF RET_TRICK}TColor{$ELSE}UInt32{$ENDIF};
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'ColorContrast';
+function ColorContrast(Color: TColor; Contrast: Single): TColor;
+begin
+  Result := TColor(Lib_ColorContrast(Color, Contrast));
 end;
 
 function Lib_ColorAlpha(Color: TColor; Alpha: Single): {$IFNDEF RET_TRICK}TColor{$ELSE}UInt32{$ENDIF};
@@ -4572,6 +4735,13 @@ function Lib_LoadFontFromMemory(const FileType: PAnsiChar; const FileData: PByte
 function LoadFontFromMemory(const FileType: PAnsiChar; const FileData: PByte; DataSize, FontSize: Integer; FontChars: PInteger; GlyphCount: Integer): TFont;
 begin
   Result := Lib_LoadFontFromMemory(FileType, FileData, DataSize, FontSize, FontChars, GlyphCount);
+end;
+
+function Lib_IsFontReady(Font: TFont): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsFontReady';
+function IsFontReady(Font: TFont): Boolean;
+begin
+  Result := Lib_IsFontReady(Font);
 end;
 
 function Lib_LoadFontData(const FileData: PByte; DataSize, FontSize: Integer; FontChars: PInteger; GlyphCount, Type_: TFontType): PGlyphInfo;
@@ -4693,6 +4863,20 @@ end;
 
 // Text codepoints management functions (unicode characters)
 
+function Lib_LoadUTF8(const Codepoints: PInteger; Length: Integer): PAnsiChar;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'LoadUTF8';
+function LoadUTF8(const Codepoints: PInteger; Length: Integer): PAnsiChar;
+begin
+  Result := Lib_LoadUTF8(Codepoints, Length);
+end;
+
+procedure Lib_UnloadUTF8(Text: PAnsiChar);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'UnloadUTF8';
+procedure UnloadUTF8(Text: PAnsiChar);
+begin
+  Lib_UnloadUTF8(Text);
+end;
+
 function Lib_LoadCodepoints(const Text: PAnsiChar; Count: PInteger): PInteger;
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'LoadCodepoints';
 function LoadCodepoints(const Text: PAnsiChar; Count: PInteger): PInteger;
@@ -4714,25 +4898,32 @@ begin
   Result := Lib_GetCodepointCount(Text);
 end;
 
-function Lib_GetCodepoint(const Text: PAnsiChar; BytesProcessed: PInteger): Integer;
+function Lib_GetCodepoint(const Text: PAnsiChar; CodepointSize: PInteger): Integer;
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GetCodepoint';
-function GetCodepoint(const Text: PAnsiChar; BytesProcessed: PInteger): Integer;
+function GetCodepoint(const Text: PAnsiChar; CodepointSize: PInteger): Integer;
 begin
-  Result := Lib_GetCodepoint(Text, BytesProcessed);
+  Result := Lib_GetCodepoint(Text, CodepointSize);
 end;
 
-function Lib_CodepointToUTF8(Codepoint: Integer; ByteSize: PInteger): PAnsiChar;
+function Lib_GetCodepointNext(const Text: PAnsiChar; CodepointSize: PInteger): Integer;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GetCodepointNext';
+function GetCodepointNext(const Text: PAnsiChar; CodepointSize: PInteger): Integer;
+begin
+  Result := Lib_GetCodepointNext(Text, CodepointSize);
+end;
+
+function Lib_GetCodepointPrevious(const Text: PAnsiChar; CodepointSize: PInteger): Integer;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GetCodepointPrevious';
+function GetCodepointPrevious(const Text: PAnsiChar; CodepointSize: PInteger): Integer;
+begin
+  Result := Lib_GetCodepointPrevious(Text, CodepointSize);
+end;
+
+function Lib_CodepointToUTF8(Codepoint: Integer; Utf8Size: PInteger): PAnsiChar;
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'CodepointToUTF8';
-function CodepointToUTF8(Codepoint: Integer; ByteSize: PInteger): PAnsiChar;
+function CodepointToUTF8(Codepoint: Integer; Utf8Size: PInteger): PAnsiChar;
 begin
-  Result := Lib_CodepointToUTF8(Codepoint, ByteSize);
-end;
-
-function Lib_TextCodepointsToUTF8(const Codepoints: PInteger; Length: Integer): PAnsiChar;
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'TextCodepointsToUTF8';
-function TextCodepointsToUTF8(const Codepoints: PInteger; Length: Integer): PAnsiChar;
-begin
-  Result := Lib_TextCodepointsToUTF8(Codepoints, Length);
+  Result := Lib_CodepointToUTF8(Codepoint, Utf8Size);
 end;
 
 // Text strings management functions (no UTF-8 strings, only byte chars)
@@ -4903,20 +5094,6 @@ begin
   Lib_DrawCubeWiresV(Position, Size, Color);
 end;
 
-procedure Lib_DrawCubeTexture(Texture: TTexture2D; Position: TVector3; Width, Height, Length: Single; Color: TColor);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DrawCubeTexture';
-procedure DrawCubeTexture(Texture: TTexture2D; Position: TVector3; Width, Height, Length: Single; Color: TColor);
-begin
-  Lib_DrawCubeTexture(Texture, Position, Width, Height, Length, Color);
-end;
-
-procedure Lib_DrawCubeTextureRec(Texture: TTexture2D; Source: TRectangle; Position: TVector3; Width, Height, Length: Single; Color: TColor);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DrawCubeTextureRec';
-procedure DrawCubeTextureRec(Texture: TTexture2D; Source: TRectangle; Position: TVector3; Width, Height, Length: Single; Color: TColor);
-begin
-  Lib_DrawCubeTextureRec(Texture, Source, Position, Width, Height, Length, Color);
-end;
-
 procedure Lib_DrawSphere(CenterPos: TVector3; Radius: Single; Color: TColor);
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DrawSphere';
 procedure DrawSphere(CenterPos: TVector3; Radius: Single; Color: TColor);
@@ -4966,6 +5143,21 @@ begin
   Lib_DrawCylinderWiresEx(StartPos, EndPos, StartRadius, EndRadius, Sides, Color);
 end;
 
+procedure Lib_DrawCapsule(StartPos, EndPos: TVector3; Radius: Single; Slices, Rings: Integer; Color: TColor);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DrawCapsule';
+procedure DrawCapsule(StartPos, EndPos: TVector3; Radius: Single; Slices, Rings: Integer; Color: TColor);
+begin
+  Lib_DrawCapsule(StartPos, EndPos, Radius, Slices, Rings, Color);
+end;
+
+procedure Lib_DrawCapsuleWires(StartPos, EndPos: TVector3; Radius: Single; Slices, Rings: Integer; Color: TColor);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DrawCapsuleWires';
+procedure DrawCapsuleWires(StartPos, EndPos: TVector3; Radius: Single; Slices, Rings: Integer; Color: TColor);
+begin
+  Lib_DrawCapsuleWires(StartPos, EndPos, Radius, Slices, Rings, Color);
+end;
+
+
 procedure Lib_DrawPlane(CenterPos: TVector3; Size: TVector2; Color: TColor);
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DrawPlane';
 procedure DrawPlane(CenterPos: TVector3; Size: TVector2; Color: TColor);
@@ -5003,18 +5195,18 @@ begin
   Result := Lib_LoadModelFromMesh(Mesh);
 end;
 
+function Lib_IsModelReady(Model: TModel): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsModelReady';
+function IsModelReady(Model: TModel): Boolean;
+begin
+  Result := Lib_IsModelReady(Model);
+end;
+
 procedure Lib_UnloadModel(Model: TModel);
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'UnloadModel';
 procedure UnloadModel(Model: TModel);
 begin
   Lib_UnloadModel(Model);
-end;
-
-procedure Lib_UnloadModelKeepMeshes(Model: TModel);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'UnloadModelKeepMeshes';
-procedure UnloadModelKeepMeshes(Model: TModel);
-begin
-  Lib_UnloadModelKeepMeshes(Model);
 end;
 
 function Lib_GetModelBoundingBox(Model: TModel): TBoundingBox;
@@ -5235,6 +5427,13 @@ begin
   Result := Lib_LoadMaterialDefault();
 end;
 
+function Lib_IsMaterialReady(Material: TMaterial): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsMaterialReady';
+function IsMaterialReady(Material: TMaterial): Boolean;
+begin
+  Result := Lib_IsMaterialReady(Material);
+end;
+
 procedure Lib_UnloadMaterial(Material: TMaterial);
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'UnloadMaterial';
 procedure UnloadMaterial(Material: TMaterial);
@@ -5398,6 +5597,13 @@ begin
   Result := Lib_LoadWaveFromMemory(FileType, FileData, DataSize);
 end;
 
+function Lib_IsWaveReady(Wave: TWave): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsWaveReady';
+function IsWaveReady(Wave: TWave): Boolean;
+begin
+  Result := Lib_IsWaveReady(Wave);
+end;
+
 function Lib_LoadSound(const FileName: PAnsiChar): TSound;
   cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'LoadSound';
 function LoadSound(const FileName: PAnsiChar): TSound;
@@ -5410,6 +5616,13 @@ function Lib_LoadSoundFromWave(Wave: TWave): TSound;
 function LoadSoundFromWave(Wave: TWave): TSound;
 begin
   Result := Lib_LoadSoundFromWave(Wave);
+end;
+
+function Lib_IsSoundReady(Sound: TSound): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsSoundReady';
+function IsSoundReady(Sound: TSound): Boolean;
+begin
+  Result := Lib_IsSoundReady(Sound);
 end;
 
 procedure Lib_UpdateSound(Sound: TSound; const Data: Pointer; SampleCount: Integer);
@@ -5476,27 +5689,6 @@ procedure Lib_ResumeSound(Sound: TSound);
 procedure ResumeSound(Sound: TSound);
 begin
   Lib_ResumeSound(Sound);
-end;
-
-procedure Lib_PlaySoundMulti(Sound: TSound);
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'PlaySoundMulti';
-procedure PlaySoundMulti(Sound: TSound);
-begin
-  Lib_PlaySoundMulti(Sound);
-end;
-
-procedure Lib_StopSoundMulti();
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'StopSoundMulti';
-procedure StopSoundMulti();
-begin
-  Lib_StopSoundMulti();
-end;
-
-function Lib_GetSoundsPlaying(): Integer;
-  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'GetSoundsPlaying';
-function GetSoundsPlaying(): Integer;
-begin
-  Result := Lib_GetSoundsPlaying();
 end;
 
 function Lib_IsSoundPlaying(Sound: TSound): Boolean;
@@ -5576,6 +5768,13 @@ function Lib_LoadMusicStreamFromMemory(const FileType: PAnsiChar; const Data: PB
 function LoadMusicStreamFromMemory(const FileType: PAnsiChar; const Data: PByte; DataSize: Integer): TMusic;
 begin
   Result := Lib_LoadMusicStreamFromMemory(FileType, Data, DataSize);
+end;
+
+function Lib_IsMusicReady(Music: TMusic): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsMusicReady';
+function IsMusicReady(Music: TMusic): Boolean;
+begin
+  Result := Lib_IsMusicReady(Music);
 end;
 
 procedure Lib_UnloadMusicStream(Music: TMusic);
@@ -5676,6 +5875,13 @@ function Lib_LoadAudioStream(SampleRate, SampleSize, Channels: Cardinal): TAudio
 function LoadAudioStream(SampleRate, SampleSize, Channels: Cardinal): TAudioStream;
 begin
   Result := Lib_LoadAudioStream(SampleRate, SampleSize, Channels);
+end;
+
+function Lib_IsAudioStreamReady(Stream: TAudioStream): Boolean;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'IsAudioStreamReady';
+function IsAudioStreamReady(Stream: TAudioStream): Boolean;
+begin
+  Result := Lib_IsAudioStreamReady(Stream);
 end;
 
 procedure Lib_UnloadAudioStream(Stream: TAudioStream);
@@ -5783,6 +5989,19 @@ begin
   Lib_DetachAudioStreamProcessor(Stream, Processor);
 end;
 
+procedure Lib_AttachAudioMixedProcessor(Processor: TAudioCallback);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'AttachAudioMixedProcessor';
+procedure AttachAudioMixedProcessor(Processor: TAudioCallback);
+begin
+  Lib_AttachAudioMixedProcessor(Processor);
+end;
+
+procedure Lib_DetachAudioMixedProcessor(Processor: TAudioCallback);
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'DetachAudioMixedProcessor';
+procedure DetachAudioMixedProcessor(Processor: TAudioCallback);
+begin
+  Lib_DetachAudioMixedProcessor(Processor);
+end;
 
 { TVector2 }
 

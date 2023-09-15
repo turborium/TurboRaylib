@@ -2,8 +2,6 @@
 *
 *   raylib [core] example - smooth pixel-perfect camera
 *
-*   Example originally created with raylib 3.7, last time updated with raylib 4.0
-*
 *   Example contributed by Giancamillo Alessandroni (@NotManyIdeasDev) and
 *   reviewed by Ramon Santamaria (@raysan5)
 *
@@ -11,6 +9,7 @@
 *   BSD-like license that allows static linking with closed source software
 *
 *   Copyright (c) 2021-2022 Giancamillo Alessandroni (@NotManyIdeasDev) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit core_smooth_pixelperfect_src;

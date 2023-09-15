@@ -2,12 +2,11 @@
 *
 *   raylib [shapes] example - Colors palette
 *
-*   Example originally created with raylib 1.0, last time updated with raylib 2.5
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
 *   Copyright (c) 2014-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit shapes_colors_palette_src;

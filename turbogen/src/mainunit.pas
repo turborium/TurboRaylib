@@ -17,10 +17,10 @@
 //          /_/    \__,_/ /_/    /_.___/\____//_/ |_| \__,_/ _\__, / /_/  /_/  /_.___/
 //                                                           /____/
 //
-//  TurboRaylib - Delphi and FreePascal headers for Raylib 4.2.
+//  TurboRaylib - Delphi and FreePascal headers for Raylib 4.5.
 //  Raylib - A simple and easy-to-use library to enjoy videogames programming (www.raylib.com)
 //
-//  Download compilled Raylib 4.2 library: https://github.com/raysan5/raylib/releases/tag/4.2.0
+//  Download compilled Raylib 4.5 library: https://github.com/raysan5/raylib/releases/tag/4.5.0
 //
 //  Copyright (c) 2022-2023 Turborium (https://github.com/turborium/TurboRaylib)
 // -------------------------------------------------------------------------------------------------------------------
@@ -53,6 +53,7 @@ type
     EditProjectName: TEdit;
     EditProjectPath: TEdit;
     ImageLogo: TImage;
+    LabelVersion: TLabel;
     LabelMainUnitName: TLabel;
     LabelProjectName: TLabel;
     LabelProjectFolder: TLabel;
@@ -72,6 +73,7 @@ type
     procedure EditProjectPathChange(Sender: TObject);
     procedure FormChangeBounds(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure LabelVersionClick(Sender: TObject);
   private
   protected
     procedure ChangeBounds(ALeft, ATop, AWidth, AHeight: Integer; AKeepBase: Boolean); override;
@@ -218,6 +220,11 @@ begin
 
   // temp hack
   EditProjectNameChange(nil);
+end;
+
+procedure TFormMain.LabelVersionClick(Sender: TObject);
+begin
+
 end;
 
 procedure TFormMain.ChangeBounds(ALeft, ATop, AWidth, AHeight: Integer; AKeepBase: Boolean);

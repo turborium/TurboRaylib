@@ -371,11 +371,12 @@ samples = [
 	'core/core_window_should_close',
 	'core/core_world_screen',
 	#audio
+	'audio/audio_mixed_processor',
 	'audio/audio_module_playing',
-	'audio/audio_multichannel_sound',
 	'audio/audio_music_stream',
 	'audio/audio_raw_stream',
 	'audio/audio_sound_loading',
+	'audio/audio_stream_effects',
 	# models
 	'models/models_animation',
 	'models/models_billboard',
@@ -394,6 +395,8 @@ samples = [
 	'models/models_rlgl_solar_system',
 	'models/models_waving_cubes',
 	'models/models_yaw_pitch_roll',
+	'models/models_draw_cube_texture',
+	'models/models_skybox',
 	# shaders
 	['shaders/shaders_basic_lighting', ['rlights']],
 	'shaders/shaders_custom_uniform',

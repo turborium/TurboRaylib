@@ -2,12 +2,11 @@
 *
 *   raylib [core] example - 2d camera
 *
-*   Example originally created with raylib 1.5, last time updated with raylib 3.0
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2016-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2016-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit core_2d_camera_src;

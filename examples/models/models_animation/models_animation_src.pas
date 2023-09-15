@@ -2,14 +2,13 @@
 *
 *   raylib [models] example - Load 3d model with animations and play them
 *
-*   Example originally created with raylib 2.5, last time updated with raylib 3.5
-*
 *   Example contributed by Culacant (@culacant) and reviewed by Ramon Santamaria (@raysan5)
 *
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2019-2022 Culacant (@culacant) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2019-2023 Culacant (@culacant) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************
 *
@@ -75,7 +74,7 @@ begin
   Anims := LoadModelAnimations(UTF8String('resources/models/models/iqm/guyanim.iqm'), @AnimsCount);
   AnimFrameCounter := 0;
 
-  SetCameraMode(Camera, CAMERA_FREE); // Set free camera mode
+  DisableCursor(); // Catch cursor
 
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
@@ -85,7 +84,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_FIRST_PERSON);
 
     // Play animation when spacebar is held down
     if IsKeyDown(KEY_SPACE) then
@@ -128,9 +127,7 @@ begin
   UnloadTexture(Texture); // Unload texture
 
   // Unload model animations data
-  for I := 0 to AnimsCount - 1 do
-    UnloadModelAnimation(Anims[I]);
-  MemFree(Anims);
+  UnloadModelAnimations(Anims, AnimsCount);
 
   UnloadModel(Model);
 

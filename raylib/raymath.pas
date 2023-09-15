@@ -1,15 +1,4 @@
 ﻿// ------------------------------------------------------------------------------------------------------------------
-//  ▄████▄▓██   ██▓ ▄▄▄▄   ▓█████  ██▀███   ██▓███    ██████▓██   ██▓ ▄████▄   ██░ ██  ▒█████    ██████  ██▓  ██████
-// ▒██▀ ▀█ ▒██  ██▒▓█████▄ ▓█   ▀ ▓██ ▒ ██▒▓██░  ██▒▒██    ▒ ▒██  ██▒▒██▀ ▀█  ▓██░ ██▒▒██▒  ██▒▒██    ▒ ▓██▒▒██    ▒
-// ▒▓█    ▄ ▒██ ██░▒██▒ ▄██▒███   ▓██ ░▄█ ▒▓██░ ██▓▒░ ▓██▄    ▒██ ██░▒▓█    ▄ ▒██▀▀██░▒██░  ██▒░ ▓██▄   ▒██▒░ ▓██▄
-// ▒▓▓▄ ▄██▒░ ▐██▓░▒██░█▀  ▒▓█  ▄ ▒██▀▀█▄  ▒██▄█▓▒ ▒  ▒   ██▒ ░ ▐██▓░▒▓▓▄ ▄██▒░▓█ ░██ ▒██   ██░  ▒   ██▒░██░  ▒   ██▒
-// ▒ ▓███▀ ░░ ██▒▓░░▓█  ▀█▓░▒████▒░██▓ ▒██▒▒██▒ ░  ░▒██████▒▒ ░ ██▒▓░▒ ▓███▀ ░░▓█▒░██▓░ ████▓▒░▒██████▒▒░██░▒██████▒▒
-// ░ ░▒ ▒  ░ ██▒▒▒ ░▒▓███▀▒░░ ▒░ ░░ ▒▓ ░▒▓░▒▓▒░ ░  ░▒ ▒▓▒ ▒ ░  ██▒▒▒ ░ ░▒ ▒  ░ ▒ ░░▒░▒░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░░▓  ▒ ▒▓▒ ▒ ░
-//   ░  ▒  ▓██ ░▒░ ▒░▒   ░  ░ ░  ░  ░▒ ░ ▒░░▒ ░     ░ ░▒  ░ ░▓██ ░▒░   ░  ▒    ▒ ░▒░ ░  ░ ▒ ▒░ ░ ░▒  ░ ░ ▒ ░░ ░▒  ░ ░
-// ░       ▒ ▒ ░░   ░    ░    ░     ░░   ░ ░░       ░  ░  ░  ▒ ▒ ░░  ░         ░  ░░ ░░ ░ ░ ▒  ░  ░  ░   ▒ ░░  ░  ░
-// ░ ░     ░ ░      ░         ░  ░   ░                    ░  ░ ░     ░ ░       ░  ░  ░    ░ ░        ░   ░        ░
-// ░       ░ ░           ░                                   ░ ░     ░
-// ------------------------------------------------------------------------------------------------------------------
 //    _  __ ________       _  __ ______     _ ________         _  __ ________________
 //   _  __ ____  __/___  ___________  /__________  __ \_____ _____  ____  /__(_)__  /_
 //       _  __  /  _  / / /_  ___/_  __ \  __ \_  /_/ /  __ `/_  / / /_  /__  /__  __ \
@@ -17,10 +6,10 @@
 //          /_/    \__,_/ /_/    /_.___/\____//_/ |_| \__,_/ _\__, / /_/  /_/  /_.___/
 //                                                           /____/
 //
-//  TurboRaylib - Delphi and FreePascal headers for Raylib 4.2.
+//  TurboRaylib - Delphi and FreePascal headers for Raylib 4.5.
 //  Raylib - A simple and easy-to-use library to enjoy videogames programming (www.raylib.com)
 //
-//  Download compilled Raylib 4.2 library: https://github.com/raysan5/raylib/releases/tag/4.2.0
+//  Download compilled Raylib 4.5 library: https://github.com/raysan5/raylib/releases/tag/4.5.0
 //
 //  Original files: raymath.h
 //
@@ -28,7 +17,7 @@
 //
 //  Headers licensed under an unmodified MIT license, that allows static linking with closed source software
 //
-//  Copyright (c) 2022-2022 Turborium (https://github.com/turborium/TurboRaylib)
+//  Copyright (c) 2022-2023 Turborium (https://github.com/turborium/TurboRaylib)
 // -------------------------------------------------------------------------------------------------------------------
 
 unit raymath;
@@ -188,7 +177,12 @@ function Vector2Distance(V1, V2: TVector2): Single;
 // Calculate square distance between two vectors
 function Vector2DistanceSqr(V1, V2: TVector2): Single;
 // Calculate angle from two vectors
+// NOTE: Angle is calculated from origin point (0, 0)
 function Vector2Angle(V1, V2: TVector2): Single;
+// Calculate angle defined by a two vectors line
+// NOTE: Parameters need to be normalized
+// Current implementation should be aligned with glm::angle
+function Vector2LineAngle(Start, End_: TVector2): Single;
 // Scale vector (multiply by value)
 function Vector2Scale(V: TVector2; Scale: Single): TVector2;
 // Multiply vector by vector
@@ -550,6 +544,13 @@ function Lib_Vector2Angle(V1, V2: TVector2): Single;
 function Vector2Angle(V1, V2: TVector2): Single;
 begin
   Result := Lib_Vector2Angle(V1, V2);
+end;
+
+function Lib_Vector2LineAngle(Start, End_: TVector2): Single;
+  cdecl; external {$IFNDEF RAY_STATIC}LibName{$ENDIF} name 'Vector2LineAngle';
+function Vector2LineAngle(Start, End_: TVector2): Single;
+begin
+  Result := Lib_Vector2LineAngle(Start, End_);
 end;
 
 function Lib_Vector2Scale(V: TVector2; Scale: Single): {$IFNDEF RET_TRICK}TVector2{$ELSE}UInt64{$ENDIF};

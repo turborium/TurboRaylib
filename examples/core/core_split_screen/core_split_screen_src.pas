@@ -2,14 +2,13 @@
 *
 *   raylib [core] example - split screen
 *
-*   Example originally created with raylib 3.7, last time updated with raylib 4.0
-*
 *   Example contributed by Jeffery Myers (@JeffM2501) and reviewed by Ramon Santamaria (@raysan5)
 *
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
 *   Copyright (c) 2021-2022 Jeffery Myers (@JeffM2501)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit core_split_screen_src;

@@ -2,12 +2,11 @@
 *
 *   raylib [models] example - Cubicmap loading and drawing
 *
-*   Example originally created with raylib 1.8, last time updated with raylib 3.5
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2015-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2015-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit models_cubicmap_src;
@@ -53,7 +52,7 @@ begin
     TVector3.Create(16.0, 14.0, 16.0),
     TVector3.Create(0.0, 0.0, 0.0),
     TVector3.Create(0.0, 1.0, 0.0),
-    45.0, 0);
+    45.0, CAMERA_PERSPECTIVE);
 
   Image := LoadImage(UTF8String('resources/models/cubicmap.png'));      // Load cubicmap image (RAM)
   Cubicmap := LoadTextureFromImage(Image);                               // Convert image to texture to display (VRAM)
@@ -69,8 +68,6 @@ begin
 
   UnloadImage(Image); // Unload cubesmap image from RAM, already uploaded to VRAM
 
-  SetCameraMode(Camera, CAMERA_ORBITAL);  // Set an orbital camera mode
-
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
 
@@ -79,7 +76,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_ORBITAL);
     //-------------------------------------------------------------------------------------------
 
     // Draw

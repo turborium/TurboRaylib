@@ -4,12 +4,11 @@
 *
 *   NOTE: Images are loaded in CPU memory (RAM); textures are loaded in GPU memory (VRAM)
 *
-*   Example originally created with raylib 1.4, last time updated with raylib 3.5
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2016-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2016-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit textures_image_processing_src;
@@ -30,7 +29,7 @@ uses
 
 type
   TImageProcess = (None, ColorGrayscale, ColorTint, ColorInvert, ColorContrast,
-   ColorBrightness, FlipVertical, FlipHorizontal);
+   ColorBrightness, GausianBlur, FlipVertical, FlipHorizontal);
 
 const
   ProcessText: array [TImageProcess] of string = (
@@ -40,6 +39,7 @@ const
     'COLOR INVERT',
     'COLOR CONTRAST',
     'COLOR BRIGHTNESS',
+    'GAUSIAN BLUR',
     'FLIP VERTICAL',
     'FLIP HORIZONTAL'
   );
@@ -141,6 +141,7 @@ begin
         ColorInvert: ImageColorInvert(@ImCopy);
         ColorContrast: ImageColorContrast(@ImCopy, -40);
         ColorBrightness: ImageColorBrightness(@ImCopy, -80);
+        GausianBlur: ImageBlurGaussian(@ImCopy, 10);
         FlipVertical: ImageFlipVertical(@ImCopy);
         FlipHorizontal: ImageFlipHorizontal(@ImCopy);
       end;

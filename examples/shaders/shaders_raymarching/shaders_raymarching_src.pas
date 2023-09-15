@@ -1,16 +1,15 @@
-(*******************************************************************************************
+﻿(*******************************************************************************************
 *
 *   raylib [shaders] example - Raymarching shapes generation
 *
 *   NOTE: This example requires raylib OpenGL 3.3 for shaders support and only #version 330
 *         is currently supported. OpenGL ES 2.0 platforms are not supported at the moment.
 *
-*   Example originally created with raylib 2.0, last time updated with raylib 4.2
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2018-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2018-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit shaders_raymarching_src;
@@ -64,8 +63,6 @@ begin
   Camera.Fovy := 65.0;                                // Camera field-of-view Y
   Camera.Projection := CAMERA_PERSPECTIVE;            // Camera mode type
 
-  SetCameraMode(Camera, CAMERA_FREE);                 // Set camera mode
-
   Model := LoadModel(UTF8String('resources/shaders/models/church.obj'));               // Load OBJ model
   Texture := LoadTexture(UTF8String('resources/shaders/models/church_diffuse.png'));   // Load model texture (diffuse map)
   Model.Materials[0].Maps[MATERIAL_MAP_DIFFUSE].Texture := Texture;                     // Set model diffuse texture
@@ -88,6 +85,8 @@ begin
 
   RunTime := 0.0;
 
+  DisableCursor();                    // Limit cursor to relative movement inside the window
+
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
 
@@ -96,7 +95,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_FIRST_PERSON);
 
     CameraPos[0] := Camera.Position.X; CameraPos[1] := Camera.Position.Y; CameraPos[2] := Camera.Position.Z;
     CameraTarget[0] := Camera.Target.X; CameraTarget[1] := Camera.Target.Y; CameraTarget[2] := Camera.Target.Z;

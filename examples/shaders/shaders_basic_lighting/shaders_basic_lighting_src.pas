@@ -7,14 +7,13 @@
 *
 *   NOTE: Shaders used in this example are #version 330 (OpenGL 3.3).
 *
-*   Example originally created with raylib 3.0, last time updated with raylib 4.2
-*
 *   Example contributed by Chris Camacho (@codifies) and reviewed by Ramon Santamaria (@raysan5)
 *
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2019-2022 Chris Camacho (@codifies) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2019-2023 Chris Camacho (@codifies) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit shaders_basic_lighting_src;
@@ -97,8 +96,6 @@ begin
   Lights[2] := CreateLight(LIGHT_POINT, TVector3.Create(-2, 1, 2), Vector3Zero(), GREEN, Shader);
   Lights[3] := CreateLight(LIGHT_POINT, TVector3.Create(2, 1, -2), Vector3Zero(), BLUE, Shader);
 
-  SetCameraMode(Camera, CAMERA_ORBITAL);  // Set an orbital camera mode
-
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second
   //---------------------------------------------------------------------------------------------
 
@@ -107,7 +104,7 @@ begin
   begin
     // Update
     //-------------------------------------------------------------------------------------------
-    UpdateCamera(@Camera);
+    UpdateCamera(@Camera, CAMERA_ORBITAL);
 
     // Update the shader with the camera view vector (points towards { 0.0f, 0.0f, 0.0f })
     CameraPos := [Camera.Position.X, Camera.Position.Y, Camera.Position.Z];

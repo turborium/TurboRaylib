@@ -2,14 +2,13 @@
 *
 *   raylib [models] example - Plane rotations (yaw, pitch, roll)
 *
-*   Example originally created with raylib 1.8, last time updated with raylib 4.0
-*
 *   Example contributed by Berni (@Berni8k) and reviewed by Ramon Santamaria (@raysan5)
 *
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2017-2022 Berni (@Berni8k) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2017-2023 Berni (@Berni8k) and Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit models_yaw_pitch_roll_src;

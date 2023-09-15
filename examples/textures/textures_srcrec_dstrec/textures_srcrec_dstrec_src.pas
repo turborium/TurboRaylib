@@ -2,12 +2,11 @@
 *
 *   raylib [textures] example - Texture source and destination rectangles
 *
-*   Example originally created with raylib 1.3, last time updated with raylib 1.3
-*
 *   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
 *   BSD-like license that allows static linking with closed source software
 *
-*   Copyright (c) 2015-2022 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2015-2023 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2022-2023 Peter Turborium (@turborium)
 *
 ********************************************************************************************)
 unit textures_srcrec_dstrec_src;
